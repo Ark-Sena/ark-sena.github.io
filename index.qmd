@@ -1,0 +1,22 @@
+---
+title: "Bienvenue sur ArkSena"
+format: html
+editor: visual
+---
+
+# ArkSena
+
+Bienvenue sur la page d'accueil du site ArkSena, hébergé via GitHub Pages avec Quarto.
+
+## À propos
+
+Ce site présente les projets, ressources et informations liés à ArkSena.
+
+## Liens utiles
+
+- [GitHub du projet](https://github.com/arksena)
+- [Documentation Quarto](https://quarto.org/)
+
+---
+
+*Site généré avec [Quarto](https://quarto.org/) et hébergé sur GitHub Pages.*

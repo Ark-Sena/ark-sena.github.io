@@ -1,0 +1,25 @@
+project:
+  type: website
+
+website:
+  title: "ArkSena"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Accueil
+      - href: about.qmd
+        text: À propos
+  page-footer: "© 2024 ArkSena"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+
+execute:
+  freeze: auto
+
+# Configuration for GitHub Pages
+publish:
+  provider: "github"
+  branch: "gh-pages"
