@@ -23,4 +23,4 @@ execute:
 # Configuration for GitHub Pages
 publish:
   provider: "github"
-  branch: "gh-pages"
+  branch: "main"
