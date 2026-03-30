@@ -16,6 +16,8 @@ chunkChromeNormal = await FileAttachment("content/scripts/shaders/chrome_normal.
 chunkChromeVertex = await FileAttachment("content/scripts/shaders/chrome_vertex.glsl").text()
 vertShaderRing = await FileAttachment("content/scripts/shaders/ring.vert").text()
 fragShaderRing = await FileAttachment("content/scripts/shaders/ring.frag").text()
+vertShaderParticles = await FileAttachment("content/scripts/shaders/particles.vert").text()
+fragShaderParticles = await FileAttachment("content/scripts/shaders/particles.frag").text()
 
 mutable hoveredProject = "Survolez un projet pour voir les détails"
 
@@ -24,10 +26,12 @@ my_portfolio_city = {
     const configUrl = await FileAttachment("content/scripts/config/settings.js").url();
     const envUrl = await FileAttachment("content/scripts/components/environment.js").url();
     const artifactUrl = await FileAttachment("content/scripts/components/artifact.js").url();
+    const particlesUrl = await FileAttachment("content/scripts/components/particles.js").url();
 
     const modConfig = await import(configUrl);
     const modEnv = await import(envUrl);
     const modArtifact = await import(artifactUrl);
+    const modParticles = await import(particlesUrl);
 
     const CONFIG = modConfig.CONFIG;
 
@@ -51,9 +55,8 @@ my_portfolio_city = {
     const pmremGenerator = new THREE.PMREMGenerator(renderer);
     scene.environment = pmremGenerator.fromScene(new RoomEnvironment.RoomEnvironment(), 0.04).texture;
 
-    //BLoom
+    // --- Configuration du Bloom (Post-Processing) ---
     const renderScene = new RenderPass.RenderPass(scene, camera);
-
     const bloomPass = new UnrealBloomPass.UnrealBloomPass(new THREE.Vector2(w, h), 1.5, 0.4, 0.85);
     bloomPass.threshold = 0.2;
     bloomPass.strength = 0.3;
@@ -90,9 +93,18 @@ my_portfolio_city = {
         chunkChromeVertex, chunkChromeNormal, vertShaderForceField, fragShaderForceField, vertShaderRing, fragShaderRing
     });
 
+    const myParticles = modParticles.createStardust(scene, THREE, CONFIG, myArtifact.artifactUniforms, {
+        vertShaderParticles,
+        fragShaderParticles
+    });
+
     // 5. Objets standard (Mockup Data)
     const interactableObjects = [myArtifact.interactableMesh];
-    const defaultMaterial = new THREE.MeshStandardMaterial({ color: CONFIG.colors.defaultObj });
+    const defaultMaterial = new THREE.MeshStandardMaterial({ 
+    color: CONFIG.colors.defaultObj,
+    roughness: 0.3,
+    metalness: 0.6
+});
     const hoverMaterial = new THREE.MeshStandardMaterial({ color: CONFIG.colors.hoverObj, emissive: 0x005555 });
 
     const building1 = new THREE.Mesh(new THREE.CylinderGeometry(2, 2, 15, 16), defaultMaterial);
@@ -151,6 +163,7 @@ my_portfolio_city = {
 
         // Délégation de l'animation au composant
         myArtifact.updateAnimation(time);
+        myParticles.updateAnimation();
 
         // On cache temporairement l'artéfact pour éviter les auto-reflets dans la cubeCamera
         myArtifact.coreMesh.visible = false;
@@ -202,6 +215,7 @@ my_portfolio_city = {
         composer.dispose();
         environmentParts.dispose();
         myArtifact.dispose();
+        myParticles.dispose();
         defaultMaterial.dispose(); hoverMaterial.dispose();
         building1.geometry.dispose(); building3.geometry.dispose();
 

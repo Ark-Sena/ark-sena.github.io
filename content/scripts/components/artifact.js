@@ -1,6 +1,11 @@
 /**
  * Factory générant l'artéfact central interactif.
  * Combine des matériaux PBR classiques avec des shaders GLSL injectés dynamiquement.
+ * @param {THREE.Scene} scene - La scène principale
+ * @param {Object} THREE - L'instance de Three.js
+ * @param {Object} CONFIG - La configuration globale de la scène
+ * @param {Object} shaders - Dictionnaire contenant les textes des shaders GLSL
+ * @returns {Object} Les meshes exposés, la caméra, les uniforms et les méthodes du cycle de vie
  */
 export function createArtifact(scene, THREE, CONFIG, shaders) {
     const { chunkChromeVertex, chunkChromeNormal, vertShaderForceField, fragShaderForceField, vertShaderRing, fragShaderRing } = shaders;
