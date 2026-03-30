@@ -11,6 +11,8 @@ vertShaderForceField = await FileAttachment("content/scripts/shaders/hologram.ve
 fragShaderForceField = await FileAttachment("content/scripts/shaders/hologram.frag").text()
 chunkChromeNormal = await FileAttachment("content/scripts/shaders/chrome_normal.glsl").text()
 chunkChromeVertex = await FileAttachment("content/scripts/shaders/chrome_vertex.glsl").text()
+vertShaderRing = await FileAttachment("content/scripts/shaders/ring.vert").text()
+fragShaderRing = await FileAttachment("content/scripts/shaders/ring.frag").text()
 
 mutable hoveredProject = "Survolez un projet pour voir les détails"
 
@@ -70,7 +72,7 @@ my_portfolio_city = {
     const environmentParts = modEnv.setupEnvironment(scene, THREE, CONFIG);
     
     const myArtifact = modArtifact.createArtifact(scene, THREE, CONFIG, {
-        chunkChromeVertex, chunkChromeNormal, vertShaderForceField, fragShaderForceField
+        chunkChromeVertex, chunkChromeNormal, vertShaderForceField, fragShaderForceField, vertShaderRing, fragShaderRing
     });
 
     // 5. Objets standard (Mockup Data)
