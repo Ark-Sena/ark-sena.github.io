@@ -7,10 +7,11 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Accueil
-      - href: about.qmd
-        text: À propos
+        text: Home
+      - href: demo.qmd
+        text: Graphic Demo
   page-footer: "© 2026 ArkSena"
+  search: false
 
 format:
   html:

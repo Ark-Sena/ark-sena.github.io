@@ -1,0 +1,60 @@
+THREE = await import("https://unpkg.com/three@0.161.0/build/three.module.js")
+
+my_3d_canvas = {
+  const w = 600;
+  const h = 600;
+
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0xffffff);
+
+  const camera = new THREE.PerspectiveCamera(60, w / h, 0.1, 100);
+  camera.position.set(2, 2, 2);
+  camera.lookAt(0, 0, 0);
+
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setSize(w, h);
+
+  const ambient = new THREE.AmbientLight(0xffffff, 0.6);
+  scene.add(ambient);
+
+  const light = new THREE.DirectionalLight(0xffffff, 1);
+  light.position.set(5, 5, 5);
+  scene.add(light);
+
+  // Un seul matériau de base
+  const geo = new THREE.BoxGeometry();
+  const mat = new THREE.MeshStandardMaterial({ color: 0xff0000 });
+  const mesh = new THREE.Mesh(geo, mat);
+  scene.add(mesh);
+
+  let frameId;
+  let hue = 0; // Cette variable va piloter notre cycle de couleurs
+
+  const animate = () => {
+    // 1. Rotation continue
+    mesh.rotation.x += 0.01;
+    mesh.rotation.y += 0.01;
+
+    // 2. Cycle de couleur RGB
+    hue += 0.005; // Ajustez cette valeur pour modifier la vitesse du cycle
+    if (hue > 1) hue = 0; // On boucle quand on a fait le tour du spectre
+    
+    // On applique la nouvelle couleur (Teinte variable, Saturation à 100%, Luminosité à 50%)
+    mat.color.setHSL(hue, 1, 0.5);
+
+    renderer.render(scene, camera);
+
+    frameId = requestAnimationFrame(animate);
+  };
+
+  animate();
+
+  invalidation.then(() => {
+    cancelAnimationFrame(frameId);
+    renderer.dispose();
+    geo.dispose();
+    mat.dispose();
+  });
+
+  return renderer.domElement;
+}

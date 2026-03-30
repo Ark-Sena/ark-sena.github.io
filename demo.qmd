@@ -1,0 +1,55 @@
+---
+format:
+    html:
+      echo: false
+      page-layout: custom
+resources:
+  - "content/scripts/shaders/"
+editor: visual
+---
+
+```{=html}
+<style>
+  body, html { 
+    margin: 0; 
+    padding: 0; 
+    overflow: hidden;
+    background-color: #1a1a1a; 
+  }
+  
+  canvas {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 0;
+    pointer-events: auto;
+  }
+
+  #quarto-header {
+    z-index: 10;
+    background-color: rgba(26, 26, 26, 0.8) !important;
+  }
+
+  #TOC, .footer {
+    display: none !important;
+  }
+  
+  #quarto-content {
+    padding-top: 0 !important; 
+  }
+</style>
+```
+
+# City Portfolio
+
+```{ojs}
+//import { my_3d_canvas } from "./content/scripts/cube_rgb.ojs"
+
+//my_3d_canvas
+
+import { my_portfolio_city } from "./content/scripts/ville.ojs"
+
+my_portfolio_city
+```

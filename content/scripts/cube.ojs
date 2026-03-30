@@ -1,0 +1,50 @@
+THREE = await import("https://unpkg.com/three@0.161.0/build/three.module.js")
+
+my_3d_canvas = {
+  const w = 600;
+  const h = 600;
+
+  const scene = new THREE.Scene();
+
+  scene.background = new THREE.Color(0xffffff);
+
+  const camera = new THREE.PerspectiveCamera(60, w / h, 0.1, 100);
+  camera.position.set(2, 2, 2);
+  camera.lookAt(0, 0, 0);
+
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setSize(w, h);
+
+  const ambient = new THREE.AmbientLight(0xffffff, 0.5);
+  scene.add(ambient);
+
+  const light = new THREE.DirectionalLight(0xffffff, 1);
+  light.position.set(5, 5, 5);
+  scene.add(light);
+
+  const geo = new THREE.BoxGeometry();
+  const mat = new THREE.MeshStandardMaterial({ color: 0x00ff00 });
+  const mesh = new THREE.Mesh(geo, mat);
+  scene.add(mesh);
+
+  let frameId;
+  const animate = () => {
+    mesh.rotation.x += 0.01;
+    mesh.rotation.y += 0.01;
+
+    renderer.render(scene, camera);
+
+    frameId = requestAnimationFrame(animate);
+  };
+
+  animate();
+
+  invalidation.then(() => {
+    cancelAnimationFrame(frameId);
+    renderer.dispose();
+    geo.dispose();
+    mat.dispose();
+  });
+
+  return renderer.domElement;
+}

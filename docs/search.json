@@ -2,43 +2,22 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Bienvenue sur ArkSena",
+    "title": "Who am I ?",
     "section": "",
-    "text": "Bienvenue sur la page d’accueil du site ArkSena, hébergé via GitHub Pages avec Quarto.\n\n\nCe site présente les projets, ressources et informations liés à ArkSena.\n\n\n\n\nGitHub du projet\nDocumentation Quarto\n\n\nSite généré avec Quarto et hébergé sur GitHub Pages."
+    "text": "Hey ! Thank you for reaching my portfolio !\nLet me presents me first !\nI’m Mathys Carboila Dias, a student in Master Degree in Computers Graphics at Limoges.\n\n\nHere I’ll share some of my academic and professional project:\n\n\n\n\nMy GitHub"
   },
   {
-    "objectID": "index.html#à-propos",
-    "href": "index.html#à-propos",
-    "title": "Bienvenue sur ArkSena",
+    "objectID": "index.html#my-projects",
+    "href": "index.html#my-projects",
+    "title": "Who am I ?",
     "section": "",
-    "text": "Ce site présente les projets, ressources et informations liés à ArkSena."
+    "text": "Here I’ll share some of my academic and professional project:"
   },
   {
-    "objectID": "index.html#liens-utiles",
-    "href": "index.html#liens-utiles",
-    "title": "Bienvenue sur ArkSena",
+    "objectID": "index.html#some-of-my-social-media",
+    "href": "index.html#some-of-my-social-media",
+    "title": "Who am I ?",
     "section": "",
-    "text": "GitHub du projet\nDocumentation Quarto\n\n\nSite généré avec Quarto et hébergé sur GitHub Pages."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "À propos",
-    "section": "",
-    "text": "Bienvenue sur mon site !\nCe site a été créé pour partager mes projets, idées et ressources autour de l’informatique et de la programmation.\n\n\nJe suis étudiant en informatique. Passionné par le développement logiciel, le rendu 3D.\n\n\n\nVous pouvez me contacter sur GitHub."
-  },
-  {
-    "objectID": "about.html#qui-suis-je",
-    "href": "about.html#qui-suis-je",
-    "title": "À propos",
-    "section": "",
-    "text": "Je suis étudiant en informatique. Passionné par le développement logiciel, le rendu 3D."
-  },
-  {
-    "objectID": "about.html#contact",
-    "href": "about.html#contact",
-    "title": "À propos",
-    "section": "",
-    "text": "Vous pouvez me contacter sur GitHub."
+    "text": "My GitHub"
   }
 ]

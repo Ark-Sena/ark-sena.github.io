@@ -1,22 +1,18 @@
 ---
-title: "Bienvenue sur ArkSena"
 format: html
 editor: visual
 ---
 
-# ArkSena
+# Who am I ?
 
-Bienvenue sur la page d'accueil du site ArkSena, hébergé via GitHub Pages avec Quarto.
+Hey ! Thank you for reaching my portfolio !\
+Let me presents me first !\
+I'm Mathys Carboila Dias, a student in Master Degree in Computers Graphics at Limoges.
 
-## À propos
+## My Projects
 
-Ce site présente les projets, ressources et informations liés à ArkSena.
+Here I'll share some of my academic and professional project:
 
-## Liens utiles
+## Some of my Social Media
 
-- [GitHub du projet](https://github.com/arksena)
-- [Documentation Quarto](https://quarto.org/)
-
----
-
-*Site généré avec [Quarto](https://quarto.org/) et hébergé sur GitHub Pages.*
+- [My GitHub](https://github.com/arksena)

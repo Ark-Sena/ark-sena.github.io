@@ -1,0 +1,184 @@
+/**
+ * Orchestrateur principal (OJS Context).
+ * Charge dynamiquement les dépendances ES6, initialise WebGL et gère la boucle applicative.
+ */
+THREE = await import("https://esm.sh/three@0.161.0")
+OrbitControls = await import("https://esm.sh/three@0.161.0/examples/jsm/controls/OrbitControls.js")
+RoomEnvironment = await import("https://esm.sh/three@0.161.0/examples/jsm/environments/RoomEnvironment.js")
+
+// Chargement asynchrone des assets GLSL
+vertShaderForceField = await FileAttachment("content/scripts/shaders/hologram.vert").text()
+fragShaderForceField = await FileAttachment("content/scripts/shaders/hologram.frag").text()
+chunkChromeNormal = await FileAttachment("content/scripts/shaders/chrome_normal.glsl").text()
+chunkChromeVertex = await FileAttachment("content/scripts/shaders/chrome_vertex.glsl").text()
+
+mutable hoveredProject = "Survolez un projet pour voir les détails"
+
+my_portfolio_city = {
+    // 1. Résolution des modules locaux via Quarto
+    const configUrl = await FileAttachment("content/scripts/config/settings.js").url();
+    const envUrl = await FileAttachment("content/scripts/components/environment.js").url();
+    const artifactUrl = await FileAttachment("content/scripts/components/artifact.js").url();
+
+    const modConfig = await import(configUrl);
+    const modEnv = await import(envUrl);
+    const modArtifact = await import(artifactUrl);
+
+    const CONFIG = modConfig.CONFIG;
+
+    let w = window.innerWidth;
+    let h = window.innerHeight;
+
+    // 2. Initialisation WebGL & Scène
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(CONFIG.colors.bg);
+    scene.fog = new THREE.FogExp2(CONFIG.colors.bg, 0.02);
+
+    const camera = new THREE.PerspectiveCamera(60, w / h, 0.1, 1000);
+    camera.position.set(0, 50, 50);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(w, h);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+    const pmremGenerator = new THREE.PMREMGenerator(renderer);
+    scene.environment = pmremGenerator.fromScene(new RoomEnvironment.RoomEnvironment(), 0.04).texture;
+
+    // 3. Inputs & Controllers
+    const controls = new OrbitControls.OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.05;
+    controls.maxPolarAngle = Math.PI / 2 - 0.05;
+
+    const keys = { forward: false, backward: false, left: false, right: false };
+    const updateKeys = (event, isPressed) => {
+        const k = event.key.toLowerCase();
+        if (k === 'w' || k === 'z' || event.code === 'ArrowUp') keys.forward = isPressed;
+        if (k === 's' || event.code === 'ArrowDown') keys.backward = isPressed;
+        if (k === 'a' || k === 'q' || event.code === 'ArrowLeft') keys.left = isPressed;
+        if (k === 'd' || event.code === 'ArrowRight') keys.right = isPressed;
+    };
+    window.addEventListener('keydown', (e) => updateKeys(e, true));
+    window.addEventListener('keyup', (e) => updateKeys(e, false));
+
+    const direction = new THREE.Vector3();
+    const right = new THREE.Vector3();
+
+    // 4. Instanciation des composants (Factories)
+    const environmentParts = modEnv.setupEnvironment(scene, THREE, CONFIG);
+    
+    const myArtifact = modArtifact.createArtifact(scene, THREE, CONFIG, {
+        chunkChromeVertex, chunkChromeNormal, vertShaderForceField, fragShaderForceField
+    });
+
+    // 5. Objets standard (Mockup Data)
+    const interactableObjects = [myArtifact.interactableMesh];
+    const defaultMaterial = new THREE.MeshStandardMaterial({ color: CONFIG.colors.defaultObj });
+    const hoverMaterial = new THREE.MeshStandardMaterial({ color: CONFIG.colors.hoverObj, emissive: 0x005555 });
+
+    const building1 = new THREE.Mesh(new THREE.CylinderGeometry(2, 2, 15, 16), defaultMaterial);
+    building1.position.set(-10, 7.5, 0);
+    building1.userData = { name: "Projet A : Moteur de rendu PBR", originalMaterial: defaultMaterial };
+    scene.add(building1);
+    interactableObjects.push(building1);
+
+    const building3 = new THREE.Mesh(new THREE.BoxGeometry(4, 20, 4), defaultMaterial);
+    building3.position.set(10, 10, 0);
+    building3.userData = { name: "Projet C : Génération Procédurale GLSL", originalMaterial: defaultMaterial };
+    scene.add(building3);
+    interactableObjects.push(building3);
+
+    // 6. Gestion du Raycasting
+    const raycaster = new THREE.Raycaster();
+    const mouse = new THREE.Vector2();
+    let intersected = null;
+
+    const onWindowResize = () => {
+        w = window.innerWidth;
+        h = window.innerHeight;
+        camera.aspect = w / h; camera.updateProjectionMatrix();
+        renderer.setSize(w, h);
+    };
+    window.addEventListener('resize', onWindowResize);
+
+    renderer.domElement.addEventListener('mousemove', (event) => {
+        const rect = renderer.domElement.getBoundingClientRect();
+        mouse.x = ((event.clientX - rect.left) / w) * 2 - 1;
+        mouse.y = -((event.clientY - rect.top) / h) * 2 + 1;
+    });
+
+    // 7. Render Loop
+    const clock = new THREE.Clock();
+    let frameId;
+
+    const animate = () => {
+        controls.update();
+        const time = clock.getElapsedTime();
+
+        // Calcul des vecteurs de déplacement caméra
+        right.setFromMatrixColumn(camera.matrix, 0).normalize();
+        direction.setFromMatrixColumn(camera.matrix, 2).normalize().negate();
+
+        if (keys.forward) { camera.position.addScaledVector(direction, CONFIG.physics.moveSpeed); controls.target.addScaledVector(direction, CONFIG.physics.moveSpeed); }
+        if (keys.backward) { camera.position.addScaledVector(direction, -CONFIG.physics.moveSpeed); controls.target.addScaledVector(direction, -CONFIG.physics.moveSpeed); }
+        if (keys.left) { camera.position.addScaledVector(right, -CONFIG.physics.moveSpeed); controls.target.addScaledVector(right, -CONFIG.physics.moveSpeed); }
+        if (keys.right) { camera.position.addScaledVector(right, CONFIG.physics.moveSpeed); controls.target.addScaledVector(right, CONFIG.physics.moveSpeed); }
+
+        if (camera.position.y < CONFIG.physics.minCameraHeight) {
+            controls.target.y += (CONFIG.physics.minCameraHeight - camera.position.y);
+            camera.position.y = CONFIG.physics.minCameraHeight;
+        }
+
+        // Délégation de l'animation au composant
+        myArtifact.updateAnimation(time);
+
+        // Processus de Raycasting interactif
+        raycaster.setFromCamera(mouse, camera);
+        const intersects = raycaster.intersectObjects(interactableObjects);
+
+        if (intersects.length > 0) {
+            if (intersected !== intersects[0].object) {
+                if (intersected) {
+                    if (intersected.userData.isArtifactForceField) myArtifact.artifactUniforms.u_hover.value = 0.0;
+                    else intersected.material = intersected.userData.originalMaterial || defaultMaterial;
+                }
+                intersected = intersects[0].object;
+                
+                if (intersected.userData.isArtifactForceField) myArtifact.artifactUniforms.u_hover.value = 1.0;
+                else intersected.material = hoverMaterial;
+                
+                mutable hoveredProject = intersected.userData.name;
+            }
+        } else if (intersected) {
+            if (intersected.userData.isArtifactForceField) myArtifact.artifactUniforms.u_hover.value = 0.0;
+            else intersected.material = intersected.userData.originalMaterial || defaultMaterial;
+            intersected = null;
+            mutable hoveredProject = "Survolez un projet pour voir les détails";
+        }
+
+        renderer.render(scene, camera);
+        frameId = requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    // 8. Garbage Collection
+    invalidation.then(() => {
+        cancelAnimationFrame(frameId);
+        window.removeEventListener('resize', onWindowResize);
+        
+        renderer.dispose();
+        environmentParts.dispose();
+        myArtifact.dispose();
+        defaultMaterial.dispose(); hoverMaterial.dispose();
+        building1.geometry.dispose(); building3.geometry.dispose();
+
+        scene.traverse(object => {
+            if (object.isMesh && object.geometry) object.geometry.dispose();
+        });
+    });
+
+    return renderer.domElement;
+}
