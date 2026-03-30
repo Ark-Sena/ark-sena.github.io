@@ -21,8 +21,8 @@ export function setupEnvironment(scene, THREE, CONFIG) {
     // Sol réactif aux reflets spéculaires
     const planeMat = new THREE.MeshStandardMaterial({ 
         color: CONFIG.colors.ground, 
-        roughness: 0.7,
-        metalness: 0.1,
+        roughness: 0.15,
+        metalness: 0.0
     });
     const planeGeo = new THREE.PlaneGeometry(100, 100);
     const plane = new THREE.Mesh(planeGeo, planeMat);

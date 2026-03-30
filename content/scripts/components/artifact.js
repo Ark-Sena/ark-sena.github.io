@@ -43,9 +43,14 @@ export function createArtifact(scene, THREE, CONFIG, shaders) {
     const artifactGeoBase = new THREE.IcosahedronGeometry(3, 10);
 
     // Couche Interne : PBR Liquide avec altération du Vertex Shader
+    const cubeRenderTarget = new THREE.WebGLCubeRenderTarget(256);
+    const cubeCamera = new THREE.CubeCamera(0.1, 50, cubeRenderTarget);
+    artifactGroup.add(cubeCamera);
+
     const artifactMaterialCore = new THREE.MeshPhysicalMaterial({ 
-        color: 0xffffff, metalness: 1.0, roughness: 0.00, 
-        clearcoat: 1.0, clearcoatRoughness: 0.05, envMapIntensity: 3.0 
+        color: 0xffffff, metalness: 1.0, roughness: 0.0, 
+        envMap: cubeRenderTarget.texture,
+        envMapIntensity: 2.0 
     });
     
     const injectChromeShaders = (shader) => {
@@ -109,6 +114,14 @@ export function createArtifact(scene, THREE, CONFIG, shaders) {
     ring2.rotation.z = Math.PI / 4;
     ring3.rotation.x = -Math.PI / 6;
 
+    const ringLight1 = new THREE.PointLight(0xffffff, 0, 50);
+    const ringLight2 = new THREE.PointLight(0xffffff, 0, 50);
+    const ringLight3 = new THREE.PointLight(0xffffff, 0, 50);
+    
+    ring1.add(ringLight1);
+    ring2.add(ringLight2);
+    ring3.add(ringLight3);
+
     ringGroup.add(ring1, ring2, ring3);
 
     const building2_forcefield = new THREE.Mesh(artifactGeoBase, artifactMaterialForceField);
@@ -121,6 +134,8 @@ export function createArtifact(scene, THREE, CONFIG, shaders) {
     
     return {
         interactableMesh: building2_forcefield, // Mesh ciblé par le Raycaster
+        coreMesh: building2_core,
+        cubeCamera: cubeCamera,
         artifactUniforms,                       // Exposition pour l'interaction externe (Hover)
         
         updateAnimation: (time) => {
@@ -140,8 +155,17 @@ export function createArtifact(scene, THREE, CONFIG, shaders) {
             // Signal de battement de coeur (Heartbeat)
             const beatFreq = 2.0;
             const beatExponent = 10.0;
-            const heartbeatSignal = Math.pow(Math.sin(time * beatFreq) * 0.5 + 0.5, beatExponent);
-            artifactUniforms.u_pulse.value = heartbeatSignal;
+            const currentPulse = Math.pow(Math.sin(time * beatFreq) * 0.5 + 0.5, beatExponent);
+            artifactUniforms.u_pulse.value = currentPulse;
+
+            ringLight1.color.setHSL((time * 0.2) % 1.0, 1.0, 0.5);
+            ringLight2.color.setHSL((time * 0.15 + 0.33) % 1.0, 1.0, 0.5);
+            ringLight3.color.setHSL((time * 0.1 + 0.66) % 1.0, 1.0, 0.5);
+
+            const lightIntensity = 1.0 + currentPulse * 20.0;
+            ringLight1.intensity = lightIntensity;
+            ringLight2.intensity = lightIntensity;
+            ringLight3.intensity = lightIntensity;
             
             // Cycle RGB de la lumière au sol
             neonColor.setHSL((time * CONFIG.artifact.rgbCycleSpeed) % 1.0, 1.0, 0.5);
