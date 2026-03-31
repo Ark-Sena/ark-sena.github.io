@@ -8,7 +8,7 @@
  * @returns {Object} Les meshes exposés, la caméra, les uniforms et les méthodes du cycle de vie
  */
 export function createArtifact(scene, THREE, CONFIG, shaders) {
-    const { chunkChromeVertex, chunkChromeNormal, vertShaderForceField, fragShaderForceField, vertShaderRing, fragShaderRing } = shaders;
+    const { chunkChromeVertex, chunkChromeNormal, chunkShatteredVertex, vertShaderRing, fragShaderRing } = shaders;
 
     // --- 1. Piédestal et Source Lumineuse Dynamique ---
     const pedestalMat = new THREE.MeshStandardMaterial({ color: 0x111115, metalness: 0.8, roughness: 0.2 });
@@ -43,8 +43,8 @@ export function createArtifact(scene, THREE, CONFIG, shaders) {
     artifactGroup.position.set(0, CONFIG.artifact.baseY, -5);
     scene.add(artifactGroup);
 
-    // Ajout de u_pulse pour gérer le battement de cœur sur tous les shaders
-    const artifactUniforms = { u_time: { value: 0.0 }, u_hover: { value: 0.0 }, u_pulse: { value: 0.0 }};
+    // Ajout de u_hover_smooth pour gérer les transitions fluides
+    const artifactUniforms = { u_time: { value: 0.0 }, u_hover: { value: 0.0 }, u_hover_smooth: { value: 0.0 }, u_pulse: { value: 0.0 }};
     const artifactGeoBase = new THREE.IcosahedronGeometry(3, 10);
 
     // Couche Interne : PBR Liquide avec altération du Vertex Shader
@@ -74,7 +74,6 @@ export function createArtifact(scene, THREE, CONFIG, shaders) {
     building2_core.castShadow = true;
     artifactGroup.add(building2_core);
 
-    // Custom depth/distance materials pour calculer les ombres sur des vertex déformés
     const depthMat = new THREE.MeshDepthMaterial({ depthPacking: THREE.RGBADepthPacking });
     depthMat.onBeforeCompile = injectChromeShaders;
     building2_core.customDepthMaterial = depthMat;
@@ -83,22 +82,63 @@ export function createArtifact(scene, THREE, CONFIG, shaders) {
     distanceMat.onBeforeCompile = injectChromeShaders;
     building2_core.customDistanceMaterial = distanceMat;
 
-    // Couche Externe : Champ de force GLSL personnalisé
-    const artifactMaterialForceField = new THREE.ShaderMaterial({
-        uniforms: { u_time: artifactUniforms.u_time, u_hover: artifactUniforms.u_hover, u_pulse: artifactUniforms.u_pulse },
-        vertexShader: vertShaderForceField,
-        fragmentShader: fragShaderForceField,
-        transparent: true, blending: THREE.AdditiveBlending,
-        depthWrite: false, side: THREE.DoubleSide, wireframe: false
+    // --- Couche Externe : Coquille Brisée (Shattered Core) ---
+    const shatteredBaseGeo = new THREE.IcosahedronGeometry(3.4, 3);
+    const shatteredGeo = shatteredBaseGeo.toNonIndexed();
+    
+    const positionAttribute = shatteredGeo.attributes.position;
+    const centers = new Float32Array(positionAttribute.count * 3);
+    const randoms = new Float32Array(positionAttribute.count);
+
+    for (let i = 0; i < positionAttribute.count; i += 3) {
+        const v1 = new THREE.Vector3().fromBufferAttribute(positionAttribute, i);
+        const v2 = new THREE.Vector3().fromBufferAttribute(positionAttribute, i + 1);
+        const v3 = new THREE.Vector3().fromBufferAttribute(positionAttribute, i + 2);
+        const center = new THREE.Vector3().add(v1).add(v2).add(v3).divideScalar(3);
+        const rand = Math.random();
+        for (let j = 0; j < 3; j++) {
+            centers[(i + j) * 3] = center.x; centers[(i + j) * 3 + 1] = center.y; centers[(i + j) * 3 + 2] = center.z;
+            randoms[i + j] = rand;
+        }
+    }
+    shatteredGeo.setAttribute('aCenter', new THREE.BufferAttribute(centers, 3));
+    shatteredGeo.setAttribute('aRandom', new THREE.BufferAttribute(randoms, 1));
+
+    const shatteredMat = new THREE.MeshStandardMaterial({
+        color: 0x050508, roughness: 0.1, metalness: 0.8, side: THREE.DoubleSide
     });
 
-    // Anneaux Gyroscopiques de Glyphes
+    shatteredMat.onBeforeCompile = (shader) => {
+        shader.uniforms.u_time = artifactUniforms.u_time;
+        shader.uniforms.u_pulse = artifactUniforms.u_pulse;
+        shader.uniforms.u_hover = artifactUniforms.u_hover_smooth; 
+
+        shader.vertexShader = `
+            uniform float u_time;
+            uniform float u_pulse;
+            uniform float u_hover;
+            attribute vec3 aCenter;
+            attribute float aRandom;
+            ${shader.vertexShader}
+        `;
+
+        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', chunkShatteredVertex);
+    };
+
+    const building2_forcefield = new THREE.Mesh(shatteredGeo, shatteredMat);
+    building2_forcefield.scale.set(1.05, 1.05, 1.05);
+    building2_forcefield.userData = { name: "Projet B : Coquille Brisée (Shattered Core)", isArtifactForceField: true }; 
+    artifactGroup.add(building2_forcefield);
+
+
+    // --- Anneaux Gyroscopiques de Glyphes ---
     const ringGroup = new THREE.Group();
     artifactGroup.add(ringGroup);
 
     const ringUniforms = {
         u_time: artifactUniforms.u_time,
-        u_pulse: artifactUniforms.u_pulse
+        u_pulse: artifactUniforms.u_pulse,
+        u_hover: artifactUniforms.u_hover_smooth // Connecté à l'animation de survol lisse
     };
 
     const ringMat = new THREE.ShaderMaterial({
@@ -129,11 +169,6 @@ export function createArtifact(scene, THREE, CONFIG, shaders) {
 
     ringGroup.add(ring1, ring2, ring3);
 
-    const building2_forcefield = new THREE.Mesh(artifactGeoBase, artifactMaterialForceField);
-    building2_forcefield.scale.set(1.05, 1.05, 1.05);
-    building2_forcefield.userData = { name: "Projet B : Shaders Géométriques", isArtifactForceField: true }; 
-    artifactGroup.add(building2_forcefield);
-
     // --- 3. Exposition de l'API du composant ---
     const neonColor = new THREE.Color();
     
@@ -141,26 +176,35 @@ export function createArtifact(scene, THREE, CONFIG, shaders) {
         interactableMesh: building2_forcefield, // Mesh ciblé par le Raycaster
         coreMesh: building2_core,
         cubeCamera: cubeCamera,
-        artifactUniforms,                       // Exposition pour l'interaction externe (Hover)
+        artifactUniforms,                       
         
         updateAnimation: (time) => {
-            // Lévitation de base
+            // Lissage de l'interaction (Transition douce même si la souris bouge vite)
+            artifactUniforms.u_hover_smooth.value += (artifactUniforms.u_hover.value - artifactUniforms.u_hover_smooth.value) * 0.1;
+            const smoothHover = artifactUniforms.u_hover_smooth.value;
+
+            // Lévitation et Rotation (S'emballe complètement au survol !)
             artifactGroup.rotation.y += 0.003;
-            artifactGroup.rotation.x += 0.001;
             artifactGroup.position.y = CONFIG.artifact.baseY + Math.sin(time * CONFIG.artifact.floatSpeed) * CONFIG.artifact.floatAmplitude;
-            
-            // Rotation des anneaux
-            ring1.rotation.y -= 0.01;
-            ring2.rotation.x += 0.015;
-            ring3.rotation.y += 0.005;
-            ring3.rotation.z -= 0.005;
+
+            // Rotation horizontale du noyau et de la forcefield, accélérant avec le survol
+            const coreSpinSpeed = smoothHover * 0.06; // Vitesse modérée et agréable
+            building2_core.rotation.y += coreSpinSpeed;
+            //building2_forcefield.rotation.y += coreSpinSpeed;
+
+            // Les anneaux accélèrent aussi
+            ring1.rotation.y -= 0.002 + (smoothHover * 0.01);
+            ring2.rotation.x += 0.004 + (smoothHover * 0.01);
+            ring3.rotation.y += 0.001 + (smoothHover * 0.01);
+            ring3.rotation.z -= 0.001 + (smoothHover * 0.01);
 
             artifactUniforms.u_time.value = time;
             
-            // Signal de battement de coeur (Heartbeat)
+            // Signal de battement de coeur (S'arrête au survol)
             const beatFreq = 2.0;
             const beatExponent = 10.0;
-            const currentPulse = Math.pow(Math.sin(time * beatFreq) * 0.5 + 0.5, beatExponent);
+            const rawPulse = Math.pow(Math.sin(time * beatFreq) * 0.5 + 0.5, beatExponent);
+            const currentPulse = rawPulse * (1.0 - smoothHover); // Tombe à 0 progressivement
             artifactUniforms.u_pulse.value = currentPulse;
 
             ringLight1.color.setHSL((time * 0.2) % 1.0, 1.0, 0.5);
@@ -181,7 +225,10 @@ export function createArtifact(scene, THREE, CONFIG, shaders) {
         dispose: () => {
             pedestalMat.dispose(); neonMat.dispose();
             geoBase.dispose(); geoNeon.dispose(); geoTop.dispose();
-            artifactMaterialCore.dispose(); artifactMaterialForceField.dispose();
+            artifactMaterialCore.dispose(); 
+            shatteredMat.dispose();
+            shatteredBaseGeo.dispose();
+            shatteredGeo.dispose();
             artifactGeoBase.dispose(); depthMat.dispose(); distanceMat.dispose();
             ringMat.dispose(); ring1.geometry.dispose(); 
             ring2.geometry.dispose(); ring3.geometry.dispose();

@@ -1,5 +1,6 @@
 uniform float u_time;
-uniform float u_pulse; 
+uniform float u_pulse;
+uniform float u_hover;
 varying vec2 vUv;
 
 // Fonction de bruit aléatoire
@@ -18,12 +19,16 @@ void main() {
 
     // 2. Onde de choc différée (Le battement arrive en retard)
     float localPulse = pow(sin(u_time * 2.0 - delayOffset) * 0.5 + 0.5, 10.0);
+    localPulse *= (1.0 - u_hover);
     
-    // 3. Contraction et explosion de l'anneau
+    // 3. Contraction de base
     float scaleMult = 1.0 - (localPulse * 0.35) + (pow(localPulse, 4.0) * 0.55);
-    transformed *= scaleMult;
 
-    // 4. Léger saut chaotique sur l'axe Y pendant le choc
+    // 3. Écartement massif au survol
+    // Plus l'anneau est grand (ringRadius), plus il s'éloigne loin !
+    scaleMult += u_hover * (0.8 + ringRadius * 0.3); 
+
+    transformed *= scaleMult;
     transformed.y += localPulse * delayIntensity * 0.5;
 
     gl_Position = projectionMatrix * modelViewMatrix * vec4(transformed, 1.0);

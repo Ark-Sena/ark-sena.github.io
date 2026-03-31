@@ -10,10 +10,9 @@ RenderPass = await import("https://esm.sh/three@0.161.0/examples/jsm/postprocess
 UnrealBloomPass = await import("https://esm.sh/three@0.161.0/examples/jsm/postprocessing/UnrealBloomPass.js")
 
 // Chargement asynchrone des assets GLSL
-vertShaderForceField = await FileAttachment("content/scripts/shaders/hologram.vert").text()
-fragShaderForceField = await FileAttachment("content/scripts/shaders/hologram.frag").text()
 chunkChromeNormal = await FileAttachment("content/scripts/shaders/chrome_normal.glsl").text()
 chunkChromeVertex = await FileAttachment("content/scripts/shaders/chrome_vertex.glsl").text()
+chunkShatteredVertex = await FileAttachment("content/scripts/shaders/shattered_vertex.glsl").text()
 vertShaderRing = await FileAttachment("content/scripts/shaders/ring.vert").text()
 fragShaderRing = await FileAttachment("content/scripts/shaders/ring.frag").text()
 vertShaderParticles = await FileAttachment("content/scripts/shaders/particles.vert").text()
@@ -90,7 +89,7 @@ my_portfolio_city = {
     const environmentParts = modEnv.setupEnvironment(scene, THREE, CONFIG);
     
     const myArtifact = modArtifact.createArtifact(scene, THREE, CONFIG, {
-        chunkChromeVertex, chunkChromeNormal, vertShaderForceField, fragShaderForceField, vertShaderRing, fragShaderRing
+        chunkChromeVertex, chunkChromeNormal, chunkShatteredVertex, vertShaderRing, fragShaderRing
     });
 
     const myParticles = modParticles.createStardust(scene, THREE, CONFIG, myArtifact.artifactUniforms, {
