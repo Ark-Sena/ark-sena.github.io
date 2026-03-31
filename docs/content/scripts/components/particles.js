@@ -38,7 +38,8 @@ export function createStardust(scene, THREE, CONFIG, artifactUniforms, shaders) 
     const particleMat = new THREE.ShaderMaterial({
         uniforms: {
             u_time: artifactUniforms.u_time,
-            u_pulse: artifactUniforms.u_pulse 
+            u_pulse: artifactUniforms.u_pulse,
+            u_hover: artifactUniforms.u_hover_smooth
         },
         vertexShader: vertShaderParticles,
         fragmentShader: fragShaderParticles,

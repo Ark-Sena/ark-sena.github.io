@@ -55,7 +55,12 @@ export function createArtifact(scene, THREE, CONFIG, shaders) {
     const artifactMaterialCore = new THREE.MeshPhysicalMaterial({ 
         color: 0xffffff, metalness: 1.0, roughness: 0.0, 
         envMap: cubeRenderTarget.texture,
-        envMapIntensity: 2.0 
+        envMapIntensity: 2.0,
+        iridescence: 1.0,
+        iridescenceIOR: 1.3,
+        iridescenceThicknessRange: [100, 400],
+        emissive: 0xffffff,
+        emissiveIntensity: 0.0
     });
     
     const injectChromeShaders = (shader) => {
@@ -73,6 +78,9 @@ export function createArtifact(scene, THREE, CONFIG, shaders) {
     const building2_core = new THREE.Mesh(artifactGeoBase, artifactMaterialCore);
     building2_core.castShadow = true;
     artifactGroup.add(building2_core);
+
+    const coreInternalLight = new THREE.PointLight(0xffffff, 0, 40);
+    building2_core.add(coreInternalLight);
 
     const depthMat = new THREE.MeshDepthMaterial({ depthPacking: THREE.RGBADepthPacking });
     depthMat.onBeforeCompile = injectChromeShaders;
@@ -171,14 +179,19 @@ export function createArtifact(scene, THREE, CONFIG, shaders) {
 
     // --- 3. Exposition de l'API du composant ---
     const neonColor = new THREE.Color();
-    
+    let heatLevel = 0.0;
+
+    const fireBaseColor = new THREE.Color(0xff3300);
+    const fireHotColor = new THREE.Color(0xffaa00);
+    const currentFireColor = new THREE.Color();
+
     return {
         interactableMesh: building2_forcefield, // Mesh ciblé par le Raycaster
         coreMesh: building2_core,
         cubeCamera: cubeCamera,
         artifactUniforms,                       
         
-        updateAnimation: (time) => {
+        updateAnimation: (time, mouse) => {
             // Lissage de l'interaction (Transition douce même si la souris bouge vite)
             artifactUniforms.u_hover_smooth.value += (artifactUniforms.u_hover.value - artifactUniforms.u_hover_smooth.value) * 0.1;
             const smoothHover = artifactUniforms.u_hover_smooth.value;
@@ -191,6 +204,9 @@ export function createArtifact(scene, THREE, CONFIG, shaders) {
             const coreSpinSpeed = smoothHover * 0.06; // Vitesse modérée et agréable
             building2_core.rotation.y += coreSpinSpeed;
             //building2_forcefield.rotation.y += coreSpinSpeed;
+            if (mouse) {
+             artifactGroup.rotation.z = mouse.x * 0.15;
+            }
 
             // Les anneaux accélèrent aussi
             ring1.rotation.y -= 0.002 + (smoothHover * 0.01);
@@ -215,6 +231,24 @@ export function createArtifact(scene, THREE, CONFIG, shaders) {
             ringLight1.intensity = lightIntensity;
             ringLight2.intensity = lightIntensity;
             ringLight3.intensity = lightIntensity;
+
+            // Intensité pulsante du cœur et changement de couleur cyclique
+            currentFireColor.lerpColors(fireBaseColor, fireHotColor, heatLevel);
+            coreInternalLight.intensity = currentPulse * (1500.0 + heatLevel * 2000.0);
+            coreInternalLight.color.copy(currentFireColor);
+            artifactMaterialCore.emissive.copy(currentFireColor);
+            artifactMaterialCore.emissiveIntensity = currentPulse * (1.5 + heatLevel);
+            if (artifactUniforms.u_hover.value > 0.5) {
+                heatLevel += 0.005; 
+            } 
+            else {
+                heatLevel -= 0.01;  
+            }
+            
+            heatLevel = Math.max(0.0, Math.min(1.0, heatLevel));
+
+            artifactMaterialCore.roughness = heatLevel * 0.3; 
+            artifactMaterialCore.iridescence = 1.0 - heatLevel;
             
             // Cycle RGB de la lumière au sol
             neonColor.setHSL((time * CONFIG.artifact.rgbCycleSpeed) % 1.0, 1.0, 0.5);

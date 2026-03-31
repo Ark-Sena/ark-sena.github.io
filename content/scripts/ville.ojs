@@ -47,9 +47,11 @@ my_portfolio_city = {
 
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(w, h);
-    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setPixelRatio(window.devicePixelRatio, 2);
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.2;
 
     const pmremGenerator = new THREE.PMREMGenerator(renderer);
     scene.environment = pmremGenerator.fromScene(new RoomEnvironment.RoomEnvironment(), 0.04).texture;
@@ -141,10 +143,9 @@ my_portfolio_city = {
     // 7. Render Loop
     const clock = new THREE.Clock();
     let frameId;
-
     const animate = () => {
         controls.update();
-        const time = clock.getElapsedTime();
+        const time = clock.getElapsedTime()
 
         // Calcul des vecteurs de déplacement caméra
         right.setFromMatrixColumn(camera.matrix, 0).normalize();
@@ -161,7 +162,7 @@ my_portfolio_city = {
         }
 
         // Délégation de l'animation au composant
-        myArtifact.updateAnimation(time);
+        myArtifact.updateAnimation(time, mouse);
         myParticles.updateAnimation();
 
         // On cache temporairement l'artéfact pour éviter les auto-reflets dans la cubeCamera
@@ -169,7 +170,7 @@ my_portfolio_city = {
         myArtifact.interactableMesh.visible = false;
 
         // On demande à la caméra de l'artéfact de calculer les reflets (anneaux, sol, lumières)
-        myArtifact.cubeCamera.update(renderer, scene);
+        
 
         // On réaffiche tout
         myArtifact.coreMesh.visible = true;
@@ -202,6 +203,10 @@ my_portfolio_city = {
         composer.render();
         frameId = requestAnimationFrame(animate);
     };
+
+    myArtifact.coreMesh.visible = false;
+    myArtifact.cubeCamera.update(renderer, scene);
+    myArtifact.coreMesh.visible = true;
 
     animate();
 

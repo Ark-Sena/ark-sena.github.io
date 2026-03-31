@@ -1,4 +1,5 @@
 uniform float u_time;
+uniform float u_hover;
 attribute float aRandom;
 varying float vRandom;
 
@@ -8,6 +9,8 @@ void main() {
     
     // Applique un flottement organique individuel
     pos.y += sin(u_time * 2.0 + aRandom * 10.0) * 0.5;
+
+    pos -= normalize(pos) * (u_hover * 3.0);
     
     vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);
     
