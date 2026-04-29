@@ -11,8 +11,8 @@ website:
       - href: demo.qmd
         text: Graphic Demo
       - href: photogrametry.qmd
-        text: Photogrametrie
-  page-footer: "© 2026 ArkSena"
+        text: Photogrametry
+  page-footer: "© 2026 Mathys Carboila Dias | Built with Quarto & Three.js"
   search: false
 
 format:

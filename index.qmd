@@ -3,16 +3,70 @@ format: html
 editor: visual
 ---
 
-# Who am I ?
+# About
 
-Hey ! Thank you for reaching my portfolio !\
-Let me presents me first !\
-I'm Mathys Carboila Dias, a student in Master Degree in Computers Graphics at Limoges.
+Hello! I am **Mathys Carboila Dias**, a Master's student in Computer Graphics at ISICG (Limoges). I specialize in **real-time rendering, ray tracing, and photogrammetry**, with a strong interest in low-level engine integration. 
 
-## My Projects
+I am currently seeking a **6-month internship in real-time engine development** starting in **February 2027**.
 
-Here I'll share some of my academic and professional project:
+---
 
-## Some of my Social Media
+## Leadership
+- **President** of IGILIM (Association of Computer Graphics and Image students at Limoges).
 
-- [My GitHub](https://github.com/arksena)
+---
+
+## Current Focus
+- **Mobile Game Development:** Developing a mobile project in Unity with Firebase integration for real-time economy and data management.
+- **Engine Development:** Building a custom C++ CPU Ray-Tracer and exploring real-time rendering techniques in C++.
+- **Hominis Project:** Developing an AI-driven human simulation that trains autonomously within a procedurally generated world.
+
+---
+
+## Technical Highlights
+
+### Custom Whitted Ray Tracer (C++)
+- **Architecture:** Modular renderer supporting implicit surfaces and triangle meshes.
+- **Performance:** Optimized **BVH** (Bounding Volume Hierarchy) with centroid-based axis partitioning and **OpenMP** multithreading for pixel-level workload distribution.
+- **Rendering:** Recursive Whitted-style integrator supporting reflections, refractions, and physically-based materials (Cook-Torrance BRDF).
+
+### 3D Graphics Engine (OpenGL/C++)
+- **Architecture:** Modular framework implementing a deferred rendering pipeline.
+- **Pipeline:** Complex G-Buffer management (6 attachments: Position, Normals, Ambient, Diffuse, Specular, Depth).
+- **Post-Processing:** Comprehensive HDR-enabled stack including Bloom, FXAA, and Gamma correction.
+
+---
+
+## Education & Skills
+
+### Academic Background
+- **Master's in Computer Graphics (ISICG):** Focused on 3D Engines, Ray-Tracing, GPGPU (CUDA), and Parallel Programming.
+- **Bachelor in Computer Science.**
+
+### Technical Skills
+- **Languages:** C/C++, Python, GLSL, JS/TS
+- **Engines & Softwares:** Unity, Blender, RealityScan/RC
+- **Graphics (Rendering/Shaders):** Three.js/WebGL, Ray Tracing, PBR, GPGPU (CUDA)
+- **Tools:** Git/GitHub, Trello
+
+### Languages
+- **French & Portuguese:** Native
+- **English:** B2 (Technical proficiency)
+- **Spanish:** B1
+- **Japanese:** A1
+
+---
+
+## Projects
+
+- [Graphic Demo](demo.qmd) - Real-time 3D scene (Three.js), shaders, and interactions.
+- [Photogrammetry](photogrametry.qmd) - Technical study from raw photo acquisition to optimized web rendering.
+- **Mobile Project** - Development of a mobile game in Unity with Firebase integration.
+
+---
+
+## Contact
+I am actively seeking an internship in real-time engine development for February 2027. Let's talk technical!
+
+- [GitHub](https://github.com/Ark-Sena)
+- [LinkedIn](https://www.linkedin.com/in/mathys-carboila-dias-a37391232/)

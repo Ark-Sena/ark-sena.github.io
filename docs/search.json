@@ -2,22 +2,50 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Who am I ?",
+    "title": "About",
     "section": "",
-    "text": "Hey ! Thank you for reaching my portfolio !\nLet me presents me first !\nI’m Mathys Carboila Dias, a student in Master Degree in Computers Graphics at Limoges.\n\n\nHere I’ll share some of my academic and professional project:\n\n\n\n\nMy GitHub"
+    "text": "Hello! I am Mathys Carboila Dias, a Master’s student in Computer Graphics at ISICG (Limoges). I specialize in real-time rendering, ray tracing, and photogrammetry, with a strong interest in low-level engine integration.\nI am currently seeking a 6-month internship in real-time engine development starting in February 2027.\n\n\n\n\nPresident of IGILIM (Association of Computer Graphics and Image students at Limoges).\n\n\n\n\n\n\nMobile Game Development: Developing a mobile project in Unity with Firebase integration for real-time economy and data management.\nEngine Development: Building a custom C++ CPU Ray-Tracer and exploring real-time rendering techniques in C++.\nHominis Project: Developing an AI-driven human simulation that trains autonomously within a procedurally generated world.\n\n\n\n\n\n\n\n\nArchitecture: Modular renderer supporting implicit surfaces and triangle meshes.\nPerformance: Optimized BVH (Bounding Volume Hierarchy) with centroid-based axis partitioning and OpenMP multithreading for pixel-level workload distribution.\nRendering: Recursive Whitted-style integrator supporting reflections, refractions, and physically-based materials (Cook-Torrance BRDF).\n\n\n\n\n\nArchitecture: Modular framework implementing a deferred rendering pipeline.\nPipeline: Complex G-Buffer management (6 attachments: Position, Normals, Ambient, Diffuse, Specular, Depth).\nPost-Processing: Comprehensive HDR-enabled stack including Bloom, FXAA, and Gamma correction.\n\n\n\n\n\n\n\n\n\nMaster’s in Computer Graphics (ISICG): Focused on 3D Engines, Ray-Tracing, GPGPU (CUDA), and Parallel Programming.\nBachelor in Computer Science.\n\n\n\n\n\nLanguages: C/C++, Python, GLSL, JS/TS\nEngines & Softwares: Unity, Blender, RealityScan/RC\nGraphics (Rendering/Shaders): Three.js/WebGL, Ray Tracing, PBR, GPGPU (CUDA)\nTools: Git/GitHub, Trello\n\n\n\n\n\nFrench & Portuguese: Native\nEnglish: B2 (Technical proficiency)\nSpanish: B1\nJapanese: A1\n\n\n\n\n\n\n\nGraphic Demo - Real-time 3D scene (Three.js), shaders, and interactions.\nPhotogrammetry - Technical study from raw photo acquisition to optimized web rendering.\nMobile Project - Development of a mobile game in Unity with Firebase integration.\n\n\n\n\n\nI am actively seeking an internship in real-time engine development for February 2027. Let’s talk technical!\n\nGitHub\nLinkedIn"
   },
   {
-    "objectID": "index.html#my-projects",
-    "href": "index.html#my-projects",
-    "title": "Who am I ?",
+    "objectID": "index.html#leadership",
+    "href": "index.html#leadership",
+    "title": "About",
     "section": "",
-    "text": "Here I’ll share some of my academic and professional project:"
+    "text": "President of IGILIM (Association of Computer Graphics and Image students at Limoges)."
   },
   {
-    "objectID": "index.html#some-of-my-social-media",
-    "href": "index.html#some-of-my-social-media",
-    "title": "Who am I ?",
+    "objectID": "index.html#current-focus",
+    "href": "index.html#current-focus",
+    "title": "About",
     "section": "",
-    "text": "My GitHub"
+    "text": "Mobile Game Development: Developing a mobile project in Unity with Firebase integration for real-time economy and data management.\nEngine Development: Building a custom C++ CPU Ray-Tracer and exploring real-time rendering techniques in C++.\nHominis Project: Developing an AI-driven human simulation that trains autonomously within a procedurally generated world."
+  },
+  {
+    "objectID": "index.html#technical-highlights",
+    "href": "index.html#technical-highlights",
+    "title": "About",
+    "section": "",
+    "text": "Architecture: Modular renderer supporting implicit surfaces and triangle meshes.\nPerformance: Optimized BVH (Bounding Volume Hierarchy) with centroid-based axis partitioning and OpenMP multithreading for pixel-level workload distribution.\nRendering: Recursive Whitted-style integrator supporting reflections, refractions, and physically-based materials (Cook-Torrance BRDF).\n\n\n\n\n\nArchitecture: Modular framework implementing a deferred rendering pipeline.\nPipeline: Complex G-Buffer management (6 attachments: Position, Normals, Ambient, Diffuse, Specular, Depth).\nPost-Processing: Comprehensive HDR-enabled stack including Bloom, FXAA, and Gamma correction."
+  },
+  {
+    "objectID": "index.html#education-skills",
+    "href": "index.html#education-skills",
+    "title": "About",
+    "section": "",
+    "text": "Master’s in Computer Graphics (ISICG): Focused on 3D Engines, Ray-Tracing, GPGPU (CUDA), and Parallel Programming.\nBachelor in Computer Science.\n\n\n\n\n\nLanguages: C/C++, Python, GLSL, JS/TS\nEngines & Softwares: Unity, Blender, RealityScan/RC\nGraphics (Rendering/Shaders): Three.js/WebGL, Ray Tracing, PBR, GPGPU (CUDA)\nTools: Git/GitHub, Trello\n\n\n\n\n\nFrench & Portuguese: Native\nEnglish: B2 (Technical proficiency)\nSpanish: B1\nJapanese: A1"
+  },
+  {
+    "objectID": "index.html#projects",
+    "href": "index.html#projects",
+    "title": "About",
+    "section": "",
+    "text": "Graphic Demo - Real-time 3D scene (Three.js), shaders, and interactions.\nPhotogrammetry - Technical study from raw photo acquisition to optimized web rendering.\nMobile Project - Development of a mobile game in Unity with Firebase integration."
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "About",
+    "section": "",
+    "text": "I am actively seeking an internship in real-time engine development for February 2027. Let’s talk technical!\n\nGitHub\nLinkedIn"
   }
 ]

@@ -251,7 +251,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./photogrametry.html"> 
-<span class="menu-text">Photogrametrie</span></a>
+<span class="menu-text">Photogrametry</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -270,10 +270,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#who-am-i" id="toc-who-am-i" class="nav-link active" data-scroll-target="#who-am-i">Who am I ?</a>
+  <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">About</a>
   <ul class="collapse">
-  <li><a href="#my-projects" id="toc-my-projects" class="nav-link" data-scroll-target="#my-projects">My Projects</a></li>
-  <li><a href="#some-of-my-social-media" id="toc-some-of-my-social-media" class="nav-link" data-scroll-target="#some-of-my-social-media">Some of my Social Media</a></li>
+  <li><a href="#leadership" id="toc-leadership" class="nav-link" data-scroll-target="#leadership">Leadership</a></li>
+  <li><a href="#current-focus" id="toc-current-focus" class="nav-link" data-scroll-target="#current-focus">Current Focus</a></li>
+  <li><a href="#technical-highlights" id="toc-technical-highlights" class="nav-link" data-scroll-target="#technical-highlights">Technical Highlights</a>
+  <ul class="collapse">
+  <li><a href="#custom-whitted-ray-tracer-c" id="toc-custom-whitted-ray-tracer-c" class="nav-link" data-scroll-target="#custom-whitted-ray-tracer-c">Custom Whitted Ray Tracer (C++)</a></li>
+  <li><a href="#d-graphics-engine-openglc" id="toc-d-graphics-engine-openglc" class="nav-link" data-scroll-target="#d-graphics-engine-openglc">3D Graphics Engine (OpenGL/C++)</a></li>
+  </ul></li>
+  <li><a href="#education-skills" id="toc-education-skills" class="nav-link" data-scroll-target="#education-skills">Education &amp; Skills</a>
+  <ul class="collapse">
+  <li><a href="#academic-background" id="toc-academic-background" class="nav-link" data-scroll-target="#academic-background">Academic Background</a></li>
+  <li><a href="#technical-skills" id="toc-technical-skills" class="nav-link" data-scroll-target="#technical-skills">Technical Skills</a></li>
+  <li><a href="#languages" id="toc-languages" class="nav-link" data-scroll-target="#languages">Languages</a></li>
+  </ul></li>
+  <li><a href="#projects" id="toc-projects" class="nav-link" data-scroll-target="#projects">Projects</a></li>
+  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -285,19 +298,91 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="who-am-i" class="level1">
-<h1>Who am I ?</h1>
-<p>Hey ! Thank you for reaching my portfolio !<br>
-Let me presents me first !<br>
-I’m Mathys Carboila Dias, a student in Master Degree in Computers Graphics at Limoges.</p>
-<section id="my-projects" class="level2">
-<h2 class="anchored" data-anchor-id="my-projects">My Projects</h2>
-<p>Here I’ll share some of my academic and professional project:</p>
-</section>
-<section id="some-of-my-social-media" class="level2">
-<h2 class="anchored" data-anchor-id="some-of-my-social-media">Some of my Social Media</h2>
+<section id="about" class="level1">
+<h1>About</h1>
+<p>Hello! I am <strong>Mathys Carboila Dias</strong>, a Master’s student in Computer Graphics at ISICG (Limoges). I specialize in <strong>real-time rendering, ray tracing, and photogrammetry</strong>, with a strong interest in low-level engine integration.</p>
+<p>I am currently seeking a <strong>6-month internship in real-time engine development</strong> starting in <strong>February 2027</strong>.</p>
+<hr>
+<section id="leadership" class="level2">
+<h2 class="anchored" data-anchor-id="leadership">Leadership</h2>
 <ul>
-<li><a href="https://github.com/arksena">My GitHub</a></li>
+<li><strong>President</strong> of IGILIM (Association of Computer Graphics and Image students at Limoges).</li>
+</ul>
+<hr>
+</section>
+<section id="current-focus" class="level2">
+<h2 class="anchored" data-anchor-id="current-focus">Current Focus</h2>
+<ul>
+<li><strong>Mobile Game Development:</strong> Developing a mobile project in Unity with Firebase integration for real-time economy and data management.</li>
+<li><strong>Engine Development:</strong> Building a custom C++ CPU Ray-Tracer and exploring real-time rendering techniques in C++.</li>
+<li><strong>Hominis Project:</strong> Developing an AI-driven human simulation that trains autonomously within a procedurally generated world.</li>
+</ul>
+<hr>
+</section>
+<section id="technical-highlights" class="level2">
+<h2 class="anchored" data-anchor-id="technical-highlights">Technical Highlights</h2>
+<section id="custom-whitted-ray-tracer-c" class="level3">
+<h3 class="anchored" data-anchor-id="custom-whitted-ray-tracer-c">Custom Whitted Ray Tracer (C++)</h3>
+<ul>
+<li><strong>Architecture:</strong> Modular renderer supporting implicit surfaces and triangle meshes.</li>
+<li><strong>Performance:</strong> Optimized <strong>BVH</strong> (Bounding Volume Hierarchy) with centroid-based axis partitioning and <strong>OpenMP</strong> multithreading for pixel-level workload distribution.</li>
+<li><strong>Rendering:</strong> Recursive Whitted-style integrator supporting reflections, refractions, and physically-based materials (Cook-Torrance BRDF).</li>
+</ul>
+</section>
+<section id="d-graphics-engine-openglc" class="level3">
+<h3 class="anchored" data-anchor-id="d-graphics-engine-openglc">3D Graphics Engine (OpenGL/C++)</h3>
+<ul>
+<li><strong>Architecture:</strong> Modular framework implementing a deferred rendering pipeline.</li>
+<li><strong>Pipeline:</strong> Complex G-Buffer management (6 attachments: Position, Normals, Ambient, Diffuse, Specular, Depth).</li>
+<li><strong>Post-Processing:</strong> Comprehensive HDR-enabled stack including Bloom, FXAA, and Gamma correction.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="education-skills" class="level2">
+<h2 class="anchored" data-anchor-id="education-skills">Education &amp; Skills</h2>
+<section id="academic-background" class="level3">
+<h3 class="anchored" data-anchor-id="academic-background">Academic Background</h3>
+<ul>
+<li><strong>Master’s in Computer Graphics (ISICG):</strong> Focused on 3D Engines, Ray-Tracing, GPGPU (CUDA), and Parallel Programming.</li>
+<li><strong>Bachelor in Computer Science.</strong></li>
+</ul>
+</section>
+<section id="technical-skills" class="level3">
+<h3 class="anchored" data-anchor-id="technical-skills">Technical Skills</h3>
+<ul>
+<li><strong>Languages:</strong> C/C++, Python, GLSL, JS/TS</li>
+<li><strong>Engines &amp; Softwares:</strong> Unity, Blender, RealityScan/RC</li>
+<li><strong>Graphics (Rendering/Shaders):</strong> Three.js/WebGL, Ray Tracing, PBR, GPGPU (CUDA)</li>
+<li><strong>Tools:</strong> Git/GitHub, Trello</li>
+</ul>
+</section>
+<section id="languages" class="level3">
+<h3 class="anchored" data-anchor-id="languages">Languages</h3>
+<ul>
+<li><strong>French &amp; Portuguese:</strong> Native</li>
+<li><strong>English:</strong> B2 (Technical proficiency)</li>
+<li><strong>Spanish:</strong> B1</li>
+<li><strong>Japanese:</strong> A1</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="projects" class="level2">
+<h2 class="anchored" data-anchor-id="projects">Projects</h2>
+<ul>
+<li><a href="./demo.html">Graphic Demo</a> - Real-time 3D scene (Three.js), shaders, and interactions.</li>
+<li><a href="./photogrametry.html">Photogrammetry</a> - Technical study from raw photo acquisition to optimized web rendering.</li>
+<li><strong>Mobile Project</strong> - Development of a mobile game in Unity with Firebase integration.</li>
+</ul>
+<hr>
+</section>
+<section id="contact" class="level2">
+<h2 class="anchored" data-anchor-id="contact">Contact</h2>
+<p>I am actively seeking an internship in real-time engine development for February 2027. Let’s talk technical!</p>
+<ul>
+<li><a href="https://github.com/Ark-Sena">GitHub</a></li>
+<li><a href="https://www.linkedin.com/in/mathys-carboila-dias-a37391232/">LinkedIn</a></li>
 </ul>
 
 
@@ -725,7 +810,7 @@ I’m Mathys Carboila Dias, a student in Master Degree in Computers Graphics at 
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>© 2026 ArkSena</p>
+<p>© 2026 Mathys Carboila Dias | Built with Quarto &amp; Three.js</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;

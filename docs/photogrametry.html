@@ -288,7 +288,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./photogrametry.html" aria-current="page"> 
-<span class="menu-text">Photogrametrie</span></a>
+<span class="menu-text">Photogrametry</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -504,38 +504,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 <div id="info-panel">
-  <h2>Synthèse d'Images par Rendu Inverse</h2>
-  <p>Dans le cadre de mon Master, cette page présente la numérisation d'un objet physique et son intégration dans un moteur web 3D. L'objectif de ce projet est de démontrer la maîtrise du processus de <strong>rendu inverse</strong> : reconstruire une structure géométrique tridimensionnelle à partir d'observations 2D (des photographies).</p>
+  <h2>Inverse Rendering: A Case Study</h2>
+  <p>This project documents the transformation of a physical object into a web-ready 3D asset, highlighting the inverse rendering pipeline.</p>
 
-  <h3>1. Le Sujet (Cyberpunk 2077)</h3>
-  <p>L'objet numérisé est une figurine de <strong>Johnny Silverhand</strong>, personnage iconique de la franchise <strong>Cyberpunk 2077</strong>. L'objet présente des caractéristiques mixtes : sa surface globalement <strong>mate et texturée</strong> (vêtements) a grandement facilité la détection de points caractéristiques. Cependant, le <strong>bras métallique réfléchissant</strong> et les <strong>lunettes transparentes</strong> représentent des défis structurels majeurs en photogrammétrie. Ces matériaux perturbent la <em>géométrie épipolaire</em>, rendant l'appariement des points complexe lors des changements de point de vue.</p>
+  <h3>1. The Subject: Cyberpunk 2077</h3>
+  <p>I digitized a Johnny Silverhand figurine to push the pipeline to its limits. The challenge lay in the mix of materials: while matte clothing textures tracked perfectly, the reflective metallic arm and transparent glasses tested the robustness of the epipolar geometry and point matching.</p>
 
-  <h3>2. Acquisition Photographique</h3>
-  <p>Le modèle repose sur la capture de <strong>322 images</strong> (Samsung S26 Ultra, résolution 6120x8160 px). Pour maximiser la précision algorithmique :</p>
+  <h3>2. Acquisition Pipeline</h3>
+  <p>To ensure high-quality reconstruction from 322 images (Samsung S26 Ultra, 6120x8160 px), I maintained a strict workflow:</p>
   <ul>
-    <li>Utilisation d'un <strong>plateau tournant</strong> pour maintenir une distance focale constante et simplifier le déplacement.</li>
-    <li>Maintien d'un <strong>taux de recouvrement massif (&gt;80%)</strong> entre les clichés adjacents pour garantir une triangulation robuste.</li>
-    <li>Utilisation d'un <strong>éclairage diffus</strong> en intérieur pour minimiser les ombres portées et les reflets parasites.</li>
+    <li><strong>Controlled Capture:</strong> Constant focal length via turntable.</li>
+    <li><strong>Data Density:</strong> &gt;80% image overlap to guarantee triangulation stability.</li>
+    <li><strong>Lighting:</strong> Diffuse interior setup to minimize parasitic reflections and harsh shadows.</li>
   </ul>
 
-  <h3>3. Reconstruction (Pipeline Rendu Inverse)</h3>
-  <p>Les photographies ont été ingérées dans <strong>RealityScan</strong>, qui exécute la chaîne algorithmique classique :</p>
+  <h3>3. Computational Reconstruction</h3>
+  <p>The images were processed using RealityScan, following standard industry algorithms:</p>
   <ul>
-    <li><strong>Structure from Motion (SfM) :</strong> Détection des correspondances 2D-2D entre les images (via des algorithmes type SIFT). Cela permet d'estimer simultanément les paramètres intrinsèques et extrinsèques (poses) des caméras, et de trianguler un <em>nuage de points épars</em>.</li>
-    <li><strong>Multi-View Stereo (MVS) :</strong> Utilisation de la géométrie de la caméra pour inférer la profondeur des pixels et générer un <em>nuage de points dense</em>.</li>
-    <li><strong>Reconstruction de Surface :</strong> Calcul d'un maillage polygonal (Mesh) à partir du nuage dense (par ex. via l'algorithme de Poisson) et projection des images originales pour la texturisation.</li>
+    <li><strong>Structure from Motion (SfM):</strong> Estimating camera intrinsics/extrinsics and triangulating a sparse point cloud.</li>
+    <li><strong>Multi-View Stereo (MVS):</strong> Pixel-depth inference for a dense point cloud.</li>
+    <li><strong>Surface Reconstruction:</strong> Generating the mesh (Poisson algorithm) and re-projecting textures.</li>
   </ul>
 
-  <h3>4. Post-Traitement (Blender)</h3>
-  <p>Le maillage brut a été nettoyé et optimisé dans <strong>Blender</strong> pour le transformer en <em>asset</em> exploitable :</p>
+  <h3>4. Optimization for Web</h3>
+  <p>Raw scans are unusable for real-time applications without rigorous cleanup in <strong>Blender</strong>:</p>
   <ul>
-    <li><strong>Nettoyage :</strong> Suppression de la géométrie non-désirée (support du plateau).</li>
-    <li><strong>Correction :</strong> Rebouchage topologique des trous engendrés par les erreurs algorithmiques sur les surfaces réfléchissantes.</li>
-    <li><strong>Optimisation :</strong> Application du modificateur <em>Decimate</em> pour réduire drastiquement la densité polygonale (retopologie), étape indispensable pour le rendu web en temps réel.</li>
+    <li><strong>Cleanup:</strong> Removing non-target geometry (platform base).</li>
+    <li><strong>Repair:</strong> Topological hole-filling where algorithms failed on reflective surfaces.</li>
+    <li><strong>Decimation:</strong> Reducing polygon count for real-time web performance while preserving visual integrity.</li>
   </ul>
 
-  <h3>5. Rendu WebGL (Three.js)</h3>
-  <p>Le résultat final est exporté au format compressé <strong>.glb</strong>. La scène est rendue avec <strong>Three.js</strong>, respectant les bonnes pratiques d'intégration : fond neutre, grille au sol, axes d'orientation, contrôles de caméra orbitaux, et un éclairage multi-directionnel pour mettre en valeur les volumes du modèle.</p>
+  <h3>5. WebGL Renders</h3>
+  <p>The final optimized <strong>.glb</strong> asset is rendered in <strong>Three.js</strong> using a customized lighting environment, orbital controls, and material settings tailored for web display.</p>
 </div>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="244" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 243;"><span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { my_photogrametry_canvas } <span class="im">from</span> <span class="st">"./content/scripts/photogrametrie.ojs"</span></span>
@@ -991,7 +991,7 @@ window._ojs.runtime.interpretFromScriptTags();
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>© 2026 ArkSena</p>
+<p>© 2026 Mathys Carboila Dias | Built with Quarto &amp; Three.js</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;
