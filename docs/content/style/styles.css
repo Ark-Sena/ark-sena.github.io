@@ -1,0 +1,42 @@
+:root {
+  --header-height: 64px;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+body.quarto-light {
+  background-color: #ffffff;
+}
+
+body.quarto-dark {
+  background-color: #1a1a1a;
+}
+
+#quarto-header,
+#quarto-header .navbar {
+  height: var(--header-height);
+  min-height: var(--header-height);
+}
+
+#quarto-header .navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+  align-items: center;
+}
+
+#quarto-header .navbar-brand,
+#quarto-header .nav-link,
+#quarto-header .navbar-toggler {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+}
+
+/* Supprimer le bouton burger */
+#quarto-header .navbar-toggler {
+  display: none !important;
+}

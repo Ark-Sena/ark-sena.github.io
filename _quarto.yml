@@ -10,12 +10,17 @@ website:
         text: Home
       - href: demo.qmd
         text: Graphic Demo
+      - href: photogrametry.qmd
+        text: Photogrametrie
   page-footer: "© 2026 ArkSena"
   search: false
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: cosmo
+      dark: darkly
+    css: content/style/styles.css
     toc: true
 
 execute:

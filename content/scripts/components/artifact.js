@@ -92,7 +92,7 @@ export function createArtifact(scene, THREE, CONFIG, shaders) {
 
     // --- Couche Externe : Coquille Brisée (Shattered Core) ---
     const shatteredBaseGeo = new THREE.IcosahedronGeometry(3.4, 3);
-    const shatteredGeo = shatteredBaseGeo.toNonIndexed();
+    const shatteredGeo = shatteredBaseGeo.index ? shatteredBaseGeo.toNonIndexed() : shatteredBaseGeo.clone();
     
     const positionAttribute = shatteredGeo.attributes.position;
     const centers = new Float32Array(positionAttribute.count * 3);

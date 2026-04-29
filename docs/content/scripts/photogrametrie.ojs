@@ -1,0 +1,194 @@
+/**
+ * Visualiseur photogrammetrie (OJS Context).
+ * Charge les modeles GLTF brut/optimise, configure la scene et gere la comparaison d'opacite.
+ */
+THREE = await import("https://esm.sh/three@0.161.0")
+OrbitControls = await import("https://esm.sh/three@0.161.0/examples/jsm/controls/OrbitControls.js")
+GLTFLoader = await import("https://esm.sh/three@0.161.0/examples/jsm/loaders/GLTFLoader.js")
+
+my_photogrametry_canvas = {
+    let w = window.innerWidth;
+    let h = window.innerHeight;
+
+    // 1. Initialisation WebGL & Scene
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x222222);
+
+    const camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 1000);
+    camera.position.set(0, 2, 5);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(w, h);
+    renderer.setPixelRatio(window.devicePixelRatio, 2);
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.0;
+
+    const controls = new OrbitControls.OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.05;
+    controls.maxPolarAngle = Math.PI / 2 - 0.05;
+
+    // 2. Eclairage (Ambient + Directionnels)
+    const ambientLight = new THREE.AmbientLight(0xffffff, 2.0); 
+    scene.add(ambientLight);
+    const dirLight1 = new THREE.DirectionalLight(0xffffff, 2.0);
+    dirLight1.position.set(5, 10, 7.5);
+    dirLight1.castShadow = true;
+    dirLight1.shadow.mapSize.width = 2048;
+    dirLight1.shadow.mapSize.height = 2048;
+    scene.add(dirLight1);
+    const dirLight2 = new THREE.DirectionalLight(0xffffff, 1.0); 
+    dirLight2.position.set(-5, 5, -7.5);
+    scene.add(dirLight2);
+    const fillLight = new THREE.DirectionalLight(0xffffff, 1.5); 
+    fillLight.position.set(0, 0, 10);
+    scene.add(fillLight);
+
+    // 3. Aides visuelles (Grille + Axes)
+    const gridHelper = new THREE.GridHelper(1000, 1000, 0x888888, 0x444444);
+    scene.add(gridHelper);
+
+    const axesScene = new THREE.Scene();
+    const axesCamera = new THREE.PerspectiveCamera(50, 1, 0.1, 10);
+    axesCamera.position.set(0, 0, 2);
+    const axesHelper = new THREE.AxesHelper(1);
+    axesScene.add(axesHelper);
+    renderer.autoClear = false;
+
+    // 4. Chargement des modeles (GLTF)
+    const loader = new GLTFLoader.GLTFLoader();
+    const [gltfBrut, gltfOpti] = await Promise.all([
+        loader.loadAsync(await FileAttachment("content/objects/johnny.glb").url()),
+        loader.loadAsync(await FileAttachment("content/objects/johnny_original.glb").url())
+    ]);
+
+    // UI: masquer l'indicateur de chargement
+    document.getElementById('loader').style.display = 'none';
+
+    let meshBrut = gltfBrut.scene;
+    let meshOpti = gltfOpti.scene;
+
+    // 5. Normalisation des meshes (echelle, sol, materiaux)
+    const setupModel = (model) => {
+        const box = new THREE.Box3().setFromObject(model);
+        const size = box.getSize(new THREE.Vector3());
+        const maxDimOriginal = Math.max(size.x, size.y, size.z);
+        const targetMaxDim = 6.0;
+        const scaleFactor = targetMaxDim / maxDimOriginal;
+        
+        model.scale.set(scaleFactor, scaleFactor, scaleFactor);
+        model.rotation.y = -Math.PI / 2 - 0.5;
+        
+        // Recalculer la bounding box apres scaling et rotation
+        const scaledBox = new THREE.Box3().setFromObject(model);
+        model.position.set(0, -scaledBox.min.y, 0); 
+        
+        model.traverse((child) => {
+            if (child.isMesh) {
+                child.castShadow = true;
+                child.receiveShadow = true;
+                child.material.transparent = true;
+                child.material.opacity = 1;
+                child.material.side = THREE.DoubleSide;
+                child.material.polygonOffset = true;
+                child.material.polygonOffsetFactor = 1;
+                child.material.polygonOffsetUnits = 1;
+            }
+        });
+        scene.add(model);
+        return { size, maxDim: maxDimOriginal * scaleFactor };
+    };
+
+    setupModel(meshBrut);
+    setupModel(meshOpti);
+    
+    // 6. Comparaison brut vs optimise (opacite + slider)
+    // Fonction utilitaire pour l'opacite
+    const setOpacity = (obj, op) => {
+        obj.traverse(c => {
+            if (c.isMesh) {
+                if (Array.isArray(c.material)) c.material.forEach(m => { m.transparent = (op < 1); m.opacity = op; });
+                else { c.material.transparent = (op < 1); c.material.opacity = op; }
+            }
+        });
+    };
+    
+    // Slider pour opacite
+    document.getElementById('compare-slider').oninput = (e) => {
+        const val = parseFloat(e.target.value);
+        // Optimise visible quand val est proche de 0 (valeur 1-val)
+        setOpacity(meshOpti, 1 - val);
+        // Brut visible quand val est proche de 1 (valeur val)
+        setOpacity(meshBrut, val);
+    };
+
+    // Initialisation opacite : 0 = optimise, 1 = brut
+    setOpacity(meshOpti, 0);
+    setOpacity(meshBrut, 1);
+
+    // 7. Cadrage initial & reset
+    // Ajuster la camera pour englober le modele optimise
+    const box = new THREE.Box3().setFromObject(meshOpti);
+    const size = box.getSize(new THREE.Vector3());
+    const maxDim = Math.max(size.x, size.y, size.z);
+    const fov = camera.fov * (Math.PI / 180);
+    let cameraZ = Math.abs(maxDim / 2 / Math.tan(fov / 2)) * 2.0;
+    
+    const initCamPos = { x: 0, y: size.y / 2 + maxDim / 1.5, z: cameraZ };
+    const initControlsTarget = { x: 0, y: size.y / 2, z: 0 };
+    camera.position.set(initCamPos.x, initCamPos.y, initCamPos.z);
+    controls.target.set(initControlsTarget.x, initControlsTarget.y, initControlsTarget.z);
+    controls.update();
+
+    document.getElementById('reset-view').onclick = () => {
+        camera.position.set(initCamPos.x, initCamPos.y, initCamPos.z);
+        controls.target.set(initControlsTarget.x, initControlsTarget.y, initControlsTarget.z);
+        controls.update();
+    };
+
+    // 8. Resize
+    const onWindowResize = () => {
+        w = window.innerWidth;
+        h = window.innerHeight;
+        camera.aspect = w / h; 
+        camera.updateProjectionMatrix();
+        renderer.setSize(w, h);
+    };
+    window.addEventListener('resize', onWindowResize);
+
+    // 9. Boucle de rendu
+    let frameId;
+    const animate = () => {
+        controls.update();
+        renderer.setViewport(0, 0, w, h);
+        renderer.clear();
+        renderer.render(scene, camera);
+        
+        axesCamera.position.copy(camera.position);
+        axesCamera.position.sub(controls.target);
+        axesCamera.position.setLength(2);
+        axesCamera.lookAt(axesScene.position);
+        
+        const axesSize = 150;
+        const marginTop = 60; 
+        renderer.clearDepth();
+        renderer.setScissorTest(true);
+        renderer.setScissor(w - axesSize - 20, h - axesSize - marginTop, axesSize, axesSize);
+        renderer.setViewport(w - axesSize - 20, h - axesSize - marginTop, axesSize, axesSize);
+        renderer.render(axesScene, axesCamera);
+        renderer.setScissorTest(false);
+        frameId = requestAnimationFrame(animate);
+    };
+    animate();
+
+    // 10. Garbage Collection
+    invalidation.then(() => {
+        cancelAnimationFrame(frameId);
+        window.removeEventListener('resize', onWindowResize);
+        renderer.dispose();
+    });
+
+    return renderer.domElement;
+}

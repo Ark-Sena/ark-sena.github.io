@@ -99,6 +99,10 @@ my_portfolio_city = {
         fragShaderParticles
     });
 
+    // Masquer le loader des que la scene est prete
+    const loaderElement = document.getElementById('loader');
+    if (loaderElement) loaderElement.style.display = 'none';
+
     // 5. Objets standard (Mockup Data)
     const interactableObjects = [myArtifact.interactableMesh];
     const defaultMaterial = new THREE.MeshStandardMaterial({ 

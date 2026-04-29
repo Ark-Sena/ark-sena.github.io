@@ -39,7 +39,26 @@ editor: visual
   #quarto-content {
     padding-top: 0 !important; 
   }
+
+  /* Spinner de chargement */
+  #loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    font-family: sans-serif;
+    font-size: 1.5em;
+  }
 </style>
+
+<div id="loader">Chargement de la scene...</div>
 ```
 
 # City Portfolio
