@@ -5,9 +5,13 @@ editor: visual
 
 # About
 
-Hello! I am **Mathys Carboila Dias**, a Master's student in Computer Graphics at ISICG (Limoges). I specialize in **real-time rendering, ray tracing, and photogrammetry**, with a strong interest in low-level engine integration. 
+Bonjour, je suis **Mathys Carboila Dias**, étudiant en **Master ISICG** à l’Université de Limoges.
 
-I am currently seeking a **6-month internship in real-time engine development** starting in **February 2027**.
+**Développement graphique & 3D · Jeu vidéo · Développement logiciel**
+
+Je conçois des logiciels, des outils graphiques et des expériences interactives en C++, C#, Python, OpenGL et Unity.
+
+**Disponible pour un stage de 4 à 6 mois à partir de février 2027.**
 
 ---
 
