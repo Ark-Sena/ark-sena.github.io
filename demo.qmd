@@ -3,6 +3,8 @@ format:
     html:
       echo: false
       page-layout: custom
+lang: fr
+body-classes: "locale-fr"
 resources:
   - "content/scripts/shaders/"
 editor: visual

@@ -16,19 +16,18 @@ body.quarto-dark {
 
 #quarto-header,
 #quarto-header .navbar {
-  height: var(--header-height);
   min-height: var(--header-height);
 }
 
 #quarto-header .navbar {
+  height: auto;
   padding-top: 0;
   padding-bottom: 0;
   align-items: center;
 }
 
 #quarto-header .navbar-brand,
-#quarto-header .nav-link,
-#quarto-header .navbar-toggler {
+#quarto-header .nav-link {
   padding-top: 0;
   padding-bottom: 0;
   height: var(--header-height);
@@ -36,7 +35,78 @@ body.quarto-dark {
   align-items: center;
 }
 
-/* Supprimer le bouton burger */
 #quarto-header .navbar-toggler {
-  display: none !important;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+#quarto-header .nav-item:has(.nav-language--fr),
+#quarto-header .nav-item:has(.nav-language--en) {
+  display: flex;
+}
+
+body.locale-fr #quarto-header .nav-item:has(.nav-language--en),
+body.locale-en #quarto-header .nav-item:has(.nav-language--fr) {
+  display: none;
+}
+
+#quarto-header .nav-item:has(.language-switch) .nav-link {
+  padding-left: 0.35rem;
+  padding-right: 0.35rem;
+}
+
+#quarto-header .language-switch {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+#quarto-header .nav-item:has(.language-switch--fr) .nav-link::after {
+  content: "|";
+  margin-left: 0.5rem;
+  color: var(--bs-secondary-color);
+  font-weight: 400;
+}
+
+body.locale-fr #quarto-header .language-switch--fr,
+body.locale-en #quarto-header .language-switch--en {
+  color: var(--bs-navbar-active-color) !important;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
+}
+
+body:not(.has-language-equivalent) #quarto-header .nav-item:has(.language-switch) {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  #quarto-header .navbar-toggler {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #quarto-header .navbar-collapse {
+    margin-top: 0.25rem;
+    padding-bottom: 0.5rem;
+  }
+
+  #quarto-header .nav-link {
+    min-height: 44px;
+    height: auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  #quarto-header .nav-item:has(.language-switch) .nav-link {
+    display: inline-flex;
+  }
+
+  #quarto-header .navbar-nav.ms-auto:has(.language-switch) {
+    flex-direction: row;
+    align-items: center;
+    width: max-content;
+    margin-left: 0 !important;
+  }
 }

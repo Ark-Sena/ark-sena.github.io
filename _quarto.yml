@@ -5,13 +5,35 @@ project:
 website:
   title: "ArkSena"
   navbar:
+    collapse: true
+    collapse-below: lg
+    toggle-position: right
     left:
       - href: index.qmd
-        text: Home
+        text: "[Accueil]{.nav-language .nav-language--fr}"
+        aria-label: "Accueil"
+      - href: en/index.qmd
+        text: "[Home]{.nav-language .nav-language--en}"
+        aria-label: "Home"
       - href: demo.qmd
-        text: Graphic Demo
+        text: "[Démo graphique]{.nav-language .nav-language--fr}"
+        aria-label: "Démo graphique"
+      - href: demo.qmd
+        text: "[Graphic Demo]{.nav-language .nav-language--en}"
+        aria-label: "Graphic Demo"
       - href: photogrametry.qmd
-        text: Photogrametry
+        text: "[Photogrammétrie]{.nav-language .nav-language--fr}"
+        aria-label: "Photogrammétrie"
+      - href: photogrametry.qmd
+        text: "[Photogrammetry]{.nav-language .nav-language--en}"
+        aria-label: "Photogrammetry"
+    right:
+      - href: index.qmd
+        text: "[FR]{.language-switch .language-switch--fr}"
+        aria-label: "Afficher le portfolio en français"
+      - href: en/index.qmd
+        text: "[EN]{.language-switch .language-switch--en}"
+        aria-label: "View the portfolio in English"
   page-footer: "© 2026 Mathys Carboila Dias | Built with Quarto & Three.js"
   search: false
 

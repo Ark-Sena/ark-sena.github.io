@@ -1,9 +1,11 @@
 ---
 format: html
 editor: visual
+lang: fr
+body-classes: "locale-fr has-language-equivalent"
 ---
 
-# About
+# À propos
 
 Bonjour, je suis **Mathys Carboila Dias**, étudiant en **Master ISICG** à l’Université de Limoges.
 
@@ -15,62 +17,62 @@ Je conçois des logiciels, des outils graphiques et des expériences interactive
 
 ---
 
-## Leadership
-- **President** of IGILIM (Association of Computer Graphics and Image students at Limoges).
+## Engagement associatif
+- **Président** d’IGILIM (Association des étudiants en informatique graphique et image de Limoges).
 
 ---
 
-## Current Focus
-- **Mobile Game Development:** Developing a mobile project in Unity with Firebase integration for real-time economy and data management.
-- **Engine Development:** Building a custom C++ CPU Ray-Tracer and exploring real-time rendering techniques in C++.
-- **Hominis Project:** Developing an AI-driven human simulation that trains autonomously within a procedurally generated world.
+## Axes actuels
+- **Développement de jeux mobiles :** développement d’un projet mobile avec Unity et une intégration Firebase pour la gestion d’une économie et de données en temps réel.
+- **Développement de moteur :** création d’un ray tracer CPU personnalisé en C++ et exploration de techniques de rendu temps réel en C++.
+- **Projet Hominis :** développement d’une simulation humaine pilotée par IA, s’entraînant de façon autonome dans un monde généré procéduralement.
 
 ---
 
-## Technical Highlights
+## Points techniques
 
-### Custom Whitted Ray Tracer (C++)
-- **Architecture:** Modular renderer supporting implicit surfaces and triangle meshes.
-- **Performance:** Optimized **BVH** (Bounding Volume Hierarchy) with centroid-based axis partitioning and **OpenMP** multithreading for pixel-level workload distribution.
-- **Rendering:** Recursive Whitted-style integrator supporting reflections, refractions, and physically-based materials (Cook-Torrance BRDF).
+### Ray tracer de Whitted personnalisé (C++)
+- **Architecture :** moteur de rendu modulaire prenant en charge les surfaces implicites et les maillages triangulaires.
+- **Performances :** **BVH** (Bounding Volume Hierarchy) optimisée avec partitionnement des axes fondé sur les centroïdes et multithreading **OpenMP** pour répartir la charge de travail au niveau des pixels.
+- **Rendu :** intégrateur récursif de type Whitted, avec réflexions, réfractions et matériaux physiquement réalistes (BRDF Cook-Torrance).
 
-### 3D Graphics Engine (OpenGL/C++)
-- **Architecture:** Modular framework implementing a deferred rendering pipeline.
-- **Pipeline:** Complex G-Buffer management (6 attachments: Position, Normals, Ambient, Diffuse, Specular, Depth).
-- **Post-Processing:** Comprehensive HDR-enabled stack including Bloom, FXAA, and Gamma correction.
-
----
-
-## Education & Skills
-
-### Academic Background
-- **Master's in Computer Graphics (ISICG):** Focused on 3D Engines, Ray-Tracing, GPGPU (CUDA), and Parallel Programming.
-- **Bachelor in Computer Science.**
-
-### Technical Skills
-- **Languages:** C/C++, Python, GLSL, JS/TS
-- **Engines & Softwares:** Unity, Blender, RealityScan/RC
-- **Graphics (Rendering/Shaders):** Three.js/WebGL, Ray Tracing, PBR, GPGPU (CUDA)
-- **Tools:** Git/GitHub, Trello
-
-### Languages
-- **French & Portuguese:** Native
-- **English:** B2 (Technical proficiency)
-- **Spanish:** B1
-- **Japanese:** A1
+### Moteur graphique 3D (OpenGL/C++)
+- **Architecture :** framework modulaire implémentant un pipeline de rendu différé.
+- **Pipeline :** gestion complexe d’un G-Buffer (six attachements : position, normales, ambiante, diffuse, spéculaire et profondeur).
+- **Post-traitement :** pile HDR complète avec Bloom, FXAA et correction gamma.
 
 ---
 
-## Projects
+## Formation et compétences
 
-- [Graphic Demo](demo.qmd) - Real-time 3D scene (Three.js), shaders, and interactions.
-- [Photogrammetry](photogrametry.qmd) - Technical study from raw photo acquisition to optimized web rendering.
-- **Mobile Project** - Development of a mobile game in Unity with Firebase integration.
+### Parcours académique
+- **Master en informatique graphique (ISICG) :** spécialisé en moteurs 3D, ray tracing, GPGPU (CUDA) et programmation parallèle.
+- **Licence en informatique.**
+
+### Compétences techniques
+- **Langages :** C/C++, Python, GLSL, JS/TS
+- **Moteurs et logiciels :** Unity, Blender, RealityScan/RC
+- **Graphisme (rendu/shaders) :** Three.js/WebGL, ray tracing, PBR, GPGPU (CUDA)
+- **Outils :** Git/GitHub, Trello
+
+### Langues
+- **Français et portugais :** langues maternelles
+- **Anglais :** B2 (niveau technique)
+- **Espagnol :** B1
+- **Japonais :** A1
+
+---
+
+## Projets
+
+- [Démo graphique](demo.qmd) — Scène 3D temps réel (Three.js), shaders et interactions.
+- [Photogrammétrie](photogrametry.qmd) — Étude technique, de l’acquisition photo brute au rendu web optimisé.
+- **Projet mobile** — Développement d’un jeu mobile avec Unity et intégration Firebase.
 
 ---
 
 ## Contact
-I am actively seeking an internship in real-time engine development for February 2027. Let's talk technical!
+Je recherche actuellement un stage de 4 à 6 mois à partir de février 2027. Échangeons autour de la technique !
 
 - [GitHub](https://github.com/Ark-Sena)
 - [LinkedIn](https://www.linkedin.com/in/mathys-carboila-dias-a37391232/)
