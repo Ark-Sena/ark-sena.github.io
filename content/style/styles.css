@@ -80,6 +80,100 @@ body:not(.has-language-equivalent) #quarto-header .nav-item:has(.language-switch
   display: none;
 }
 
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  padding: 1.5rem;
+  border: 1px solid var(--bs-border-color);
+  border-radius: 0.75rem;
+  background-color: var(--bs-tertiary-bg);
+  box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 5%);
+}
+
+body.quarto-dark .project-card {
+  border-color: rgb(255 255 255 / 18%);
+  background-color: #252525;
+  box-shadow: none;
+}
+
+body.quarto-dark .project-card__tag {
+  border-color: rgb(255 255 255 / 20%);
+  background-color: rgb(255 255 255 / 8%);
+  color: rgb(255 255 255 / 85%);
+}
+
+.project-card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.project-card__subtitle {
+  margin: 0.35rem 0 1rem;
+  color: var(--bs-secondary-color);
+  font-weight: 600;
+}
+
+.project-card__technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+.project-card__technologies p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0;
+}
+
+.project-card__tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.75rem;
+  padding: 0.15rem 0.55rem;
+  border: 1px solid var(--bs-border-color);
+  border-radius: 999px;
+  color: var(--bs-secondary-color);
+  font-size: 0.8125rem;
+  line-height: 1.25;
+}
+
+.project-card > p:not(.project-card__subtitle) {
+  margin-bottom: 1.25rem;
+}
+
+.project-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--bs-border-color);
+  color: var(--bs-secondary-color);
+  font-size: 0.8125rem;
+}
+
+.project-card__status {
+  color: var(--bs-secondary-color);
+  font-weight: 600;
+}
+
+.project-card__availability {
+  flex-basis: 100%;
+  color: var(--bs-secondary-color);
+}
+
 @media (max-width: 991.98px) {
   #quarto-header .navbar-toggler {
     display: inline-flex;
@@ -108,5 +202,16 @@ body:not(.has-language-equivalent) #quarto-header .nav-item:has(.language-switch
     align-items: center;
     width: max-content;
     margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .project-card {
+    padding: 1.25rem;
   }
 }

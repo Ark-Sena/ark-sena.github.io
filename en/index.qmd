@@ -17,6 +17,91 @@ I design software, graphics tools, and interactive experiences using C++, C#, Py
 
 ---
 
+## Selected Projects {#selected-projects}
+
+::: {.project-grid}
+
+::: {.project-card}
+### Arkhe Engine
+
+<p class="project-card__subtitle">2D Engine and Editor in Development</p>
+
+<div class="project-card__technologies" aria-label="Technologies">
+  <span class="project-card__tag">C++</span>
+  <span class="project-card__tag">OpenGL</span>
+  <span class="project-card__tag">SDL2</span>
+  <span class="project-card__tag">ImGui</span>
+  <span class="project-card__tag">CMake</span>
+</div>
+
+A personal 2D engine and editor focused on software architecture, graphics rendering, and editor-tool development.
+
+<div class="project-card__meta">
+  <span class="project-card__status">Active development · private repository</span>
+  <span class="project-card__availability">Details coming soon</span>
+</div>
+:::
+
+::: {.project-card}
+### Tap Time Breaker
+
+<p class="project-card__subtitle">Mobile Game in Development</p>
+
+<div class="project-card__technologies" aria-label="Technologies">
+  <span class="project-card__tag">Unity</span>
+  <span class="project-card__tag">C#</span>
+  <span class="project-card__tag">Firebase</span>
+</div>
+
+An idle/clicker mobile game developed by a two-person team, centered on combat, progression, and collection systems.
+
+<div class="project-card__meta">
+  <span class="project-card__status">Active development · private source code</span>
+  <span class="project-card__availability">Details coming soon</span>
+</div>
+:::
+
+::: {.project-card}
+### IGILIM Discord Bot
+
+<p class="project-card__subtitle">Community Management Tool</p>
+
+<div class="project-card__technologies" aria-label="Technologies">
+  <span class="project-card__tag">Python</span>
+  <span class="project-card__tag">Discord API</span>
+  <span class="project-card__tag">Git</span>
+</div>
+
+A bot developed to automate management, moderation, and event-organization tasks on the IGILIM association’s Discord server.
+
+<div class="project-card__meta">
+  <span class="project-card__availability">Details coming soon</span>
+</div>
+:::
+
+::: {.project-card}
+### Graphics Experiments
+
+<p class="project-card__subtitle">Real-Time Rendering and Interactive Experiences</p>
+
+<div class="project-card__technologies" aria-label="Technologies">
+  <span class="project-card__tag">Three.js</span>
+  <span class="project-card__tag">WebGL</span>
+  <span class="project-card__tag">GLSL</span>
+  <span class="project-card__tag">3D</span>
+</div>
+
+A collection of experiments in real-time rendering, shaders, interactive 3D, and photogrammetry.
+
+<div class="project-card__meta">
+  <span class="project-card__availability">Details coming soon</span>
+</div>
+:::
+
+:::
+
+---
+
 ## Leadership
 - **President** of IGILIM (Association of Computer Graphics and Image Students at Limoges).
 
@@ -60,14 +145,6 @@ I design software, graphics tools, and interactive experiences using C++, C#, Py
 - **English:** B2 (technical proficiency)
 - **Spanish:** B1
 - **Japanese:** A1
-
----
-
-## Projects
-
-- [Graphic Demo](../demo.qmd) — Real-time 3D scene (Three.js), shaders, and interactions.
-- [Photogrammetry](../photogrametry.qmd) — Technical study from raw photo acquisition to optimized web rendering.
-- **Mobile Project** — Development of a mobile game in Unity with Firebase integration.
 
 ---
 
