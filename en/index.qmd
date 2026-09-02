@@ -116,7 +116,7 @@ A collection of experiments in real-time rendering, shaders, interactive 3D, and
 
 ## Technical Highlights
 
-### Custom Whitted Ray Tracer (C++)
+### CPU Ray Tracer in C++
 - **Architecture:** Modular renderer supporting implicit surfaces and triangle meshes.
 - **Performance:** Optimized **BVH** (Bounding Volume Hierarchy) with centroid-based axis partitioning and **OpenMP** multithreading for pixel-level workload distribution.
 - **Rendering:** Recursive Whitted-style integrator supporting reflections, refractions, and physically based materials (Cook-Torrance BRDF).

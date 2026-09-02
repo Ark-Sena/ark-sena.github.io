@@ -116,7 +116,7 @@ Ensemble d’expérimentations autour du rendu temps réel, des shaders, de la 3
 
 ## Points techniques
 
-### Ray tracer de Whitted personnalisé (C++)
+### Ray Tracer CPU en C++
 - **Architecture :** moteur de rendu modulaire prenant en charge les surfaces implicites et les maillages triangulaires.
 - **Performances :** **BVH** (Bounding Volume Hierarchy) optimisée avec partitionnement des axes fondé sur les centroïdes et multithreading **OpenMP** pour répartir la charge de travail au niveau des pixels.
 - **Rendu :** intégrateur récursif de type Whitted, avec réflexions, réfractions et matériaux physiquement réalistes (BRDF Cook-Torrance).
