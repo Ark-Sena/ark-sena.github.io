@@ -15,91 +15,68 @@ I design software, graphics tools, and interactive experiences using C++, C#, Py
 
 **Available for a 4 to 6-month internship starting February 2027.**
 
-<p class="profile-cv-action">
-  <a class="profile-cv-link" href="/content/files/CV_Mathys_Carboila_Dias.pdf" target="_blank" rel="noopener noreferrer" aria-label="View my CV (opens in a new tab)">View my CV</a>
-</p>
+::: {.profile-actions}
+<a class="profile-actions__primary" href="#selected-projects">View selected projects</a>
+
+::: {.profile-actions__secondary}
+<a href="/content/files/CV_Mathys_Carboila_Dias.pdf" target="_blank" rel="noopener noreferrer" aria-label="View my CV (opens in a new tab)">View my CV</a>
+
+<a href="../demo.html">Explore the 3D demo</a>
+:::
+:::
 
 ---
 
 ## Selected Projects {#selected-projects}
 
-::: {.project-grid}
+::: {.project-list}
 
-::: {.project-card}
+::: {.project-entry .project-entry--featured}
+::: {.project-entry__identity}
 ### Arkhe Engine
 
-<p class="project-card__subtitle">2D Engine and Editor in Development</p>
+<p class="project-entry__subtitle">2D Engine and Editor in Development</p>
+:::
 
-<div class="project-card__technologies" aria-label="Technologies">
-  <span class="project-card__tag">C++</span>
-  <span class="project-card__tag">OpenGL</span>
-  <span class="project-card__tag">SDL2</span>
-  <span class="project-card__tag">ImGui</span>
-  <span class="project-card__tag">CMake</span>
-</div>
+::: {.project-entry__details}
+<p class="project-entry__technologies"><span>Technologies&nbsp;:</span> C++ · OpenGL · SDL2 · ImGui · CMake</p>
 
 A personal 2D engine and editor focused on software architecture, graphics rendering, and editor-tool development.
 
-<div class="project-card__meta">
-  <span class="project-card__status">Active development · private repository</span>
-  <span class="project-card__availability">Details coming soon</span>
-</div>
+<p class="project-entry__meta"><span class="project-entry__status">Active development · private repository</span><span class="project-entry__availability">Details coming soon</span></p>
+:::
 :::
 
-::: {.project-card}
+::: {.project-entry}
+::: {.project-entry__identity}
 ### Tap Time Breaker
 
-<p class="project-card__subtitle">Mobile Game in Development</p>
+<p class="project-entry__subtitle">Mobile Game in Development</p>
+:::
 
-<div class="project-card__technologies" aria-label="Technologies">
-  <span class="project-card__tag">Unity</span>
-  <span class="project-card__tag">C#</span>
-  <span class="project-card__tag">Firebase</span>
-</div>
+::: {.project-entry__details}
+<p class="project-entry__technologies"><span>Technologies&nbsp;:</span> Unity · C# · Firebase</p>
 
 An idle/clicker mobile game developed by a two-person team, centered on combat, progression, and collection systems.
 
-<div class="project-card__meta">
-  <span class="project-card__status">Active development · private source code</span>
-  <span class="project-card__availability">Details coming soon</span>
-</div>
+<p class="project-entry__meta"><span class="project-entry__status">Active development · private source code</span><span class="project-entry__availability">Details coming soon</span></p>
+:::
 :::
 
-::: {.project-card}
+::: {.project-entry}
+::: {.project-entry__identity}
 ### IGILIM Discord Bot
 
-<p class="project-card__subtitle">Community Management Tool</p>
+<p class="project-entry__subtitle">Community Management Tool</p>
+:::
 
-<div class="project-card__technologies" aria-label="Technologies">
-  <span class="project-card__tag">Python</span>
-  <span class="project-card__tag">Discord API</span>
-  <span class="project-card__tag">Git</span>
-</div>
+::: {.project-entry__details}
+<p class="project-entry__technologies"><span>Technologies&nbsp;:</span> Python · Discord API · Git</p>
 
 A bot developed to automate management, moderation, and event-organization tasks on the IGILIM association’s Discord server.
 
-<div class="project-card__meta">
-  <span class="project-card__availability">Details coming soon</span>
-</div>
+<p class="project-entry__meta"><span class="project-entry__availability">Details coming soon</span></p>
 :::
-
-::: {.project-card}
-### Graphics Experiments
-
-<p class="project-card__subtitle">Real-Time Rendering and Interactive Experiences</p>
-
-<div class="project-card__technologies" aria-label="Technologies">
-  <span class="project-card__tag">Three.js</span>
-  <span class="project-card__tag">WebGL</span>
-  <span class="project-card__tag">GLSL</span>
-  <span class="project-card__tag">3D</span>
-</div>
-
-A collection of experiments in real-time rendering, shaders, interactive 3D, and photogrammetry.
-
-<div class="project-card__meta">
-  <span class="project-card__availability">Details coming soon</span>
-</div>
 :::
 
 :::
