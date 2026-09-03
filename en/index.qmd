@@ -15,6 +15,10 @@ I design software, graphics tools, and interactive experiences using C++, C#, Py
 
 **Available for a 4 to 6-month internship starting February 2027.**
 
+<p class="profile-cv-action">
+  <a class="profile-cv-link" href="/content/files/CV_Mathys_Carboila_Dias.pdf" target="_blank" rel="noopener noreferrer" aria-label="View my CV (opens in a new tab)">View my CV</a>
+</p>
+
 ---
 
 ## Selected Projects {#selected-projects}

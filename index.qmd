@@ -15,6 +15,10 @@ Je conçois des logiciels, des outils graphiques et des expériences interactive
 
 **Disponible pour un stage de 4 à 6 mois à partir de février 2027.**
 
+<p class="profile-cv-action">
+  <a class="profile-cv-link" href="/content/files/CV_Mathys_Carboila_Dias.pdf" target="_blank" rel="noopener noreferrer" aria-label="Voir mon CV (s’ouvre dans un nouvel onglet)">Voir mon CV</a>
+</p>
+
 ---
 
 ## Projets sélectionnés {#projets-selectionnes}

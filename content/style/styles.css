@@ -80,6 +80,35 @@ body:not(.has-language-equivalent) #quarto-header .nav-item:has(.language-switch
   display: none;
 }
 
+.profile-cv-action {
+  margin: 1rem 0 0;
+}
+
+.profile-cv-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.875rem;
+  border: 1px solid currentColor;
+  border-radius: 0.5rem;
+  color: var(--bs-link-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.profile-cv-link:hover,
+.profile-cv-link:focus-visible {
+  background-color: var(--bs-link-color);
+  color: #fff;
+  text-decoration: none;
+}
+
+.profile-cv-link:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

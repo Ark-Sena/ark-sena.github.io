@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - content/files/CV_Mathys_Carboila_Dias.pdf
 
 website:
   title: "ArkSena"
