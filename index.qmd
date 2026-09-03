@@ -193,7 +193,11 @@ Expérience graphique temps réel regroupant shaders, particules, animation et i
 ---
 
 ## Contact
-Je recherche actuellement un stage de 4 à 6 mois à partir de février 2027. Échangeons autour de la technique !
-
-- [GitHub](https://github.com/Ark-Sena)
-- [LinkedIn](https://www.linkedin.com/in/mathys-carboila-dias-a37391232/)
+<div class="contact-card">
+  <p class="contact-card__intro">Vous souhaitez échanger à propos d’un stage, d’un projet ou de mes travaux ? Vous pouvez me contacter par email ou via mes profils professionnels.</p>
+  <ul class="contact-card__links">
+    <li><a class="contact-card__link" href="mailto:mcd087@gmail.com" aria-label="Envoyer un email à mcd087@gmail.com"><span class="contact-card__label">Email</span><span class="contact-card__value">mcd087@gmail.com</span></a></li>
+    <li><a class="contact-card__link" href="https://www.linkedin.com/in/mathys-carboila-dias-a37391232/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir mon profil LinkedIn dans un nouvel onglet"><span class="contact-card__label">LinkedIn</span><span class="contact-card__value">Profil professionnel</span></a></li>
+    <li><a class="contact-card__link" href="https://github.com/Ark-Sena" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir mon profil GitHub dans un nouvel onglet"><span class="contact-card__label">GitHub</span><span class="contact-card__value">Profil professionnel</span></a></li>
+  </ul>
+</div>

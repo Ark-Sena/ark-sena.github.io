@@ -109,6 +109,80 @@ body:not(.has-language-equivalent) #quarto-header .nav-item:has(.language-switch
   outline-offset: 3px;
 }
 
+.contact-card {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--bs-border-color);
+  border-radius: 0.75rem;
+  background-color: var(--bs-tertiary-bg);
+  box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 5%);
+}
+
+body.quarto-dark .contact-card {
+  border-color: rgb(255 255 255 / 18%);
+  background-color: #252525;
+  box-shadow: none;
+}
+
+.contact-card__intro {
+  max-width: 50rem;
+  margin: 0;
+}
+
+.contact-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-card__links li {
+  display: flex;
+  min-width: 0;
+}
+
+.contact-card__link {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.875rem;
+  border: 1px solid currentColor;
+  border-radius: 0.5rem;
+  color: var(--bs-link-color);
+  text-decoration: none;
+}
+
+.contact-card__label {
+  font-weight: 600;
+}
+
+.contact-card__value {
+  color: var(--bs-secondary-color);
+  font-size: 0.875rem;
+  overflow-wrap: anywhere;
+}
+
+.contact-card__link:hover,
+.contact-card__link:focus-visible {
+  background-color: var(--bs-link-color);
+  color: var(--bs-body-bg);
+  text-decoration: none;
+}
+
+.contact-card__link:hover .contact-card__value,
+.contact-card__link:focus-visible .contact-card__value {
+  color: inherit;
+}
+
+.contact-card__link:focus-visible {
+  outline: 3px solid var(--bs-link-color);
+  outline-offset: 3px;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -321,6 +395,19 @@ body.quarto-dark .graphics-lab-card__tag {
 }
 
 @media (max-width: 767.98px) {
+  .contact-card {
+    padding: 1.25rem;
+  }
+
+  .contact-card__links {
+    flex-direction: column;
+  }
+
+  .contact-card__links li,
+  .contact-card__link {
+    width: 100%;
+  }
+
   .project-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
