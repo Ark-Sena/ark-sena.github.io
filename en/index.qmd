@@ -89,34 +89,34 @@ I explore real-time rendering, shaders, and 3D interactions through several demo
 
 The interactive city brings these graphics experiments together in an explorable environment, while the photogrammetry study follows the path from a real object to a 3D asset optimized for the web.
 
-::: {.graphics-lab-grid}
+::: {.graphics-lab-list}
 
-::: {.graphics-lab-card}
+::: {.graphics-lab-entry .graphics-lab-entry--city}
+::: {.graphics-lab-entry__content}
 ### Interactive 3D City
 
-<div class="graphics-lab-card__technologies" aria-label="Technologies">
-  <span class="graphics-lab-card__tag">Three.js</span>
-  <span class="graphics-lab-card__tag">WebGL</span>
-  <span class="graphics-lab-card__tag">GLSL</span>
-</div>
+<p class="graphics-lab-entry__technologies"><span>Technologies&nbsp;:</span> Three.js · WebGL · GLSL</p>
 
 A real-time graphics experience bringing together shaders, particles, animation, and interactions in an explorable futuristic city.
-
-<a class="graphics-lab-card__cta" href="../demo.html">Explore the City</a>
 :::
 
-::: {.graphics-lab-card}
+::: {.graphics-lab-entry__action}
+[Explore the City](../demo.html){.graphics-lab-entry__cta}
+:::
+:::
+
+::: {.graphics-lab-entry .graphics-lab-entry--photogrammetry}
+::: {.graphics-lab-entry__content}
 ### Photogrammetry
 
-<div class="graphics-lab-card__technologies" aria-label="Technologies">
-  <span class="graphics-lab-card__tag">RealityScan</span>
-  <span class="graphics-lab-card__tag">Blender</span>
-  <span class="graphics-lab-card__tag">Three.js</span>
-</div>
+<p class="graphics-lab-entry__technologies"><span>Technologies&nbsp;:</span> RealityScan · Blender · Three.js</p>
 
 A study of the path from a real object to a reconstructed, cleaned, optimized 3D model displayed directly in the browser.
+:::
 
-<a class="graphics-lab-card__cta" href="../photogrametry.html">View the Study</a>
+::: {.graphics-lab-entry__action}
+[View the Study](../photogrametry.html){.graphics-lab-entry__cta}
+:::
 :::
 
 :::
@@ -170,11 +170,9 @@ A study of the path from a real object to a reconstructed, cleaned, optimized 3D
 ---
 
 ## Contact
-<div class="contact-card">
-  <p class="contact-card__intro">If you would like to discuss an internship, a project, or my work, you can reach me by email or through my professional profiles.</p>
-  <ul class="contact-card__links">
-    <li><a class="contact-card__link" href="mailto:mcd087@gmail.com" aria-label="Send an email to mcd087@gmail.com"><span class="contact-card__label">Email</span><span class="contact-card__value">mcd087@gmail.com</span></a></li>
-    <li><a class="contact-card__link" href="https://www.linkedin.com/in/mathys-carboila-dias-a37391232/" target="_blank" rel="noopener noreferrer" aria-label="Open my LinkedIn profile in a new tab"><span class="contact-card__label">LinkedIn</span><span class="contact-card__value">Professional profile</span></a></li>
-    <li><a class="contact-card__link" href="https://github.com/Ark-Sena" target="_blank" rel="noopener noreferrer" aria-label="Open my GitHub profile in a new tab"><span class="contact-card__label">GitHub</span><span class="contact-card__value">Professional profile</span></a></li>
-  </ul>
-</div>
+
+<p class="contact-intro">For an internship, a project, or a question about my work:</p>
+
+<p class="contact-email"><a href="mailto:mcd087@gmail.com" aria-label="Send an email to mcd087@gmail.com">mcd087@gmail.com</a></p>
+
+<p class="contact-links"><a href="https://www.linkedin.com/in/mathys-carboila-dias-a37391232/" target="_blank" rel="noopener noreferrer" aria-label="Open my LinkedIn profile in a new tab">LinkedIn</a><span aria-hidden="true"> · </span><a href="https://github.com/Ark-Sena" target="_blank" rel="noopener noreferrer" aria-label="Open my GitHub profile in a new tab">GitHub</a></p>

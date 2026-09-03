@@ -137,76 +137,32 @@ body:not(.has-language-equivalent) #quarto-header .nav-item:has(.language-switch
   text-underline-offset: 0.22em;
 }
 
-.contact-card {
-  margin-top: 1.5rem;
-  padding: 1.5rem;
-  border: 1px solid var(--bs-border-color);
-  border-radius: 0.75rem;
-  background-color: var(--bs-tertiary-bg);
-  box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 5%);
-}
-
-body.quarto-dark .contact-card {
-  border-color: rgb(255 255 255 / 18%);
-  background-color: #252525;
-  box-shadow: none;
-}
-
-.contact-card__intro {
-  max-width: 50rem;
+.contact-intro {
+  max-width: 44rem;
   margin: 0;
 }
 
-.contact-card__links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin: 1.25rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.contact-card__links li {
-  display: flex;
-  min-width: 0;
-}
-
-.contact-card__link {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  min-width: 0;
-  min-height: 2.75rem;
-  padding: 0.5rem 0.875rem;
-  border: 1px solid currentColor;
-  border-radius: 0.5rem;
-  color: var(--bs-link-color);
-  text-decoration: none;
-}
-
-.contact-card__label {
+.contact-email {
+  margin: 0.4rem 0 0;
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
   font-weight: 600;
 }
 
-.contact-card__value {
+.contact-links {
+  margin: 0.55rem 0 0;
   color: var(--bs-secondary-color);
-  font-size: 0.875rem;
-  overflow-wrap: anywhere;
 }
 
-.contact-card__link:hover,
-.contact-card__link:focus-visible {
-  background-color: var(--bs-link-color);
-  color: var(--bs-body-bg);
-  text-decoration: none;
+.contact-email a,
+.contact-links a {
+  color: var(--bs-link-color);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
 }
 
-.contact-card__link:hover .contact-card__value,
-.contact-card__link:focus-visible .contact-card__value {
-  color: inherit;
-}
-
-.contact-card__link:focus-visible {
+.contact-email a:focus-visible,
+.contact-links a:focus-visible {
   outline: 3px solid var(--bs-link-color);
   outline-offset: 3px;
 }
@@ -286,89 +242,84 @@ body.quarto-dark .contact-card {
   font-weight: 600;
 }
 
-.graphics-lab-grid {
+.graphics-lab-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.25rem;
-  margin: 1.5rem 0 2rem;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 0 clamp(1rem, 3vw, 3rem);
+  margin: 1.75rem 0 2.25rem;
 }
 
-.graphics-lab-card {
-  display: flex;
-  flex-direction: column;
+.graphics-lab-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem clamp(1rem, 3vw, 2rem);
+  align-items: end;
   min-width: 0;
-  min-height: 100%;
-  padding: 1.5rem;
-  border: 1px solid var(--bs-border-color);
-  border-top: 3px solid var(--bs-primary);
-  border-radius: 0.75rem;
-  background-color: var(--bs-body-bg);
-  box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 5%);
+  padding: 1.25rem 0 1.5rem;
+  border-top: 1px solid var(--bs-border-color);
 }
 
-body.quarto-dark .graphics-lab-card {
-  border-color: rgb(255 255 255 / 18%);
-  border-top-color: #6ea8fe;
-  background-color: #202020;
-  box-shadow: none;
+.graphics-lab-entry--city {
+  grid-column: 1 / span 8;
+  padding-top: 1.75rem;
+  border-top: 2px solid var(--bs-link-color);
 }
 
-.graphics-lab-card h3 {
-  margin: 0 0 1rem;
-  font-size: 1.25rem;
+.graphics-lab-entry--photogrammetry {
+  grid-column: 5 / -1;
+  margin-top: 1.5rem;
 }
 
-.graphics-lab-card__technologies {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  margin-bottom: 1rem;
+.graphics-lab-entry__content {
+  min-width: 0;
 }
 
-.graphics-lab-card__tag {
+.graphics-lab-entry h3 {
+  margin: 0;
+  font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+  line-height: 1.15;
+}
+
+.graphics-lab-entry--city h3 {
+  font-size: clamp(1.55rem, 3vw, 2.15rem);
+}
+
+.graphics-lab-entry__content > p {
+  margin: 0;
+}
+
+.graphics-lab-entry__content > p + p {
+  margin-top: 0.75rem;
+}
+
+.graphics-lab-entry__technologies {
+  color: var(--bs-secondary-color);
+  font-size: 0.875rem;
+}
+
+.graphics-lab-entry__technologies span {
+  font-weight: 600;
+}
+
+.graphics-lab-entry__action,
+.graphics-lab-entry__action p {
+  margin: 0;
+}
+
+.graphics-lab-entry__cta {
   display: inline-flex;
   align-items: center;
-  min-height: 1.75rem;
-  padding: 0.15rem 0.55rem;
-  border: 1px solid currentColor;
-  border-radius: 999px;
-  color: var(--bs-link-color);
-  font-size: 0.8125rem;
-  line-height: 1.25;
-}
-
-body.quarto-dark .graphics-lab-card__tag {
-  color: #9ec5fe;
-}
-
-.graphics-lab-card > p {
-  margin-bottom: 1.25rem;
-}
-
-.graphics-lab-card__cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  align-self: flex-start;
   min-height: 2.75rem;
-  margin-top: auto;
-  padding: 0.5rem 0.875rem;
-  border: 1px solid currentColor;
-  border-radius: 0.5rem;
   color: var(--bs-link-color);
   font-weight: 600;
-  text-decoration: none;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  white-space: nowrap;
 }
 
-.graphics-lab-card__cta:hover,
-.graphics-lab-card__cta:focus-visible {
-  background-color: var(--bs-link-color);
-  color: #fff;
-  text-decoration: none;
-}
-
-.graphics-lab-card__cta:focus-visible {
-  outline: 3px solid currentColor;
+.graphics-lab-entry__cta:focus-visible {
+  outline: 3px solid var(--bs-link-color);
   outline-offset: 3px;
 }
 
@@ -404,19 +355,6 @@ body.quarto-dark .graphics-lab-card__tag {
 }
 
 @media (max-width: 767.98px) {
-  .contact-card {
-    padding: 1.25rem;
-  }
-
-  .contact-card__links {
-    flex-direction: column;
-  }
-
-  .contact-card__links li,
-  .contact-card__link {
-    width: 100%;
-  }
-
   .project-entry,
   .project-entry--featured {
     grid-template-columns: 1fr;
@@ -428,12 +366,21 @@ body.quarto-dark .graphics-lab-card__tag {
     font-size: clamp(1.9rem, 10vw, 2.5rem);
   }
 
-  .graphics-lab-grid {
+  .graphics-lab-list {
     grid-template-columns: 1fr;
-    gap: 1rem;
   }
 
-  .graphics-lab-card {
-    padding: 1.25rem;
+  .graphics-lab-entry,
+  .graphics-lab-entry--city,
+  .graphics-lab-entry--photogrammetry {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-top: 0;
+    padding: 1.25rem 0;
+  }
+
+  .graphics-lab-entry--city h3 {
+    font-size: clamp(1.45rem, 8vw, 2rem);
   }
 }

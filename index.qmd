@@ -89,34 +89,34 @@ J’expérimente le rendu temps réel, les shaders et les interactions 3D à tra
 
 La ville interactive regroupe ces travaux graphiques dans un environnement explorable, tandis que l’étude de photogrammétrie présente le passage d’un objet réel à son affichage 3D optimisé pour le Web.
 
-::: {.graphics-lab-grid}
+::: {.graphics-lab-list}
 
-::: {.graphics-lab-card}
+::: {.graphics-lab-entry .graphics-lab-entry--city}
+::: {.graphics-lab-entry__content}
 ### Ville interactive 3D
 
-<div class="graphics-lab-card__technologies" aria-label="Technologies">
-  <span class="graphics-lab-card__tag">Three.js</span>
-  <span class="graphics-lab-card__tag">WebGL</span>
-  <span class="graphics-lab-card__tag">GLSL</span>
-</div>
+<p class="graphics-lab-entry__technologies"><span>Technologies&nbsp;:</span> Three.js · WebGL · GLSL</p>
 
 Expérience graphique temps réel regroupant shaders, particules, animation et interactions dans une ville futuriste explorable.
-
-<a class="graphics-lab-card__cta" href="demo.html">Explorer la ville</a>
 :::
 
-::: {.graphics-lab-card}
+::: {.graphics-lab-entry__action}
+[Explorer la ville](demo.html){.graphics-lab-entry__cta}
+:::
+:::
+
+::: {.graphics-lab-entry .graphics-lab-entry--photogrammetry}
+::: {.graphics-lab-entry__content}
 ### Photogrammétrie
 
-<div class="graphics-lab-card__technologies" aria-label="Technologies">
-  <span class="graphics-lab-card__tag">RealityScan</span>
-  <span class="graphics-lab-card__tag">Blender</span>
-  <span class="graphics-lab-card__tag">Three.js</span>
-</div>
+<p class="graphics-lab-entry__technologies"><span>Technologies&nbsp;:</span> RealityScan · Blender · Three.js</p>
 
 Étude du passage d’un objet réel à un modèle 3D reconstruit, nettoyé, optimisé et affiché directement dans le navigateur.
+:::
 
-<a class="graphics-lab-card__cta" href="photogrametry.html">Voir l’étude</a>
+::: {.graphics-lab-entry__action}
+[Voir l’étude](photogrametry.html){.graphics-lab-entry__cta}
+:::
 :::
 
 :::
@@ -170,11 +170,9 @@ Expérience graphique temps réel regroupant shaders, particules, animation et i
 ---
 
 ## Contact
-<div class="contact-card">
-  <p class="contact-card__intro">Vous souhaitez échanger à propos d’un stage, d’un projet ou de mes travaux ? Vous pouvez me contacter par email ou via mes profils professionnels.</p>
-  <ul class="contact-card__links">
-    <li><a class="contact-card__link" href="mailto:mcd087@gmail.com" aria-label="Envoyer un email à mcd087@gmail.com"><span class="contact-card__label">Email</span><span class="contact-card__value">mcd087@gmail.com</span></a></li>
-    <li><a class="contact-card__link" href="https://www.linkedin.com/in/mathys-carboila-dias-a37391232/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir mon profil LinkedIn dans un nouvel onglet"><span class="contact-card__label">LinkedIn</span><span class="contact-card__value">Profil professionnel</span></a></li>
-    <li><a class="contact-card__link" href="https://github.com/Ark-Sena" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir mon profil GitHub dans un nouvel onglet"><span class="contact-card__label">GitHub</span><span class="contact-card__value">Profil professionnel</span></a></li>
-  </ul>
-</div>
+
+<p class="contact-intro">Pour un stage, un projet ou une question sur mon travail&nbsp;:</p>
+
+<p class="contact-email"><a href="mailto:mcd087@gmail.com" aria-label="Envoyer un email à mcd087@gmail.com">mcd087@gmail.com</a></p>
+
+<p class="contact-links"><a href="https://www.linkedin.com/in/mathys-carboila-dias-a37391232/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir mon profil LinkedIn dans un nouvel onglet">LinkedIn</a><span aria-hidden="true"> · </span><a href="https://github.com/Ark-Sena" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir mon profil GitHub dans un nouvel onglet">GitHub</a></p>
