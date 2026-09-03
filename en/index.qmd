@@ -102,6 +102,46 @@ A collection of experiments in real-time rendering, shaders, interactive 3D, and
 
 ---
 
+## Interactive Graphics Lab {#interactive-graphics-lab}
+
+I explore real-time rendering, shaders, and 3D interactions through several demonstrations built with Three.js, WebGL, and GLSL.
+
+The interactive city brings these graphics experiments together in an explorable environment, while the photogrammetry study follows the path from a real object to a 3D asset optimized for the web.
+
+::: {.graphics-lab-grid}
+
+::: {.graphics-lab-card}
+### Interactive 3D City
+
+<div class="graphics-lab-card__technologies" aria-label="Technologies">
+  <span class="graphics-lab-card__tag">Three.js</span>
+  <span class="graphics-lab-card__tag">WebGL</span>
+  <span class="graphics-lab-card__tag">GLSL</span>
+</div>
+
+A real-time graphics experience bringing together shaders, particles, animation, and interactions in an explorable futuristic city.
+
+<a class="graphics-lab-card__cta" href="../demo.html">Explore the City</a>
+:::
+
+::: {.graphics-lab-card}
+### Photogrammetry
+
+<div class="graphics-lab-card__technologies" aria-label="Technologies">
+  <span class="graphics-lab-card__tag">RealityScan</span>
+  <span class="graphics-lab-card__tag">Blender</span>
+  <span class="graphics-lab-card__tag">Three.js</span>
+</div>
+
+A study of the path from a real object to a reconstructed, cleaned, optimized 3D model displayed directly in the browser.
+
+<a class="graphics-lab-card__cta" href="../photogrametry.html">View the Study</a>
+:::
+
+:::
+
+---
+
 ## Leadership
 - **President** of IGILIM (Association of Computer Graphics and Image Students at Limoges).
 

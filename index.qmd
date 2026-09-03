@@ -102,6 +102,46 @@ Ensemble d’expérimentations autour du rendu temps réel, des shaders, de la 3
 
 ---
 
+## Laboratoire graphique interactif {#laboratoire-graphique-interactif}
+
+J’expérimente le rendu temps réel, les shaders et les interactions 3D à travers plusieurs démonstrations développées avec Three.js, WebGL et GLSL.
+
+La ville interactive regroupe ces travaux graphiques dans un environnement explorable, tandis que l’étude de photogrammétrie présente le passage d’un objet réel à son affichage 3D optimisé pour le Web.
+
+::: {.graphics-lab-grid}
+
+::: {.graphics-lab-card}
+### Ville interactive 3D
+
+<div class="graphics-lab-card__technologies" aria-label="Technologies">
+  <span class="graphics-lab-card__tag">Three.js</span>
+  <span class="graphics-lab-card__tag">WebGL</span>
+  <span class="graphics-lab-card__tag">GLSL</span>
+</div>
+
+Expérience graphique temps réel regroupant shaders, particules, animation et interactions dans une ville futuriste explorable.
+
+<a class="graphics-lab-card__cta" href="demo.html">Explorer la ville</a>
+:::
+
+::: {.graphics-lab-card}
+### Photogrammétrie
+
+<div class="graphics-lab-card__technologies" aria-label="Technologies">
+  <span class="graphics-lab-card__tag">RealityScan</span>
+  <span class="graphics-lab-card__tag">Blender</span>
+  <span class="graphics-lab-card__tag">Three.js</span>
+</div>
+
+Étude du passage d’un objet réel à un modèle 3D reconstruit, nettoyé, optimisé et affiché directement dans le navigateur.
+
+<a class="graphics-lab-card__cta" href="photogrametry.html">Voir l’étude</a>
+:::
+
+:::
+
+---
+
 ## Engagement associatif
 - **Président** d’IGILIM (Association des étudiants en informatique graphique et image de Limoges).
 
