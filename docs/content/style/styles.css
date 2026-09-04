@@ -81,7 +81,11 @@ body:not(.has-language-equivalent) #quarto-header .nav-item:has(.language-switch
 }
 
 body:not(.arkhe-page) #quarto-header .nav-item:has(.language-switch--arkhe),
-body.arkhe-page #quarto-header .nav-item:has(.language-switch--home) {
+body:not(.ttb-page) #quarto-header .nav-item:has(.language-switch--ttb),
+body.arkhe-page #quarto-header .nav-item:has(.language-switch--home),
+body.arkhe-page #quarto-header .nav-item:has(.language-switch--ttb),
+body.ttb-page #quarto-header .nav-item:has(.language-switch--home),
+body.ttb-page #quarto-header .nav-item:has(.language-switch--arkhe) {
   display: none;
 }
 
@@ -198,6 +202,87 @@ body.arkhe-page #quarto-header .nav-item:has(.language-switch--home) {
 
 .arkhe-architecture__relation {
   white-space: nowrap;
+}
+
+.ttb-page h1 {
+  margin-bottom: 0.35rem;
+  font-size: clamp(2.5rem, 6vw, 4.25rem);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.ttb-project__type {
+  margin: 0;
+  color: var(--bs-secondary-color);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.ttb-project__status {
+  margin: 0.55rem 0 2.5rem;
+  color: var(--bs-secondary-color);
+}
+
+.ttb-page h2 {
+  margin-top: 3.25rem;
+}
+
+.ttb-project__technologies {
+  margin-top: 1.25rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--bs-border-color);
+  color: var(--bs-secondary-color);
+}
+
+.ttb-project__technologies span {
+  font-weight: 600;
+}
+
+.ttb-system-list {
+  margin: 1.5rem 0 0;
+}
+
+.ttb-system-list > section {
+  display: grid;
+  grid-template-columns: minmax(11rem, 0.8fr) minmax(0, 2fr);
+  gap: 0.6rem clamp(1.5rem, 4vw, 4rem);
+  align-items: start;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--bs-border-color);
+}
+
+.ttb-system-list > section:last-child {
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.ttb-system-list h3,
+.ttb-system-list p {
+  margin: 0;
+}
+
+.ttb-system-list h3 {
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.ttb-system-state {
+  margin-bottom: 0.4rem !important;
+  color: var(--bs-secondary-color);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.ttb-development {
+  margin: 1.5rem 0 0;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--bs-border-color);
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.ttb-media-note {
+  color: var(--bs-secondary-color);
 }
 
 .profile-actions {
@@ -498,7 +583,8 @@ body.arkhe-page #quarto-header .nav-item:has(.language-switch--home) {
     font-size: clamp(1.45rem, 8vw, 2rem);
   }
 
-  .arkhe-feature-list > section {
+  .arkhe-feature-list > section,
+  .ttb-system-list > section {
     grid-template-columns: 1fr;
     gap: 0.5rem;
   }

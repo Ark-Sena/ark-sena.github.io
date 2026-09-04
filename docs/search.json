@@ -1,108 +1,115 @@
 [
   {
-    "objectID": "projects/arkhe/index.html",
-    "href": "projects/arkhe/index.html",
-    "title": "Arkhe Engine",
+    "objectID": "projects/tap-time-breaker/index.html",
+    "href": "projects/tap-time-breaker/index.html",
+    "title": "Tap Time Breaker",
     "section": "",
     "text": "← Retour aux projets"
   },
   {
-    "objectID": "projects/arkhe/index.html#présentation",
-    "href": "projects/arkhe/index.html#présentation",
-    "title": "Arkhe Engine",
+    "objectID": "projects/tap-time-breaker/index.html#présentation",
+    "href": "projects/tap-time-breaker/index.html#présentation",
+    "title": "Tap Time Breaker",
     "section": "Présentation",
-    "text": "Présentation\nArkhe Engine est un moteur et éditeur 2D développé en C++ autour d’OpenGL. Le projet me sert à travailler sur l’architecture logicielle d’un moteur, le rendu graphique et la conception d’outils d’édition.\nÀ un niveau général, le projet distingue les responsabilités liées à l’exécution du moteur de celles propres à l’environnement d’édition. Cette fiche présente les orientations publiques du projet sans documenter son architecture complète."
+    "text": "Présentation\nTap Time Breaker est un jeu mobile idle/clicker développé sous Unity en binôme. Le projet associe une progression passive à des interactions actives, autour de systèmes de combat, de progression et de collection."
   },
   {
-    "objectID": "projects/arkhe/index.html#technologies",
-    "href": "projects/arkhe/index.html#technologies",
-    "title": "Arkhe Engine",
+    "objectID": "projects/tap-time-breaker/index.html#technologies",
+    "href": "projects/tap-time-breaker/index.html#technologies",
+    "title": "Tap Time Breaker",
     "section": "Technologies",
-    "text": "Technologies\n\nTechnologies principales : C++ · OpenGL · SDL2 · ImGui · CMake · Git"
+    "text": "Technologies\n\nTechnologies principales : Unity · C# · Firebase"
   },
   {
-    "objectID": "projects/arkhe/index.html#fonctionnalités-principales",
-    "href": "projects/arkhe/index.html#fonctionnalités-principales",
-    "title": "Arkhe Engine",
-    "section": "Fonctionnalités principales",
-    "text": "Fonctionnalités principales\n\n\nMoteur 2D et rendu OpenGL\nLe moteur est conçu pour des projets 2D et s’appuie sur OpenGL pour le rendu graphique.\n\n\nÉditeur et outils dédiés\nL’environnement d’édition réunit des outils dédiés à la construction et à l’organisation des projets.\n\n\nGestion de projets\nLe projet prévoit une gestion de projets afin de structurer le travail entre l’éditeur et le runtime.\n\n\nOrganisation modulaire et build\nLa base du projet est organisée de manière modulaire et utilise CMake pour son système de build."
+    "objectID": "projects/tap-time-breaker/index.html#mon-rôle",
+    "href": "projects/tap-time-breaker/index.html#mon-rôle",
+    "title": "Tap Time Breaker",
+    "section": "Mon rôle",
+    "text": "Mon rôle\nJe contribue à la programmation, au game design, à la conception des systèmes de jeu et à la documentation du projet. Le développement est partagé avec mon binôme : cette fiche présente mon périmètre sans attribuer l’ensemble du jeu à une seule personne."
   },
   {
-    "objectID": "projects/arkhe/index.html#quelques-choix-techniques",
-    "href": "projects/arkhe/index.html#quelques-choix-techniques",
-    "title": "Arkhe Engine",
-    "section": "Quelques choix techniques",
-    "text": "Quelques choix techniques\nL’une des orientations du projet consiste à séparer le code nécessaire à l’exécution du moteur des outils propres à l’éditeur. Cette séparation permet de limiter les dépendances de l’environnement d’édition dans le runtime.\nCMake accompagne l’organisation modulaire du projet et son système de build, sans exposer les mécanismes internes du moteur."
+    "objectID": "projects/tap-time-breaker/index.html#systèmes-du-jeu",
+    "href": "projects/tap-time-breaker/index.html#systèmes-du-jeu",
+    "title": "Tap Time Breaker",
+    "section": "Systèmes du jeu",
+    "text": "Systèmes du jeu\nLes éléments ci-dessous correspondent à des travaux de conception, de prototypage ou à des systèmes prévus. Ils ne sont pas présentés comme des fonctionnalités finalisées.\n\n\nCombat et interaction active\n\nConception et prototypage\n\nLe combat et les interactions actives constituent des axes de conception et de prototypage pour donner un rythme à la progression.\n\n\nProgression, améliorations et prestige\n\nConception\n\nLa progression passive, les améliorations et le prestige sont étudiés pour structurer les paliers d’évolution du joueur.\n\n\nCompagnons, collection et progression hors ligne\n\nSystèmes prévus et documentation\n\nLes compagnons, la collection et la progression hors ligne font partie du travail de game design et des systèmes documentés ou prévus selon leur avancement."
   },
   {
-    "objectID": "projects/arkhe/index.html#architecture-simplifiée",
-    "href": "projects/arkhe/index.html#architecture-simplifiée",
-    "title": "Arkhe Engine",
-    "section": "Architecture simplifiée",
-    "text": "Architecture simplifiée\nLe schéma suivant représente une relation conceptuelle entre les principaux niveaux du projet. Il ne détaille ni les sous-systèmes internes ni leurs implémentations.\n\n\n\nEnvironnement d’édition\n\n\nEditor\n\n\n\nutilise\n\n\n\nExécution du moteur\n\n\nRuntime\n\n\n\ns’appuie sur\n\n\n\nTechnologies de base\n\n\nOpenGL · SDL2"
+    "objectID": "projects/tap-time-breaker/index.html#développement-du-projet",
+    "href": "projects/tap-time-breaker/index.html#développement-du-projet",
+    "title": "Tap Time Breaker",
+    "section": "Développement du projet",
+    "text": "Développement du projet\n\nProjet développé en binôme dans le cadre du statut étudiant-entrepreneur. Le travail est organisé autour d’un périmètre partagé, avec Unity, C# et Firebase parmi les technologies principales."
   },
   {
-    "objectID": "projects/arkhe/index.html#statut-du-projet",
-    "href": "projects/arkhe/index.html#statut-du-projet",
-    "title": "Arkhe Engine",
-    "section": "Statut du projet",
-    "text": "Statut du projet\nArkhe est en développement actif et son dépôt reste privé. Cette page donne un aperçu du travail réalisé, avec un niveau de détail adapté à une présentation professionnelle."
+    "objectID": "projects/tap-time-breaker/index.html#médias",
+    "href": "projects/tap-time-breaker/index.html#médias",
+    "title": "Tap Time Breaker",
+    "section": "Médias",
+    "text": "Médias\n\nDes captures réelles du jeu seront ajoutées dans une mise à jour dédiée lorsqu’elles pourront être partagées."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "À propos",
+    "objectID": "projects/tap-time-breaker/index.html#statut",
+    "href": "projects/tap-time-breaker/index.html#statut",
+    "title": "Tap Time Breaker",
+    "section": "Statut",
+    "text": "Statut\nTap Time Breaker est en développement actif et son code source reste privé. Cette fiche présente uniquement les informations publiques utiles à comprendre le projet."
+  },
+  {
+    "objectID": "en/projects/tap-time-breaker/index.html",
+    "href": "en/projects/tap-time-breaker/index.html",
+    "title": "Tap Time Breaker",
     "section": "",
-    "text": "Bonjour, je suis Mathys Carboila Dias, étudiant en Master ISICG à l’Université de Limoges.\nDéveloppement graphique & 3D · Jeu vidéo · Développement logiciel\nJe conçois des logiciels, des outils graphiques et des expériences interactives en C++, C#, Python, OpenGL et Unity.\nDisponible pour un stage de 4 à 6 mois à partir de février 2027.\n\nVoir les projets\n\nVoir mon CV\nExplorer la démo 3D\n\n\n\n\n\n\n\n\n\n\nMoteur et éditeur 2D en développement\n\n\n\n\nTechnologies : C++ · OpenGL · SDL2 · ImGui · CMake\n\nMoteur et éditeur 2D personnel axé sur l’architecture logicielle, le rendu graphique et la création d’outils d’édition.\n\nDécouvrir le projet\n\n\nDéveloppement actif · dépôt privé\n\n\n\n\n\n\n\nJeu mobile en développement\n\n\n\n\nTechnologies : Unity · C# · Firebase\n\nJeu mobile idle/clicker développé en binôme, autour de systèmes de combat, de progression et de collection.\n\nDéveloppement actif · code source privéDétails bientôt disponibles\n\n\n\n\n\n\n\nOutil associatif\n\n\n\n\nTechnologies : Python · Discord API · Git\n\nBot développé pour automatiser différentes tâches de gestion, de modération et d’organisation d’événements sur le serveur Discord de l’association IGILIM.\n\nDétails bientôt disponibles\n\n\n\n\n\n\n\n\nJ’expérimente le rendu temps réel, les shaders et les interactions 3D à travers plusieurs démonstrations développées avec Three.js, WebGL et GLSL.\nLa ville interactive regroupe ces travaux graphiques dans un environnement explorable, tandis que l’étude de photogrammétrie présente le passage d’un objet réel à son affichage 3D optimisé pour le Web.\n\n\n\n\n\nTechnologies : Three.js · WebGL · GLSL\n\nExpérience graphique temps réel regroupant shaders, particules, animation et interactions dans une ville futuriste explorable.\n\n\nExplorer la ville\n\n\n\n\n\n\nTechnologies : RealityScan · Blender · Three.js\n\nÉtude du passage d’un objet réel à un modèle 3D reconstruit, nettoyé, optimisé et affiché directement dans le navigateur.\n\n\nVoir l’étude\n\n\n\n\n\n\n\n\nPrésident d’IGILIM (Association des étudiants en informatique graphique et image de Limoges).\n\n\n\n\n\n\nDéveloppement de jeux mobiles : développement d’un projet mobile avec Unity et une intégration Firebase pour la gestion d’une économie et de données en temps réel.\nDéveloppement de moteur : création d’un ray tracer CPU personnalisé en C++ et exploration de techniques de rendu temps réel en C++.\nProjet Hominis : développement d’une simulation humaine pilotée par IA, s’entraînant de façon autonome dans un monde généré procéduralement.\n\n\n\n\n\n\n\n\nArchitecture : moteur de rendu modulaire prenant en charge les surfaces implicites et les maillages triangulaires.\nPerformances : BVH (Bounding Volume Hierarchy) optimisée avec partitionnement des axes fondé sur les centroïdes et multithreading OpenMP pour répartir la charge de travail au niveau des pixels.\nRendu : intégrateur récursif de type Whitted, avec réflexions, réfractions et matériaux physiquement réalistes (BRDF Cook-Torrance).\n\n\n\n\n\nArchitecture : framework modulaire implémentant un pipeline de rendu différé.\nPipeline : gestion complexe d’un G-Buffer (six attachements : position, normales, ambiante, diffuse, spéculaire et profondeur).\nPost-traitement : pile HDR complète avec Bloom, FXAA et correction gamma.\n\n\n\n\n\n\n\n\n\nMaster en informatique graphique (ISICG) : spécialisé en moteurs 3D, ray tracing, GPGPU (CUDA) et programmation parallèle.\nLicence en informatique.\n\n\n\n\n\nLangages : C/C++, Python, GLSL, JS/TS\nMoteurs et logiciels : Unity, Blender, RealityScan/RC\nGraphisme (rendu/shaders) : Three.js/WebGL, ray tracing, PBR, GPGPU (CUDA)\nOutils : Git/GitHub, Trello\n\n\n\n\n\nFrançais et portugais : langues maternelles\nAnglais : B2 (niveau technique)\nEspagnol : B1\nJaponais : A1\n\n\n\n\n\n\n\nPour un stage, un projet ou une question sur mon travail :\n\n\nmcd087@gmail.com\n\n\nLinkedIn · GitHub"
+    "text": "← Back to projects"
   },
   {
-    "objectID": "index.html#projets-selectionnes",
-    "href": "index.html#projets-selectionnes",
-    "title": "À propos",
-    "section": "",
-    "text": "Moteur et éditeur 2D en développement\n\n\n\n\nTechnologies : C++ · OpenGL · SDL2 · ImGui · CMake\n\nMoteur et éditeur 2D personnel axé sur l’architecture logicielle, le rendu graphique et la création d’outils d’édition.\n\nDécouvrir le projet\n\n\nDéveloppement actif · dépôt privé\n\n\n\n\n\n\n\nJeu mobile en développement\n\n\n\n\nTechnologies : Unity · C# · Firebase\n\nJeu mobile idle/clicker développé en binôme, autour de systèmes de combat, de progression et de collection.\n\nDéveloppement actif · code source privéDétails bientôt disponibles\n\n\n\n\n\n\n\nOutil associatif\n\n\n\n\nTechnologies : Python · Discord API · Git\n\nBot développé pour automatiser différentes tâches de gestion, de modération et d’organisation d’événements sur le serveur Discord de l’association IGILIM.\n\nDétails bientôt disponibles"
+    "objectID": "en/projects/tap-time-breaker/index.html#overview",
+    "href": "en/projects/tap-time-breaker/index.html#overview",
+    "title": "Tap Time Breaker",
+    "section": "Overview",
+    "text": "Overview\nTap Time Breaker is an idle/clicker mobile game developed in Unity by a two-person team. The project combines passive progression with active interactions, around combat, progression, and collection systems."
   },
   {
-    "objectID": "index.html#laboratoire-graphique-interactif",
-    "href": "index.html#laboratoire-graphique-interactif",
-    "title": "À propos",
-    "section": "",
-    "text": "J’expérimente le rendu temps réel, les shaders et les interactions 3D à travers plusieurs démonstrations développées avec Three.js, WebGL et GLSL.\nLa ville interactive regroupe ces travaux graphiques dans un environnement explorable, tandis que l’étude de photogrammétrie présente le passage d’un objet réel à son affichage 3D optimisé pour le Web.\n\n\n\n\n\nTechnologies : Three.js · WebGL · GLSL\n\nExpérience graphique temps réel regroupant shaders, particules, animation et interactions dans une ville futuriste explorable.\n\n\nExplorer la ville\n\n\n\n\n\n\nTechnologies : RealityScan · Blender · Three.js\n\nÉtude du passage d’un objet réel à un modèle 3D reconstruit, nettoyé, optimisé et affiché directement dans le navigateur.\n\n\nVoir l’étude"
+    "objectID": "en/projects/tap-time-breaker/index.html#technologies",
+    "href": "en/projects/tap-time-breaker/index.html#technologies",
+    "title": "Tap Time Breaker",
+    "section": "Technologies",
+    "text": "Technologies\n\nCore technologies : Unity · C# · Firebase"
   },
   {
-    "objectID": "index.html#engagement-associatif",
-    "href": "index.html#engagement-associatif",
-    "title": "À propos",
-    "section": "",
-    "text": "Président d’IGILIM (Association des étudiants en informatique graphique et image de Limoges)."
+    "objectID": "en/projects/tap-time-breaker/index.html#my-role",
+    "href": "en/projects/tap-time-breaker/index.html#my-role",
+    "title": "Tap Time Breaker",
+    "section": "My role",
+    "text": "My role\nI contribute to programming, game design, game-system design, and project documentation. Development is shared with my teammate: this page describes my scope without assigning the entire game to one person."
   },
   {
-    "objectID": "index.html#axes-actuels",
-    "href": "index.html#axes-actuels",
-    "title": "À propos",
-    "section": "",
-    "text": "Développement de jeux mobiles : développement d’un projet mobile avec Unity et une intégration Firebase pour la gestion d’une économie et de données en temps réel.\nDéveloppement de moteur : création d’un ray tracer CPU personnalisé en C++ et exploration de techniques de rendu temps réel en C++.\nProjet Hominis : développement d’une simulation humaine pilotée par IA, s’entraînant de façon autonome dans un monde généré procéduralement."
+    "objectID": "en/projects/tap-time-breaker/index.html#game-systems",
+    "href": "en/projects/tap-time-breaker/index.html#game-systems",
+    "title": "Tap Time Breaker",
+    "section": "Game systems",
+    "text": "Game systems\nThe items below describe design work, prototyping, or planned systems. They are not presented as finished features.\n\n\nCombat and active interaction\n\nDesign and prototyping\n\nCombat and active interactions are areas of design and prototyping intended to give progression its rhythm.\n\n\nProgression, upgrades, and prestige\n\nDesign\n\nPassive progression, upgrades, and prestige are being considered to structure the player’s progression milestones.\n\n\nCompanions, collection, and offline progression\n\nPlanned systems and documentation\n\nCompanions, collection, and offline progression are part of the game-design work and of systems documented or planned according to their stage of development."
   },
   {
-    "objectID": "index.html#points-techniques",
-    "href": "index.html#points-techniques",
-    "title": "À propos",
-    "section": "",
-    "text": "Architecture : moteur de rendu modulaire prenant en charge les surfaces implicites et les maillages triangulaires.\nPerformances : BVH (Bounding Volume Hierarchy) optimisée avec partitionnement des axes fondé sur les centroïdes et multithreading OpenMP pour répartir la charge de travail au niveau des pixels.\nRendu : intégrateur récursif de type Whitted, avec réflexions, réfractions et matériaux physiquement réalistes (BRDF Cook-Torrance).\n\n\n\n\n\nArchitecture : framework modulaire implémentant un pipeline de rendu différé.\nPipeline : gestion complexe d’un G-Buffer (six attachements : position, normales, ambiante, diffuse, spéculaire et profondeur).\nPost-traitement : pile HDR complète avec Bloom, FXAA et correction gamma."
+    "objectID": "en/projects/tap-time-breaker/index.html#project-development",
+    "href": "en/projects/tap-time-breaker/index.html#project-development",
+    "title": "Tap Time Breaker",
+    "section": "Project development",
+    "text": "Project development\n\nThe project is developed by a two-person team under student-entrepreneur status. Work is organized around a shared scope, with Unity, C#, and Firebase among the project’s core technologies."
   },
   {
-    "objectID": "index.html#formation-et-compétences",
-    "href": "index.html#formation-et-compétences",
-    "title": "À propos",
-    "section": "",
-    "text": "Master en informatique graphique (ISICG) : spécialisé en moteurs 3D, ray tracing, GPGPU (CUDA) et programmation parallèle.\nLicence en informatique.\n\n\n\n\n\nLangages : C/C++, Python, GLSL, JS/TS\nMoteurs et logiciels : Unity, Blender, RealityScan/RC\nGraphisme (rendu/shaders) : Three.js/WebGL, ray tracing, PBR, GPGPU (CUDA)\nOutils : Git/GitHub, Trello\n\n\n\n\n\nFrançais et portugais : langues maternelles\nAnglais : B2 (niveau technique)\nEspagnol : B1\nJaponais : A1"
+    "objectID": "en/projects/tap-time-breaker/index.html#media",
+    "href": "en/projects/tap-time-breaker/index.html#media",
+    "title": "Tap Time Breaker",
+    "section": "Media",
+    "text": "Media\n\nReal game captures will be added in a dedicated update when they can be shared."
   },
   {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "À propos",
-    "section": "",
-    "text": "Pour un stage, un projet ou une question sur mon travail :\n\n\nmcd087@gmail.com\n\n\nLinkedIn · GitHub"
+    "objectID": "en/projects/tap-time-breaker/index.html#status",
+    "href": "en/projects/tap-time-breaker/index.html#status",
+    "title": "Tap Time Breaker",
+    "section": "Status",
+    "text": "Status\nTap Time Breaker is in active development and its source code remains private. This page only presents public information useful for understanding the project."
   },
   {
     "objectID": "en/index.html",
@@ -208,5 +215,110 @@
     "title": "Arkhe Engine",
     "section": "Project status",
     "text": "Project status\nArkhe is under active development and its repository remains private. This page gives an overview of the work while keeping the level of detail appropriate for a professional portfolio."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "À propos",
+    "section": "",
+    "text": "Bonjour, je suis Mathys Carboila Dias, étudiant en Master ISICG à l’Université de Limoges.\nDéveloppement graphique & 3D · Jeu vidéo · Développement logiciel\nJe conçois des logiciels, des outils graphiques et des expériences interactives en C++, C#, Python, OpenGL et Unity.\nDisponible pour un stage de 4 à 6 mois à partir de février 2027.\n\nVoir les projets\n\nVoir mon CV\nExplorer la démo 3D\n\n\n\n\n\n\n\n\n\n\nMoteur et éditeur 2D en développement\n\n\n\n\nTechnologies : C++ · OpenGL · SDL2 · ImGui · CMake\n\nMoteur et éditeur 2D personnel axé sur l’architecture logicielle, le rendu graphique et la création d’outils d’édition.\n\nDécouvrir le projet\n\n\nDéveloppement actif · dépôt privé\n\n\n\n\n\n\n\nJeu mobile en développement\n\n\n\n\nTechnologies : Unity · C# · Firebase\n\nJeu mobile idle/clicker développé en binôme, autour de systèmes de combat, de progression et de collection.\n\nDéveloppement actif · code source privéDétails bientôt disponibles\n\n\n\n\n\n\n\nOutil associatif\n\n\n\n\nTechnologies : Python · Discord API · Git\n\nBot développé pour automatiser différentes tâches de gestion, de modération et d’organisation d’événements sur le serveur Discord de l’association IGILIM.\n\nDétails bientôt disponibles\n\n\n\n\n\n\n\n\nJ’expérimente le rendu temps réel, les shaders et les interactions 3D à travers plusieurs démonstrations développées avec Three.js, WebGL et GLSL.\nLa ville interactive regroupe ces travaux graphiques dans un environnement explorable, tandis que l’étude de photogrammétrie présente le passage d’un objet réel à son affichage 3D optimisé pour le Web.\n\n\n\n\n\nTechnologies : Three.js · WebGL · GLSL\n\nExpérience graphique temps réel regroupant shaders, particules, animation et interactions dans une ville futuriste explorable.\n\n\nExplorer la ville\n\n\n\n\n\n\nTechnologies : RealityScan · Blender · Three.js\n\nÉtude du passage d’un objet réel à un modèle 3D reconstruit, nettoyé, optimisé et affiché directement dans le navigateur.\n\n\nVoir l’étude\n\n\n\n\n\n\n\n\nPrésident d’IGILIM (Association des étudiants en informatique graphique et image de Limoges).\n\n\n\n\n\n\nDéveloppement de jeux mobiles : développement d’un projet mobile avec Unity et une intégration Firebase pour la gestion d’une économie et de données en temps réel.\nDéveloppement de moteur : création d’un ray tracer CPU personnalisé en C++ et exploration de techniques de rendu temps réel en C++.\nProjet Hominis : développement d’une simulation humaine pilotée par IA, s’entraînant de façon autonome dans un monde généré procéduralement.\n\n\n\n\n\n\n\n\nArchitecture : moteur de rendu modulaire prenant en charge les surfaces implicites et les maillages triangulaires.\nPerformances : BVH (Bounding Volume Hierarchy) optimisée avec partitionnement des axes fondé sur les centroïdes et multithreading OpenMP pour répartir la charge de travail au niveau des pixels.\nRendu : intégrateur récursif de type Whitted, avec réflexions, réfractions et matériaux physiquement réalistes (BRDF Cook-Torrance).\n\n\n\n\n\nArchitecture : framework modulaire implémentant un pipeline de rendu différé.\nPipeline : gestion complexe d’un G-Buffer (six attachements : position, normales, ambiante, diffuse, spéculaire et profondeur).\nPost-traitement : pile HDR complète avec Bloom, FXAA et correction gamma.\n\n\n\n\n\n\n\n\n\nMaster en informatique graphique (ISICG) : spécialisé en moteurs 3D, ray tracing, GPGPU (CUDA) et programmation parallèle.\nLicence en informatique.\n\n\n\n\n\nLangages : C/C++, Python, GLSL, JS/TS\nMoteurs et logiciels : Unity, Blender, RealityScan/RC\nGraphisme (rendu/shaders) : Three.js/WebGL, ray tracing, PBR, GPGPU (CUDA)\nOutils : Git/GitHub, Trello\n\n\n\n\n\nFrançais et portugais : langues maternelles\nAnglais : B2 (niveau technique)\nEspagnol : B1\nJaponais : A1\n\n\n\n\n\n\n\nPour un stage, un projet ou une question sur mon travail :\n\n\nmcd087@gmail.com\n\n\nLinkedIn · GitHub"
+  },
+  {
+    "objectID": "index.html#projets-selectionnes",
+    "href": "index.html#projets-selectionnes",
+    "title": "À propos",
+    "section": "",
+    "text": "Moteur et éditeur 2D en développement\n\n\n\n\nTechnologies : C++ · OpenGL · SDL2 · ImGui · CMake\n\nMoteur et éditeur 2D personnel axé sur l’architecture logicielle, le rendu graphique et la création d’outils d’édition.\n\nDécouvrir le projet\n\n\nDéveloppement actif · dépôt privé\n\n\n\n\n\n\n\nJeu mobile en développement\n\n\n\n\nTechnologies : Unity · C# · Firebase\n\nJeu mobile idle/clicker développé en binôme, autour de systèmes de combat, de progression et de collection.\n\nDéveloppement actif · code source privéDétails bientôt disponibles\n\n\n\n\n\n\n\nOutil associatif\n\n\n\n\nTechnologies : Python · Discord API · Git\n\nBot développé pour automatiser différentes tâches de gestion, de modération et d’organisation d’événements sur le serveur Discord de l’association IGILIM.\n\nDétails bientôt disponibles"
+  },
+  {
+    "objectID": "index.html#laboratoire-graphique-interactif",
+    "href": "index.html#laboratoire-graphique-interactif",
+    "title": "À propos",
+    "section": "",
+    "text": "J’expérimente le rendu temps réel, les shaders et les interactions 3D à travers plusieurs démonstrations développées avec Three.js, WebGL et GLSL.\nLa ville interactive regroupe ces travaux graphiques dans un environnement explorable, tandis que l’étude de photogrammétrie présente le passage d’un objet réel à son affichage 3D optimisé pour le Web.\n\n\n\n\n\nTechnologies : Three.js · WebGL · GLSL\n\nExpérience graphique temps réel regroupant shaders, particules, animation et interactions dans une ville futuriste explorable.\n\n\nExplorer la ville\n\n\n\n\n\n\nTechnologies : RealityScan · Blender · Three.js\n\nÉtude du passage d’un objet réel à un modèle 3D reconstruit, nettoyé, optimisé et affiché directement dans le navigateur.\n\n\nVoir l’étude"
+  },
+  {
+    "objectID": "index.html#engagement-associatif",
+    "href": "index.html#engagement-associatif",
+    "title": "À propos",
+    "section": "",
+    "text": "Président d’IGILIM (Association des étudiants en informatique graphique et image de Limoges)."
+  },
+  {
+    "objectID": "index.html#axes-actuels",
+    "href": "index.html#axes-actuels",
+    "title": "À propos",
+    "section": "",
+    "text": "Développement de jeux mobiles : développement d’un projet mobile avec Unity et une intégration Firebase pour la gestion d’une économie et de données en temps réel.\nDéveloppement de moteur : création d’un ray tracer CPU personnalisé en C++ et exploration de techniques de rendu temps réel en C++.\nProjet Hominis : développement d’une simulation humaine pilotée par IA, s’entraînant de façon autonome dans un monde généré procéduralement."
+  },
+  {
+    "objectID": "index.html#points-techniques",
+    "href": "index.html#points-techniques",
+    "title": "À propos",
+    "section": "",
+    "text": "Architecture : moteur de rendu modulaire prenant en charge les surfaces implicites et les maillages triangulaires.\nPerformances : BVH (Bounding Volume Hierarchy) optimisée avec partitionnement des axes fondé sur les centroïdes et multithreading OpenMP pour répartir la charge de travail au niveau des pixels.\nRendu : intégrateur récursif de type Whitted, avec réflexions, réfractions et matériaux physiquement réalistes (BRDF Cook-Torrance).\n\n\n\n\n\nArchitecture : framework modulaire implémentant un pipeline de rendu différé.\nPipeline : gestion complexe d’un G-Buffer (six attachements : position, normales, ambiante, diffuse, spéculaire et profondeur).\nPost-traitement : pile HDR complète avec Bloom, FXAA et correction gamma."
+  },
+  {
+    "objectID": "index.html#formation-et-compétences",
+    "href": "index.html#formation-et-compétences",
+    "title": "À propos",
+    "section": "",
+    "text": "Master en informatique graphique (ISICG) : spécialisé en moteurs 3D, ray tracing, GPGPU (CUDA) et programmation parallèle.\nLicence en informatique.\n\n\n\n\n\nLangages : C/C++, Python, GLSL, JS/TS\nMoteurs et logiciels : Unity, Blender, RealityScan/RC\nGraphisme (rendu/shaders) : Three.js/WebGL, ray tracing, PBR, GPGPU (CUDA)\nOutils : Git/GitHub, Trello\n\n\n\n\n\nFrançais et portugais : langues maternelles\nAnglais : B2 (niveau technique)\nEspagnol : B1\nJaponais : A1"
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "À propos",
+    "section": "",
+    "text": "Pour un stage, un projet ou une question sur mon travail :\n\n\nmcd087@gmail.com\n\n\nLinkedIn · GitHub"
+  },
+  {
+    "objectID": "projects/arkhe/index.html",
+    "href": "projects/arkhe/index.html",
+    "title": "Arkhe Engine",
+    "section": "",
+    "text": "← Retour aux projets"
+  },
+  {
+    "objectID": "projects/arkhe/index.html#présentation",
+    "href": "projects/arkhe/index.html#présentation",
+    "title": "Arkhe Engine",
+    "section": "Présentation",
+    "text": "Présentation\nArkhe Engine est un moteur et éditeur 2D développé en C++ autour d’OpenGL. Le projet me sert à travailler sur l’architecture logicielle d’un moteur, le rendu graphique et la conception d’outils d’édition.\nÀ un niveau général, le projet distingue les responsabilités liées à l’exécution du moteur de celles propres à l’environnement d’édition. Cette fiche présente les orientations publiques du projet sans documenter son architecture complète."
+  },
+  {
+    "objectID": "projects/arkhe/index.html#technologies",
+    "href": "projects/arkhe/index.html#technologies",
+    "title": "Arkhe Engine",
+    "section": "Technologies",
+    "text": "Technologies\n\nTechnologies principales : C++ · OpenGL · SDL2 · ImGui · CMake · Git"
+  },
+  {
+    "objectID": "projects/arkhe/index.html#fonctionnalités-principales",
+    "href": "projects/arkhe/index.html#fonctionnalités-principales",
+    "title": "Arkhe Engine",
+    "section": "Fonctionnalités principales",
+    "text": "Fonctionnalités principales\n\n\nMoteur 2D et rendu OpenGL\nLe moteur est conçu pour des projets 2D et s’appuie sur OpenGL pour le rendu graphique.\n\n\nÉditeur et outils dédiés\nL’environnement d’édition réunit des outils dédiés à la construction et à l’organisation des projets.\n\n\nGestion de projets\nLe projet prévoit une gestion de projets afin de structurer le travail entre l’éditeur et le runtime.\n\n\nOrganisation modulaire et build\nLa base du projet est organisée de manière modulaire et utilise CMake pour son système de build."
+  },
+  {
+    "objectID": "projects/arkhe/index.html#quelques-choix-techniques",
+    "href": "projects/arkhe/index.html#quelques-choix-techniques",
+    "title": "Arkhe Engine",
+    "section": "Quelques choix techniques",
+    "text": "Quelques choix techniques\nL’une des orientations du projet consiste à séparer le code nécessaire à l’exécution du moteur des outils propres à l’éditeur. Cette séparation permet de limiter les dépendances de l’environnement d’édition dans le runtime.\nCMake accompagne l’organisation modulaire du projet et son système de build, sans exposer les mécanismes internes du moteur."
+  },
+  {
+    "objectID": "projects/arkhe/index.html#architecture-simplifiée",
+    "href": "projects/arkhe/index.html#architecture-simplifiée",
+    "title": "Arkhe Engine",
+    "section": "Architecture simplifiée",
+    "text": "Architecture simplifiée\nLe schéma suivant représente une relation conceptuelle entre les principaux niveaux du projet. Il ne détaille ni les sous-systèmes internes ni leurs implémentations.\n\n\n\nEnvironnement d’édition\n\n\nEditor\n\n\n\nutilise\n\n\n\nExécution du moteur\n\n\nRuntime\n\n\n\ns’appuie sur\n\n\n\nTechnologies de base\n\n\nOpenGL · SDL2"
+  },
+  {
+    "objectID": "projects/arkhe/index.html#statut-du-projet",
+    "href": "projects/arkhe/index.html#statut-du-projet",
+    "title": "Arkhe Engine",
+    "section": "Statut du projet",
+    "text": "Statut du projet\nArkhe est en développement actif et son dépôt reste privé. Cette page donne un aperçu du travail réalisé, avec un niveau de détail adapté à une présentation professionnelle."
   }
 ]

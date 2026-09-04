@@ -1,0 +1,64 @@
+---
+format: html
+editor: visual
+lang: en
+body-classes: "locale-en ttb-page has-language-equivalent"
+---
+
+<p class="project-back-link"><a href="/en/#selected-projects">← Back to projects</a></p>
+
+# Tap Time Breaker
+
+<p class="ttb-project__type">Idle/clicker mobile game</p>
+
+<p class="ttb-project__status">Active development · private source code</p>
+
+## Overview
+
+Tap Time Breaker is an idle/clicker mobile game developed in Unity by a two-person team. The project combines passive progression with active interactions, around combat, progression, and collection systems.
+
+## Technologies
+
+<p class="ttb-project__technologies"><span>Core technologies&nbsp;:</span> Unity · C# · Firebase</p>
+
+## My role
+
+I contribute to programming, game design, game-system design, and project documentation. Development is shared with my teammate: this page describes my scope without assigning the entire game to one person.
+
+## Game systems
+
+The items below describe design work, prototyping, or planned systems. They are not presented as finished features.
+
+::: {.ttb-system-list}
+
+### Combat and active interaction
+
+<p class="ttb-system-state">Design and prototyping</p>
+
+Combat and active interactions are areas of design and prototyping intended to give progression its rhythm.
+
+### Progression, upgrades, and prestige
+
+<p class="ttb-system-state">Design</p>
+
+Passive progression, upgrades, and prestige are being considered to structure the player’s progression milestones.
+
+### Companions, collection, and offline progression
+
+<p class="ttb-system-state">Planned systems and documentation</p>
+
+Companions, collection, and offline progression are part of the game-design work and of systems documented or planned according to their stage of development.
+
+:::
+
+## Project development
+
+<p class="ttb-development">The project is developed by a two-person team under student-entrepreneur status. Work is organized around a shared scope, with Unity, C#, and Firebase among the project’s core technologies.</p>
+
+## Media
+
+<p class="ttb-media-note">Real game captures will be added in a dedicated update when they can be shared.</p>
+
+## Status
+
+Tap Time Breaker is in active development and its source code remains private. This page only presents public information useful for understanding the project.
