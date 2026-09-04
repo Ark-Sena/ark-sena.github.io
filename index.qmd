@@ -61,7 +61,9 @@ Moteur et éditeur 2D personnel axé sur l’architecture logicielle, le rendu g
 
 Jeu mobile idle/clicker développé en binôme, autour de systèmes de combat, de progression et de collection.
 
-<p class="project-entry__meta"><span class="project-entry__status">Développement actif · code source privé</span><span class="project-entry__availability">Détails bientôt disponibles</span></p>
+<p class="project-entry__link"><a href="/projects/tap-time-breaker/">Découvrir le projet</a></p>
+
+<p class="project-entry__meta"><span class="project-entry__status">Développement actif · code source privé</span></p>
 :::
 :::
 
