@@ -33,21 +33,33 @@ Les éléments ci-dessous correspondent à des travaux de conception, de prototy
 
 ### Combat et interaction active
 
+::: {.ttb-system__content}
+
 <p class="ttb-system-state">Conception et prototypage</p>
 
 Le combat et les interactions actives constituent des axes de conception et de prototypage pour donner un rythme à la progression.
 
+:::
+
 ### Progression, améliorations et prestige
+
+::: {.ttb-system__content}
 
 <p class="ttb-system-state">Conception</p>
 
 La progression passive, les améliorations et le prestige sont étudiés pour structurer les paliers d’évolution du joueur.
 
+:::
+
 ### Compagnons, collection et progression hors ligne
+
+::: {.ttb-system__content}
 
 <p class="ttb-system-state">Systèmes prévus et documentation</p>
 
 Les compagnons, la collection et la progression hors ligne font partie du travail de game design et des systèmes documentés ou prévus selon leur avancement.
+
+:::
 
 :::
 

@@ -244,7 +244,7 @@ body.ttb-page #quarto-header .nav-item:has(.language-switch--arkhe) {
 
 .ttb-system-list > section {
   display: grid;
-  grid-template-columns: minmax(11rem, 0.8fr) minmax(0, 2fr);
+  grid-template-columns: minmax(12rem, 0.9fr) minmax(0, 2fr);
   gap: 0.6rem clamp(1.5rem, 4vw, 4rem);
   align-items: start;
   padding: 1.25rem 0;
@@ -261,17 +261,25 @@ body.ttb-page #quarto-header .nav-item:has(.language-switch--arkhe) {
 }
 
 .ttb-system-list h3 {
+  grid-column: 1;
   font-size: 1.1rem;
   line-height: 1.2;
 }
 
+.ttb-system__content {
+  grid-column: 2;
+  min-width: 0;
+}
+
+.ttb-system__content p {
+  margin: 0;
+}
+
 .ttb-system-state {
-  margin-bottom: 0.4rem !important;
+  margin-bottom: 0.5rem !important;
   color: var(--bs-secondary-color);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
 }
 
 .ttb-development {
@@ -587,6 +595,11 @@ body.ttb-page #quarto-header .nav-item:has(.language-switch--arkhe) {
   .ttb-system-list > section {
     grid-template-columns: 1fr;
     gap: 0.5rem;
+  }
+
+  .ttb-system-list h3,
+  .ttb-system__content {
+    grid-column: auto;
   }
 
   .arkhe-architecture {

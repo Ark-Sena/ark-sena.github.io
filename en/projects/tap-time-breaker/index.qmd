@@ -33,21 +33,33 @@ The items below describe design work, prototyping, or planned systems. They are 
 
 ### Combat and active interaction
 
+::: {.ttb-system__content}
+
 <p class="ttb-system-state">Design and prototyping</p>
 
 Combat and active interactions are areas of design and prototyping intended to give progression its rhythm.
 
+:::
+
 ### Progression, upgrades, and prestige
+
+::: {.ttb-system__content}
 
 <p class="ttb-system-state">Design</p>
 
 Passive progression, upgrades, and prestige are being considered to structure the player’s progression milestones.
 
+:::
+
 ### Companions, collection, and offline progression
+
+::: {.ttb-system__content}
 
 <p class="ttb-system-state">Planned systems and documentation</p>
 
 Companions, collection, and offline progression are part of the game-design work and of systems documented or planned according to their stage of development.
+
+:::
 
 :::
 
