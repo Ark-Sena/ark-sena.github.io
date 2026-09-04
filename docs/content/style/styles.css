@@ -80,22 +80,11 @@ body:not(.has-language-equivalent) #quarto-header .nav-item:has(.language-switch
   display: none;
 }
 
-body.arkhe-page #quarto-header .nav-item:has(.language-switch) {
+body:not(.arkhe-page) #quarto-header .nav-item:has(.language-switch--arkhe),
+body.arkhe-page #quarto-header .nav-item:has(.language-switch--home) {
   display: none;
 }
 
-.project-language-switch {
-  display: inline-flex;
-  gap: 0.35rem;
-  align-items: center;
-  margin: 0;
-  color: var(--bs-secondary-color);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-}
-
-.project-language-switch a,
 .project-back-link a {
   color: var(--bs-link-color);
   text-decoration-line: underline;
@@ -103,13 +92,6 @@ body.arkhe-page #quarto-header .nav-item:has(.language-switch) {
   text-underline-offset: 0.22em;
 }
 
-.project-language-switch__active {
-  color: var(--bs-body-color) !important;
-  text-decoration-thickness: 2px !important;
-  text-underline-offset: 0.3em !important;
-}
-
-.project-language-switch a:focus-visible,
 .project-back-link a:focus-visible {
   outline: 3px solid var(--bs-link-color);
   outline-offset: 3px;

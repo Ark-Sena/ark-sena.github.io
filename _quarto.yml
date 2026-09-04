@@ -31,11 +31,17 @@ website:
         aria-label: "Photogrammetry"
     right:
       - href: index.qmd
-        text: "[FR]{.language-switch .language-switch--fr}"
+        text: "[FR]{.language-switch .language-switch--fr .language-switch--home}"
         aria-label: "Afficher le portfolio en français"
       - href: en/index.qmd
-        text: "[EN]{.language-switch .language-switch--en}"
+        text: "[EN]{.language-switch .language-switch--en .language-switch--home}"
         aria-label: "View the portfolio in English"
+      - href: projects/arkhe/index.qmd
+        text: "[FR]{.language-switch .language-switch--fr .language-switch--arkhe}"
+        aria-label: "Afficher la fiche Arkhe en français"
+      - href: en/projects/arkhe/index.qmd
+        text: "[EN]{.language-switch .language-switch--en .language-switch--arkhe}"
+        aria-label: "View the Arkhe project page in English"
   page-footer: "© 2026 Mathys Carboila Dias | Built with Quarto & Three.js"
   search: false
 

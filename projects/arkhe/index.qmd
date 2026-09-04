@@ -5,8 +5,6 @@ lang: fr
 body-classes: "locale-fr arkhe-page has-language-equivalent"
 ---
 
-<nav class="project-language-switch" aria-label="Langue de la fiche Arkhe"><a class="project-language-switch__active" href="/projects/arkhe/" aria-current="page">FR</a><span aria-hidden="true"> | </span><a href="/en/projects/arkhe/">EN</a></nav>
-
 <p class="project-back-link"><a href="/#projets-selectionnes">← Retour aux projets</a></p>
 
 # Arkhe Engine
