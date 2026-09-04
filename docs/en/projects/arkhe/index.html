@@ -296,6 +296,9 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#technologies" id="toc-technologies" class="nav-link" data-scroll-target="#technologies">Technologies</a></li>
+  <li><a href="#main-capabilities" id="toc-main-capabilities" class="nav-link" data-scroll-target="#main-capabilities">Main capabilities</a></li>
+  <li><a href="#selected-technical-choices" id="toc-selected-technical-choices" class="nav-link" data-scroll-target="#selected-technical-choices">Selected technical choices</a></li>
+  <li><a href="#simplified-architecture" id="toc-simplified-architecture" class="nav-link" data-scroll-target="#simplified-architecture">Simplified architecture</a></li>
   <li><a href="#project-status" id="toc-project-status" class="nav-link" data-scroll-target="#project-status">Project status</a></li>
   </ul></li>
   </ul>
@@ -332,6 +335,68 @@ Active development · private repository
 <p class="arkhe-project__technologies">
 <span>Core technologies&nbsp;:</span> C++ · OpenGL · SDL2 · ImGui · CMake · Git
 </p>
+</section>
+<section id="main-capabilities" class="level2">
+<h2 class="anchored" data-anchor-id="main-capabilities">Main capabilities</h2>
+<div class="arkhe-feature-list">
+<section id="d-engine-and-opengl-rendering" class="level3">
+<h3 class="anchored" data-anchor-id="d-engine-and-opengl-rendering">2D engine and OpenGL rendering</h3>
+<p>The engine is designed for 2D projects and relies on OpenGL for graphics rendering.</p>
+</section>
+<section id="dedicated-editor-and-tools" class="level3">
+<h3 class="anchored" data-anchor-id="dedicated-editor-and-tools">Dedicated editor and tools</h3>
+<p>The editing environment brings together tools for building and organizing projects.</p>
+</section>
+<section id="project-management" class="level3">
+<h3 class="anchored" data-anchor-id="project-management">Project management</h3>
+<p>The project includes project management to structure work between the editor and the runtime.</p>
+</section>
+<section id="modular-organization-and-build" class="level3">
+<h3 class="anchored" data-anchor-id="modular-organization-and-build">Modular organization and build</h3>
+<p>The project is organized in modules and uses CMake for its build system.</p>
+</section>
+</div>
+</section>
+<section id="selected-technical-choices" class="level2">
+<h2 class="anchored" data-anchor-id="selected-technical-choices">Selected technical choices</h2>
+<p>One direction of the project is to separate code required for engine execution from tools specific to the editor. This separation helps limit the editor environment’s dependencies in the runtime.</p>
+<p>CMake supports the project’s modular organization and build system without exposing the engine’s internal mechanisms.</p>
+</section>
+<section id="simplified-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="simplified-architecture">Simplified architecture</h2>
+<p>The diagram below presents a conceptual relationship between the project’s main layers. It does not detail internal subsystems or their implementations.</p>
+<div class="arkhe-architecture" aria-label="Conceptual Arkhe architecture diagram">
+<div class="arkhe-architecture__step">
+<p class="arkhe-architecture__label">
+Editing environment
+</p>
+<p class="arkhe-architecture__name">
+Editor
+</p>
+</div>
+<div class="arkhe-architecture__relation">
+<p>uses</p>
+</div>
+<div class="arkhe-architecture__step">
+<p class="arkhe-architecture__label">
+Engine execution
+</p>
+<p class="arkhe-architecture__name">
+Runtime
+</p>
+</div>
+<div class="arkhe-architecture__relation">
+<p>relies on</p>
+</div>
+<div class="arkhe-architecture__step">
+<p class="arkhe-architecture__label">
+Core technologies
+</p>
+<p class="arkhe-architecture__name">
+OpenGL · SDL2
+</p>
+</div>
+</div>
 </section>
 <section id="project-status" class="level2">
 <h2 class="anchored" data-anchor-id="project-status">Project status</h2>

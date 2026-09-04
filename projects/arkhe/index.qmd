@@ -25,6 +25,65 @@ Arkhe Engine est un moteur et éditeur 2D développé en C++ autour d’OpenGL. 
 
 <p class="arkhe-project__technologies"><span>Technologies principales&nbsp;:</span> C++ · OpenGL · SDL2 · ImGui · CMake · Git</p>
 
+## Fonctionnalités principales
+
+::: {.arkhe-feature-list}
+
+### Moteur 2D et rendu OpenGL
+
+Le moteur est conçu pour des projets 2D et s’appuie sur OpenGL pour le rendu graphique.
+
+### Éditeur et outils dédiés
+
+L’environnement d’édition réunit des outils dédiés à la construction et à l’organisation des projets.
+
+### Gestion de projets
+
+Le projet prévoit une gestion de projets afin de structurer le travail entre l’éditeur et le runtime.
+
+### Organisation modulaire et build
+
+La base du projet est organisée de manière modulaire et utilise CMake pour son système de build.
+
+:::
+
+## Quelques choix techniques
+
+L’une des orientations du projet consiste à séparer le code nécessaire à l’exécution du moteur des outils propres à l’éditeur. Cette séparation permet de limiter les dépendances de l’environnement d’édition dans le runtime.
+
+CMake accompagne l’organisation modulaire du projet et son système de build, sans exposer les mécanismes internes du moteur.
+
+## Architecture simplifiée
+
+Le schéma suivant représente une relation conceptuelle entre les principaux niveaux du projet. Il ne détaille ni les sous-systèmes internes ni leurs implémentations.
+
+::: {.arkhe-architecture aria-label="Schéma conceptuel de l’architecture Arkhe"}
+
+::: {.arkhe-architecture__step}
+<p class="arkhe-architecture__label">Environnement d’édition</p>
+<p class="arkhe-architecture__name">Editor</p>
+:::
+
+::: {.arkhe-architecture__relation}
+utilise
+:::
+
+::: {.arkhe-architecture__step}
+<p class="arkhe-architecture__label">Exécution du moteur</p>
+<p class="arkhe-architecture__name">Runtime</p>
+:::
+
+::: {.arkhe-architecture__relation}
+s’appuie sur
+:::
+
+::: {.arkhe-architecture__step}
+<p class="arkhe-architecture__label">Technologies de base</p>
+<p class="arkhe-architecture__name">OpenGL · SDL2</p>
+:::
+
+:::
+
 ## Statut du projet
 
 Arkhe est en développement actif et son dépôt reste privé. Cette page donne un aperçu du travail réalisé, avec un niveau de détail adapté à une présentation professionnelle.

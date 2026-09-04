@@ -296,6 +296,9 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#présentation" id="toc-présentation" class="nav-link" data-scroll-target="#présentation">Présentation</a></li>
   <li><a href="#technologies" id="toc-technologies" class="nav-link" data-scroll-target="#technologies">Technologies</a></li>
+  <li><a href="#fonctionnalités-principales" id="toc-fonctionnalités-principales" class="nav-link" data-scroll-target="#fonctionnalités-principales">Fonctionnalités principales</a></li>
+  <li><a href="#quelques-choix-techniques" id="toc-quelques-choix-techniques" class="nav-link" data-scroll-target="#quelques-choix-techniques">Quelques choix techniques</a></li>
+  <li><a href="#architecture-simplifiée" id="toc-architecture-simplifiée" class="nav-link" data-scroll-target="#architecture-simplifiée">Architecture simplifiée</a></li>
   <li><a href="#statut-du-projet" id="toc-statut-du-projet" class="nav-link" data-scroll-target="#statut-du-projet">Statut du projet</a></li>
   </ul></li>
   </ul>
@@ -332,6 +335,68 @@ Développement actif · dépôt privé
 <p class="arkhe-project__technologies">
 <span>Technologies principales&nbsp;:</span> C++ · OpenGL · SDL2 · ImGui · CMake · Git
 </p>
+</section>
+<section id="fonctionnalités-principales" class="level2">
+<h2 class="anchored" data-anchor-id="fonctionnalités-principales">Fonctionnalités principales</h2>
+<div class="arkhe-feature-list">
+<section id="moteur-2d-et-rendu-opengl" class="level3">
+<h3 class="anchored" data-anchor-id="moteur-2d-et-rendu-opengl">Moteur 2D et rendu OpenGL</h3>
+<p>Le moteur est conçu pour des projets 2D et s’appuie sur OpenGL pour le rendu graphique.</p>
+</section>
+<section id="éditeur-et-outils-dédiés" class="level3">
+<h3 class="anchored" data-anchor-id="éditeur-et-outils-dédiés">Éditeur et outils dédiés</h3>
+<p>L’environnement d’édition réunit des outils dédiés à la construction et à l’organisation des projets.</p>
+</section>
+<section id="gestion-de-projets" class="level3">
+<h3 class="anchored" data-anchor-id="gestion-de-projets">Gestion de projets</h3>
+<p>Le projet prévoit une gestion de projets afin de structurer le travail entre l’éditeur et le runtime.</p>
+</section>
+<section id="organisation-modulaire-et-build" class="level3">
+<h3 class="anchored" data-anchor-id="organisation-modulaire-et-build">Organisation modulaire et build</h3>
+<p>La base du projet est organisée de manière modulaire et utilise CMake pour son système de build.</p>
+</section>
+</div>
+</section>
+<section id="quelques-choix-techniques" class="level2">
+<h2 class="anchored" data-anchor-id="quelques-choix-techniques">Quelques choix techniques</h2>
+<p>L’une des orientations du projet consiste à séparer le code nécessaire à l’exécution du moteur des outils propres à l’éditeur. Cette séparation permet de limiter les dépendances de l’environnement d’édition dans le runtime.</p>
+<p>CMake accompagne l’organisation modulaire du projet et son système de build, sans exposer les mécanismes internes du moteur.</p>
+</section>
+<section id="architecture-simplifiée" class="level2">
+<h2 class="anchored" data-anchor-id="architecture-simplifiée">Architecture simplifiée</h2>
+<p>Le schéma suivant représente une relation conceptuelle entre les principaux niveaux du projet. Il ne détaille ni les sous-systèmes internes ni leurs implémentations.</p>
+<div class="arkhe-architecture" aria-label="Schéma conceptuel de l’architecture Arkhe">
+<div class="arkhe-architecture__step">
+<p class="arkhe-architecture__label">
+Environnement d’édition
+</p>
+<p class="arkhe-architecture__name">
+Editor
+</p>
+</div>
+<div class="arkhe-architecture__relation">
+<p>utilise</p>
+</div>
+<div class="arkhe-architecture__step">
+<p class="arkhe-architecture__label">
+Exécution du moteur
+</p>
+<p class="arkhe-architecture__name">
+Runtime
+</p>
+</div>
+<div class="arkhe-architecture__relation">
+<p>s’appuie sur</p>
+</div>
+<div class="arkhe-architecture__step">
+<p class="arkhe-architecture__label">
+Technologies de base
+</p>
+<p class="arkhe-architecture__name">
+OpenGL · SDL2
+</p>
+</div>
+</div>
 </section>
 <section id="statut-du-projet" class="level2">
 <h2 class="anchored" data-anchor-id="statut-du-projet">Statut du projet</h2>

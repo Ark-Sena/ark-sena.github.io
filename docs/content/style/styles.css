@@ -122,6 +122,9 @@ body.arkhe-page #quarto-header .nav-item:has(.language-switch) {
 
 .arkhe-page h1 {
   margin-bottom: 0.35rem;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  letter-spacing: -0.04em;
+  line-height: 1;
 }
 
 .arkhe-project__type {
@@ -137,11 +140,82 @@ body.arkhe-page #quarto-header .nav-item:has(.language-switch) {
 }
 
 .arkhe-project__technologies {
+  margin-top: 1.25rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--bs-border-color);
   color: var(--bs-secondary-color);
 }
 
 .arkhe-project__technologies span {
   font-weight: 600;
+}
+
+.arkhe-page h2 {
+  margin-top: 3.25rem;
+}
+
+.arkhe-feature-list {
+  margin: 1.5rem 0 0;
+}
+
+.arkhe-feature-list > section {
+  display: grid;
+  grid-template-columns: minmax(11rem, 0.8fr) minmax(0, 2fr);
+  gap: 0.75rem clamp(1.5rem, 4vw, 4rem);
+  align-items: start;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--bs-border-color);
+}
+
+.arkhe-feature-list > section:last-child {
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.arkhe-feature-list h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.arkhe-feature-list p {
+  margin: 0;
+}
+
+.arkhe-architecture {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1.25fr);
+  gap: 0.75rem clamp(0.75rem, 2vw, 1.5rem);
+  align-items: center;
+  margin: 1.5rem 0 0;
+}
+
+.arkhe-architecture__step {
+  min-width: 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--bs-border-color);
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.arkhe-architecture__label,
+.arkhe-architecture__name,
+.arkhe-architecture__relation p {
+  margin: 0;
+}
+
+.arkhe-architecture__label,
+.arkhe-architecture__relation {
+  color: var(--bs-secondary-color);
+  font-size: 0.875rem;
+}
+
+.arkhe-architecture__name {
+  margin-top: 0.3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.arkhe-architecture__relation {
+  white-space: nowrap;
 }
 
 .profile-actions {
@@ -427,5 +501,19 @@ body.arkhe-page #quarto-header .nav-item:has(.language-switch) {
 
   .graphics-lab-entry--city h3 {
     font-size: clamp(1.45rem, 8vw, 2rem);
+  }
+
+  .arkhe-feature-list > section {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .arkhe-architecture {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .arkhe-architecture__relation {
+    padding-left: 1rem;
   }
 }

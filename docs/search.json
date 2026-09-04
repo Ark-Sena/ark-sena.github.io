@@ -21,6 +21,27 @@
     "text": "Technologies\n\nTechnologies principales : C++ · OpenGL · SDL2 · ImGui · CMake · Git"
   },
   {
+    "objectID": "projects/arkhe/index.html#fonctionnalités-principales",
+    "href": "projects/arkhe/index.html#fonctionnalités-principales",
+    "title": "Arkhe Engine",
+    "section": "Fonctionnalités principales",
+    "text": "Fonctionnalités principales\n\n\nMoteur 2D et rendu OpenGL\nLe moteur est conçu pour des projets 2D et s’appuie sur OpenGL pour le rendu graphique.\n\n\nÉditeur et outils dédiés\nL’environnement d’édition réunit des outils dédiés à la construction et à l’organisation des projets.\n\n\nGestion de projets\nLe projet prévoit une gestion de projets afin de structurer le travail entre l’éditeur et le runtime.\n\n\nOrganisation modulaire et build\nLa base du projet est organisée de manière modulaire et utilise CMake pour son système de build."
+  },
+  {
+    "objectID": "projects/arkhe/index.html#quelques-choix-techniques",
+    "href": "projects/arkhe/index.html#quelques-choix-techniques",
+    "title": "Arkhe Engine",
+    "section": "Quelques choix techniques",
+    "text": "Quelques choix techniques\nL’une des orientations du projet consiste à séparer le code nécessaire à l’exécution du moteur des outils propres à l’éditeur. Cette séparation permet de limiter les dépendances de l’environnement d’édition dans le runtime.\nCMake accompagne l’organisation modulaire du projet et son système de build, sans exposer les mécanismes internes du moteur."
+  },
+  {
+    "objectID": "projects/arkhe/index.html#architecture-simplifiée",
+    "href": "projects/arkhe/index.html#architecture-simplifiée",
+    "title": "Arkhe Engine",
+    "section": "Architecture simplifiée",
+    "text": "Architecture simplifiée\nLe schéma suivant représente une relation conceptuelle entre les principaux niveaux du projet. Il ne détaille ni les sous-systèmes internes ni leurs implémentations.\n\n\n\nEnvironnement d’édition\n\n\nEditor\n\n\n\nutilise\n\n\n\nExécution du moteur\n\n\nRuntime\n\n\n\ns’appuie sur\n\n\n\nTechnologies de base\n\n\nOpenGL · SDL2"
+  },
+  {
     "objectID": "projects/arkhe/index.html#statut-du-projet",
     "href": "projects/arkhe/index.html#statut-du-projet",
     "title": "Arkhe Engine",
@@ -159,6 +180,27 @@
     "title": "Arkhe Engine",
     "section": "Technologies",
     "text": "Technologies\n\nCore technologies : C++ · OpenGL · SDL2 · ImGui · CMake · Git"
+  },
+  {
+    "objectID": "en/projects/arkhe/index.html#main-capabilities",
+    "href": "en/projects/arkhe/index.html#main-capabilities",
+    "title": "Arkhe Engine",
+    "section": "Main capabilities",
+    "text": "Main capabilities\n\n\n2D engine and OpenGL rendering\nThe engine is designed for 2D projects and relies on OpenGL for graphics rendering.\n\n\nDedicated editor and tools\nThe editing environment brings together tools for building and organizing projects.\n\n\nProject management\nThe project includes project management to structure work between the editor and the runtime.\n\n\nModular organization and build\nThe project is organized in modules and uses CMake for its build system."
+  },
+  {
+    "objectID": "en/projects/arkhe/index.html#selected-technical-choices",
+    "href": "en/projects/arkhe/index.html#selected-technical-choices",
+    "title": "Arkhe Engine",
+    "section": "Selected technical choices",
+    "text": "Selected technical choices\nOne direction of the project is to separate code required for engine execution from tools specific to the editor. This separation helps limit the editor environment’s dependencies in the runtime.\nCMake supports the project’s modular organization and build system without exposing the engine’s internal mechanisms."
+  },
+  {
+    "objectID": "en/projects/arkhe/index.html#simplified-architecture",
+    "href": "en/projects/arkhe/index.html#simplified-architecture",
+    "title": "Arkhe Engine",
+    "section": "Simplified architecture",
+    "text": "Simplified architecture\nThe diagram below presents a conceptual relationship between the project’s main layers. It does not detail internal subsystems or their implementations.\n\n\n\nEditing environment\n\n\nEditor\n\n\n\nuses\n\n\n\nEngine execution\n\n\nRuntime\n\n\n\nrelies on\n\n\n\nCore technologies\n\n\nOpenGL · SDL2"
   },
   {
     "objectID": "en/projects/arkhe/index.html#project-status",

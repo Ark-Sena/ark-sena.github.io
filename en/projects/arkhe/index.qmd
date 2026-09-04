@@ -25,6 +25,65 @@ At a high level, the project distinguishes responsibilities related to engine ex
 
 <p class="arkhe-project__technologies"><span>Core technologies&nbsp;:</span> C++ · OpenGL · SDL2 · ImGui · CMake · Git</p>
 
+## Main capabilities
+
+::: {.arkhe-feature-list}
+
+### 2D engine and OpenGL rendering
+
+The engine is designed for 2D projects and relies on OpenGL for graphics rendering.
+
+### Dedicated editor and tools
+
+The editing environment brings together tools for building and organizing projects.
+
+### Project management
+
+The project includes project management to structure work between the editor and the runtime.
+
+### Modular organization and build
+
+The project is organized in modules and uses CMake for its build system.
+
+:::
+
+## Selected technical choices
+
+One direction of the project is to separate code required for engine execution from tools specific to the editor. This separation helps limit the editor environment’s dependencies in the runtime.
+
+CMake supports the project’s modular organization and build system without exposing the engine’s internal mechanisms.
+
+## Simplified architecture
+
+The diagram below presents a conceptual relationship between the project’s main layers. It does not detail internal subsystems or their implementations.
+
+::: {.arkhe-architecture aria-label="Conceptual Arkhe architecture diagram"}
+
+::: {.arkhe-architecture__step}
+<p class="arkhe-architecture__label">Editing environment</p>
+<p class="arkhe-architecture__name">Editor</p>
+:::
+
+::: {.arkhe-architecture__relation}
+uses
+:::
+
+::: {.arkhe-architecture__step}
+<p class="arkhe-architecture__label">Engine execution</p>
+<p class="arkhe-architecture__name">Runtime</p>
+:::
+
+::: {.arkhe-architecture__relation}
+relies on
+:::
+
+::: {.arkhe-architecture__step}
+<p class="arkhe-architecture__label">Core technologies</p>
+<p class="arkhe-architecture__name">OpenGL · SDL2</p>
+:::
+
+:::
+
 ## Project status
 
 Arkhe is under active development and its repository remains private. This page gives an overview of the work while keeping the level of detail appropriate for a professional portfolio.
