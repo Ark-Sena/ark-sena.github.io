@@ -1,59 +1,31 @@
 [
   {
-    "objectID": "en/index.html",
-    "href": "en/index.html",
-    "title": "About",
+    "objectID": "projects/arkhe/index.html",
+    "href": "projects/arkhe/index.html",
+    "title": "Arkhe Engine",
     "section": "",
-    "text": "Hello, I’m Mathys Carboila Dias, a Master’s student in ISICG at the University of Limoges.\nGraphics & 3D Development · Game Development · Software Development\nI design software, graphics tools, and interactive experiences using C++, C#, Python, OpenGL, and Unity.\nAvailable for a 4 to 6-month internship starting February 2027.\n\nView selected projects\n\nView my CV\nExplore the 3D demo\n\n\n\n\n\n\n\n\n\n\n2D Engine and Editor in Development\n\n\n\n\nTechnologies : C++ · OpenGL · SDL2 · ImGui · CMake\n\nA personal 2D engine and editor focused on software architecture, graphics rendering, and editor-tool development.\n\nActive development · private repositoryDetails coming soon\n\n\n\n\n\n\n\nMobile Game in Development\n\n\n\n\nTechnologies : Unity · C# · Firebase\n\nAn idle/clicker mobile game developed by a two-person team, centered on combat, progression, and collection systems.\n\nActive development · private source codeDetails coming soon\n\n\n\n\n\n\n\nCommunity Management Tool\n\n\n\n\nTechnologies : Python · Discord API · Git\n\nA bot developed to automate management, moderation, and event-organization tasks on the IGILIM association’s Discord server.\n\nDetails coming soon\n\n\n\n\n\n\n\n\nI explore real-time rendering, shaders, and 3D interactions through several demonstrations built with Three.js, WebGL, and GLSL.\nThe interactive city brings these graphics experiments together in an explorable environment, while the photogrammetry study follows the path from a real object to a 3D asset optimized for the web.\n\n\n\n\n\nTechnologies : Three.js · WebGL · GLSL\n\nA real-time graphics experience bringing together shaders, particles, animation, and interactions in an explorable futuristic city.\n\n\nExplore the City\n\n\n\n\n\n\nTechnologies : RealityScan · Blender · Three.js\n\nA study of the path from a real object to a reconstructed, cleaned, optimized 3D model displayed directly in the browser.\n\n\nView the Study\n\n\n\n\n\n\n\n\nPresident of IGILIM (Association of Computer Graphics and Image Students at Limoges).\n\n\n\n\n\n\nMobile Game Development: Developing a mobile project in Unity with Firebase integration for real-time economy and data management.\nEngine Development: Building a custom C++ CPU ray tracer and exploring real-time rendering techniques in C++.\nHominis Project: Developing an AI-driven human simulation that trains autonomously within a procedurally generated world.\n\n\n\n\n\n\n\n\nArchitecture: Modular renderer supporting implicit surfaces and triangle meshes.\nPerformance: Optimized BVH (Bounding Volume Hierarchy) with centroid-based axis partitioning and OpenMP multithreading for pixel-level workload distribution.\nRendering: Recursive Whitted-style integrator supporting reflections, refractions, and physically based materials (Cook-Torrance BRDF).\n\n\n\n\n\nArchitecture: Modular framework implementing a deferred rendering pipeline.\nPipeline: Complex G-buffer management (6 attachments: Position, Normals, Ambient, Diffuse, Specular, Depth).\nPost-Processing: Comprehensive HDR-enabled stack including Bloom, FXAA, and gamma correction.\n\n\n\n\n\n\n\n\n\nMaster’s in Computer Graphics (ISICG): Focused on 3D engines, ray tracing, GPGPU (CUDA), and parallel programming.\nBachelor’s degree in Computer Science.\n\n\n\n\n\nLanguages: C/C++, Python, GLSL, JS/TS\nEngines & Software: Unity, Blender, RealityScan/RC\nGraphics (Rendering/Shaders): Three.js/WebGL, ray tracing, PBR, GPGPU (CUDA)\nTools: Git/GitHub, Trello\n\n\n\n\n\nFrench & Portuguese: Native\nEnglish: B2 (technical proficiency)\nSpanish: B1\nJapanese: A1\n\n\n\n\n\n\n\nFor an internship, a project, or a question about my work:\n\n\nmcd087@gmail.com\n\n\nLinkedIn · GitHub"
+    "text": "FR | EN\n← Retour aux projets"
   },
   {
-    "objectID": "en/index.html#selected-projects",
-    "href": "en/index.html#selected-projects",
-    "title": "About",
-    "section": "",
-    "text": "2D Engine and Editor in Development\n\n\n\n\nTechnologies : C++ · OpenGL · SDL2 · ImGui · CMake\n\nA personal 2D engine and editor focused on software architecture, graphics rendering, and editor-tool development.\n\nActive development · private repositoryDetails coming soon\n\n\n\n\n\n\n\nMobile Game in Development\n\n\n\n\nTechnologies : Unity · C# · Firebase\n\nAn idle/clicker mobile game developed by a two-person team, centered on combat, progression, and collection systems.\n\nActive development · private source codeDetails coming soon\n\n\n\n\n\n\n\nCommunity Management Tool\n\n\n\n\nTechnologies : Python · Discord API · Git\n\nA bot developed to automate management, moderation, and event-organization tasks on the IGILIM association’s Discord server.\n\nDetails coming soon"
+    "objectID": "projects/arkhe/index.html#présentation",
+    "href": "projects/arkhe/index.html#présentation",
+    "title": "Arkhe Engine",
+    "section": "Présentation",
+    "text": "Présentation\nArkhe Engine est un moteur et éditeur 2D développé en C++ autour d’OpenGL. Le projet me sert à travailler sur l’architecture logicielle d’un moteur, le rendu graphique et la conception d’outils d’édition.\nÀ un niveau général, le projet distingue les responsabilités liées à l’exécution du moteur de celles propres à l’environnement d’édition. Cette fiche présente les orientations publiques du projet sans documenter son architecture complète."
   },
   {
-    "objectID": "en/index.html#interactive-graphics-lab",
-    "href": "en/index.html#interactive-graphics-lab",
-    "title": "About",
-    "section": "",
-    "text": "I explore real-time rendering, shaders, and 3D interactions through several demonstrations built with Three.js, WebGL, and GLSL.\nThe interactive city brings these graphics experiments together in an explorable environment, while the photogrammetry study follows the path from a real object to a 3D asset optimized for the web.\n\n\n\n\n\nTechnologies : Three.js · WebGL · GLSL\n\nA real-time graphics experience bringing together shaders, particles, animation, and interactions in an explorable futuristic city.\n\n\nExplore the City\n\n\n\n\n\n\nTechnologies : RealityScan · Blender · Three.js\n\nA study of the path from a real object to a reconstructed, cleaned, optimized 3D model displayed directly in the browser.\n\n\nView the Study"
+    "objectID": "projects/arkhe/index.html#technologies",
+    "href": "projects/arkhe/index.html#technologies",
+    "title": "Arkhe Engine",
+    "section": "Technologies",
+    "text": "Technologies\n\nTechnologies principales : C++ · OpenGL · SDL2 · ImGui · CMake · Git"
   },
   {
-    "objectID": "en/index.html#leadership",
-    "href": "en/index.html#leadership",
-    "title": "About",
-    "section": "",
-    "text": "President of IGILIM (Association of Computer Graphics and Image Students at Limoges)."
-  },
-  {
-    "objectID": "en/index.html#current-focus",
-    "href": "en/index.html#current-focus",
-    "title": "About",
-    "section": "",
-    "text": "Mobile Game Development: Developing a mobile project in Unity with Firebase integration for real-time economy and data management.\nEngine Development: Building a custom C++ CPU ray tracer and exploring real-time rendering techniques in C++.\nHominis Project: Developing an AI-driven human simulation that trains autonomously within a procedurally generated world."
-  },
-  {
-    "objectID": "en/index.html#technical-highlights",
-    "href": "en/index.html#technical-highlights",
-    "title": "About",
-    "section": "",
-    "text": "Architecture: Modular renderer supporting implicit surfaces and triangle meshes.\nPerformance: Optimized BVH (Bounding Volume Hierarchy) with centroid-based axis partitioning and OpenMP multithreading for pixel-level workload distribution.\nRendering: Recursive Whitted-style integrator supporting reflections, refractions, and physically based materials (Cook-Torrance BRDF).\n\n\n\n\n\nArchitecture: Modular framework implementing a deferred rendering pipeline.\nPipeline: Complex G-buffer management (6 attachments: Position, Normals, Ambient, Diffuse, Specular, Depth).\nPost-Processing: Comprehensive HDR-enabled stack including Bloom, FXAA, and gamma correction."
-  },
-  {
-    "objectID": "en/index.html#education-skills",
-    "href": "en/index.html#education-skills",
-    "title": "About",
-    "section": "",
-    "text": "Master’s in Computer Graphics (ISICG): Focused on 3D engines, ray tracing, GPGPU (CUDA), and parallel programming.\nBachelor’s degree in Computer Science.\n\n\n\n\n\nLanguages: C/C++, Python, GLSL, JS/TS\nEngines & Software: Unity, Blender, RealityScan/RC\nGraphics (Rendering/Shaders): Three.js/WebGL, ray tracing, PBR, GPGPU (CUDA)\nTools: Git/GitHub, Trello\n\n\n\n\n\nFrench & Portuguese: Native\nEnglish: B2 (technical proficiency)\nSpanish: B1\nJapanese: A1"
-  },
-  {
-    "objectID": "en/index.html#contact",
-    "href": "en/index.html#contact",
-    "title": "About",
-    "section": "",
-    "text": "For an internship, a project, or a question about my work:\n\n\nmcd087@gmail.com\n\n\nLinkedIn · GitHub"
+    "objectID": "projects/arkhe/index.html#statut-du-projet",
+    "href": "projects/arkhe/index.html#statut-du-projet",
+    "title": "Arkhe Engine",
+    "section": "Statut du projet",
+    "text": "Statut du projet\nArkhe est en développement actif et son dépôt reste privé. Cette page donne un aperçu du travail réalisé, avec un niveau de détail adapté à une présentation professionnelle."
   },
   {
     "objectID": "index.html",
@@ -110,5 +82,89 @@
     "title": "À propos",
     "section": "",
     "text": "Pour un stage, un projet ou une question sur mon travail :\n\n\nmcd087@gmail.com\n\n\nLinkedIn · GitHub"
+  },
+  {
+    "objectID": "en/index.html",
+    "href": "en/index.html",
+    "title": "About",
+    "section": "",
+    "text": "Hello, I’m Mathys Carboila Dias, a Master’s student in ISICG at the University of Limoges.\nGraphics & 3D Development · Game Development · Software Development\nI design software, graphics tools, and interactive experiences using C++, C#, Python, OpenGL, and Unity.\nAvailable for a 4 to 6-month internship starting February 2027.\n\nView selected projects\n\nView my CV\nExplore the 3D demo\n\n\n\n\n\n\n\n\n\n\n2D Engine and Editor in Development\n\n\n\n\nTechnologies : C++ · OpenGL · SDL2 · ImGui · CMake\n\nA personal 2D engine and editor focused on software architecture, graphics rendering, and editor-tool development.\n\nActive development · private repositoryDetails coming soon\n\n\n\n\n\n\n\nMobile Game in Development\n\n\n\n\nTechnologies : Unity · C# · Firebase\n\nAn idle/clicker mobile game developed by a two-person team, centered on combat, progression, and collection systems.\n\nActive development · private source codeDetails coming soon\n\n\n\n\n\n\n\nCommunity Management Tool\n\n\n\n\nTechnologies : Python · Discord API · Git\n\nA bot developed to automate management, moderation, and event-organization tasks on the IGILIM association’s Discord server.\n\nDetails coming soon\n\n\n\n\n\n\n\n\nI explore real-time rendering, shaders, and 3D interactions through several demonstrations built with Three.js, WebGL, and GLSL.\nThe interactive city brings these graphics experiments together in an explorable environment, while the photogrammetry study follows the path from a real object to a 3D asset optimized for the web.\n\n\n\n\n\nTechnologies : Three.js · WebGL · GLSL\n\nA real-time graphics experience bringing together shaders, particles, animation, and interactions in an explorable futuristic city.\n\n\nExplore the City\n\n\n\n\n\n\nTechnologies : RealityScan · Blender · Three.js\n\nA study of the path from a real object to a reconstructed, cleaned, optimized 3D model displayed directly in the browser.\n\n\nView the Study\n\n\n\n\n\n\n\n\nPresident of IGILIM (Association of Computer Graphics and Image Students at Limoges).\n\n\n\n\n\n\nMobile Game Development: Developing a mobile project in Unity with Firebase integration for real-time economy and data management.\nEngine Development: Building a custom C++ CPU ray tracer and exploring real-time rendering techniques in C++.\nHominis Project: Developing an AI-driven human simulation that trains autonomously within a procedurally generated world.\n\n\n\n\n\n\n\n\nArchitecture: Modular renderer supporting implicit surfaces and triangle meshes.\nPerformance: Optimized BVH (Bounding Volume Hierarchy) with centroid-based axis partitioning and OpenMP multithreading for pixel-level workload distribution.\nRendering: Recursive Whitted-style integrator supporting reflections, refractions, and physically based materials (Cook-Torrance BRDF).\n\n\n\n\n\nArchitecture: Modular framework implementing a deferred rendering pipeline.\nPipeline: Complex G-buffer management (6 attachments: Position, Normals, Ambient, Diffuse, Specular, Depth).\nPost-Processing: Comprehensive HDR-enabled stack including Bloom, FXAA, and gamma correction.\n\n\n\n\n\n\n\n\n\nMaster’s in Computer Graphics (ISICG): Focused on 3D engines, ray tracing, GPGPU (CUDA), and parallel programming.\nBachelor’s degree in Computer Science.\n\n\n\n\n\nLanguages: C/C++, Python, GLSL, JS/TS\nEngines & Software: Unity, Blender, RealityScan/RC\nGraphics (Rendering/Shaders): Three.js/WebGL, ray tracing, PBR, GPGPU (CUDA)\nTools: Git/GitHub, Trello\n\n\n\n\n\nFrench & Portuguese: Native\nEnglish: B2 (technical proficiency)\nSpanish: B1\nJapanese: A1\n\n\n\n\n\n\n\nFor an internship, a project, or a question about my work:\n\n\nmcd087@gmail.com\n\n\nLinkedIn · GitHub"
+  },
+  {
+    "objectID": "en/index.html#selected-projects",
+    "href": "en/index.html#selected-projects",
+    "title": "About",
+    "section": "",
+    "text": "2D Engine and Editor in Development\n\n\n\n\nTechnologies : C++ · OpenGL · SDL2 · ImGui · CMake\n\nA personal 2D engine and editor focused on software architecture, graphics rendering, and editor-tool development.\n\nActive development · private repositoryDetails coming soon\n\n\n\n\n\n\n\nMobile Game in Development\n\n\n\n\nTechnologies : Unity · C# · Firebase\n\nAn idle/clicker mobile game developed by a two-person team, centered on combat, progression, and collection systems.\n\nActive development · private source codeDetails coming soon\n\n\n\n\n\n\n\nCommunity Management Tool\n\n\n\n\nTechnologies : Python · Discord API · Git\n\nA bot developed to automate management, moderation, and event-organization tasks on the IGILIM association’s Discord server.\n\nDetails coming soon"
+  },
+  {
+    "objectID": "en/index.html#interactive-graphics-lab",
+    "href": "en/index.html#interactive-graphics-lab",
+    "title": "About",
+    "section": "",
+    "text": "I explore real-time rendering, shaders, and 3D interactions through several demonstrations built with Three.js, WebGL, and GLSL.\nThe interactive city brings these graphics experiments together in an explorable environment, while the photogrammetry study follows the path from a real object to a 3D asset optimized for the web.\n\n\n\n\n\nTechnologies : Three.js · WebGL · GLSL\n\nA real-time graphics experience bringing together shaders, particles, animation, and interactions in an explorable futuristic city.\n\n\nExplore the City\n\n\n\n\n\n\nTechnologies : RealityScan · Blender · Three.js\n\nA study of the path from a real object to a reconstructed, cleaned, optimized 3D model displayed directly in the browser.\n\n\nView the Study"
+  },
+  {
+    "objectID": "en/index.html#leadership",
+    "href": "en/index.html#leadership",
+    "title": "About",
+    "section": "",
+    "text": "President of IGILIM (Association of Computer Graphics and Image Students at Limoges)."
+  },
+  {
+    "objectID": "en/index.html#current-focus",
+    "href": "en/index.html#current-focus",
+    "title": "About",
+    "section": "",
+    "text": "Mobile Game Development: Developing a mobile project in Unity with Firebase integration for real-time economy and data management.\nEngine Development: Building a custom C++ CPU ray tracer and exploring real-time rendering techniques in C++.\nHominis Project: Developing an AI-driven human simulation that trains autonomously within a procedurally generated world."
+  },
+  {
+    "objectID": "en/index.html#technical-highlights",
+    "href": "en/index.html#technical-highlights",
+    "title": "About",
+    "section": "",
+    "text": "Architecture: Modular renderer supporting implicit surfaces and triangle meshes.\nPerformance: Optimized BVH (Bounding Volume Hierarchy) with centroid-based axis partitioning and OpenMP multithreading for pixel-level workload distribution.\nRendering: Recursive Whitted-style integrator supporting reflections, refractions, and physically based materials (Cook-Torrance BRDF).\n\n\n\n\n\nArchitecture: Modular framework implementing a deferred rendering pipeline.\nPipeline: Complex G-buffer management (6 attachments: Position, Normals, Ambient, Diffuse, Specular, Depth).\nPost-Processing: Comprehensive HDR-enabled stack including Bloom, FXAA, and gamma correction."
+  },
+  {
+    "objectID": "en/index.html#education-skills",
+    "href": "en/index.html#education-skills",
+    "title": "About",
+    "section": "",
+    "text": "Master’s in Computer Graphics (ISICG): Focused on 3D engines, ray tracing, GPGPU (CUDA), and parallel programming.\nBachelor’s degree in Computer Science.\n\n\n\n\n\nLanguages: C/C++, Python, GLSL, JS/TS\nEngines & Software: Unity, Blender, RealityScan/RC\nGraphics (Rendering/Shaders): Three.js/WebGL, ray tracing, PBR, GPGPU (CUDA)\nTools: Git/GitHub, Trello\n\n\n\n\n\nFrench & Portuguese: Native\nEnglish: B2 (technical proficiency)\nSpanish: B1\nJapanese: A1"
+  },
+  {
+    "objectID": "en/index.html#contact",
+    "href": "en/index.html#contact",
+    "title": "About",
+    "section": "",
+    "text": "For an internship, a project, or a question about my work:\n\n\nmcd087@gmail.com\n\n\nLinkedIn · GitHub"
+  },
+  {
+    "objectID": "en/projects/arkhe/index.html",
+    "href": "en/projects/arkhe/index.html",
+    "title": "Arkhe Engine",
+    "section": "",
+    "text": "FR | EN\n← Back to projects"
+  },
+  {
+    "objectID": "en/projects/arkhe/index.html#overview",
+    "href": "en/projects/arkhe/index.html#overview",
+    "title": "Arkhe Engine",
+    "section": "Overview",
+    "text": "Overview\nArkhe Engine is a 2D engine and editor built in C++ around OpenGL. The project lets me work on engine software architecture, graphics rendering, and the design of editing tools.\nAt a high level, the project distinguishes responsibilities related to engine execution from those specific to the editing environment. This page presents the project’s public direction without documenting its complete architecture."
+  },
+  {
+    "objectID": "en/projects/arkhe/index.html#technologies",
+    "href": "en/projects/arkhe/index.html#technologies",
+    "title": "Arkhe Engine",
+    "section": "Technologies",
+    "text": "Technologies\n\nCore technologies : C++ · OpenGL · SDL2 · ImGui · CMake · Git"
+  },
+  {
+    "objectID": "en/projects/arkhe/index.html#project-status",
+    "href": "en/projects/arkhe/index.html#project-status",
+    "title": "Arkhe Engine",
+    "section": "Project status",
+    "text": "Project status\nArkhe is under active development and its repository remains private. This page gives an overview of the work while keeping the level of detail appropriate for a professional portfolio."
   }
 ]

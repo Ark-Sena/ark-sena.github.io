@@ -1,0 +1,30 @@
+---
+format: html
+editor: visual
+lang: en
+body-classes: "locale-en arkhe-page has-language-equivalent"
+---
+
+<nav class="project-language-switch" aria-label="Arkhe project page language"><a href="/projects/arkhe/">FR</a><span aria-hidden="true"> | </span><a class="project-language-switch__active" href="/en/projects/arkhe/" aria-current="page">EN</a></nav>
+
+<p class="project-back-link"><a href="/en/#selected-projects">← Back to projects</a></p>
+
+# Arkhe Engine
+
+<p class="arkhe-project__type">2D Engine and Editor</p>
+
+<p class="arkhe-project__status">Active development · private repository</p>
+
+## Overview
+
+Arkhe Engine is a 2D engine and editor built in C++ around OpenGL. The project lets me work on engine software architecture, graphics rendering, and the design of editing tools.
+
+At a high level, the project distinguishes responsibilities related to engine execution from those specific to the editing environment. This page presents the project’s public direction without documenting its complete architecture.
+
+## Technologies
+
+<p class="arkhe-project__technologies"><span>Core technologies&nbsp;:</span> C++ · OpenGL · SDL2 · ImGui · CMake · Git</p>
+
+## Project status
+
+Arkhe is under active development and its repository remains private. This page gives an overview of the work while keeping the level of detail appropriate for a professional portfolio.

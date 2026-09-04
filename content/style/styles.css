@@ -80,6 +80,70 @@ body:not(.has-language-equivalent) #quarto-header .nav-item:has(.language-switch
   display: none;
 }
 
+body.arkhe-page #quarto-header .nav-item:has(.language-switch) {
+  display: none;
+}
+
+.project-language-switch {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+  margin: 0;
+  color: var(--bs-secondary-color);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.project-language-switch a,
+.project-back-link a {
+  color: var(--bs-link-color);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
+.project-language-switch__active {
+  color: var(--bs-body-color) !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 0.3em !important;
+}
+
+.project-language-switch a:focus-visible,
+.project-back-link a:focus-visible {
+  outline: 3px solid var(--bs-link-color);
+  outline-offset: 3px;
+}
+
+.project-back-link {
+  margin: 1rem 0 2.5rem;
+  font-weight: 600;
+}
+
+.arkhe-page h1 {
+  margin-bottom: 0.35rem;
+}
+
+.arkhe-project__type {
+  margin: 0;
+  color: var(--bs-secondary-color);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.arkhe-project__status {
+  margin: 0.55rem 0 2.5rem;
+  color: var(--bs-secondary-color);
+}
+
+.arkhe-project__technologies {
+  color: var(--bs-secondary-color);
+}
+
+.arkhe-project__technologies span {
+  font-weight: 600;
+}
+
 .profile-actions {
   display: flex;
   flex-wrap: wrap;
