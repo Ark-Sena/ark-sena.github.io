@@ -379,6 +379,19 @@ body.arkhe-page #quarto-header .nav-item:has(.language-switch) {
   font-weight: 600;
 }
 
+.project-entry__link a {
+  color: var(--bs-link-color);
+  font-weight: 600;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
+.project-entry__link a:focus-visible {
+  outline: 3px solid var(--bs-link-color);
+  outline-offset: 3px;
+}
+
 .graphics-lab-list {
   margin: 1.75rem 0 2.25rem;
 }
