@@ -186,7 +186,6 @@ body:not(.has-language-equivalent) #quarto-header .nav-item:has(.language-switch
 }
 
 .project-entry--featured {
-  grid-template-columns: minmax(12rem, 0.75fr) minmax(0, 2.25fr);
   padding: 2.25rem 0 2rem;
   border-top: 2px solid var(--bs-link-color);
 }
@@ -243,31 +242,18 @@ body:not(.has-language-equivalent) #quarto-header .nav-item:has(.language-switch
 }
 
 .graphics-lab-list {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 0 clamp(1rem, 3vw, 3rem);
   margin: 1.75rem 0 2.25rem;
 }
 
 .graphics-lab-entry {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 1rem clamp(1rem, 3vw, 2rem);
-  align-items: end;
   min-width: 0;
   padding: 1.25rem 0 1.5rem;
   border-top: 1px solid var(--bs-border-color);
 }
 
 .graphics-lab-entry--city {
-  grid-column: 1 / span 8;
   padding-top: 1.75rem;
   border-top: 2px solid var(--bs-link-color);
-}
-
-.graphics-lab-entry--photogrammetry {
-  grid-column: 5 / -1;
-  margin-top: 1.5rem;
 }
 
 .graphics-lab-entry__content {
@@ -288,6 +274,7 @@ body:not(.has-language-equivalent) #quarto-header .nav-item:has(.language-switch
   margin: 0;
 }
 
+.graphics-lab-entry__content > h3 + p,
 .graphics-lab-entry__content > p + p {
   margin-top: 0.75rem;
 }
@@ -301,7 +288,10 @@ body:not(.has-language-equivalent) #quarto-header .nav-item:has(.language-switch
   font-weight: 600;
 }
 
-.graphics-lab-entry__action,
+.graphics-lab-entry__action {
+  margin-top: 0.75rem;
+}
+
 .graphics-lab-entry__action p {
   margin: 0;
 }
@@ -354,7 +344,7 @@ body:not(.has-language-equivalent) #quarto-header .nav-item:has(.language-switch
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .project-entry,
   .project-entry--featured {
     grid-template-columns: 1fr;
@@ -366,17 +356,8 @@ body:not(.has-language-equivalent) #quarto-header .nav-item:has(.language-switch
     font-size: clamp(1.9rem, 10vw, 2.5rem);
   }
 
-  .graphics-lab-list {
-    grid-template-columns: 1fr;
-  }
-
   .graphics-lab-entry,
-  .graphics-lab-entry--city,
-  .graphics-lab-entry--photogrammetry {
-    grid-column: auto;
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-    margin-top: 0;
+  .graphics-lab-entry--city {
     padding: 1.25rem 0;
   }
 
