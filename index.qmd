@@ -79,7 +79,7 @@ Jeu mobile idle/clicker développé en binôme, autour de systèmes de combat, d
 
 Bot développé pour automatiser différentes tâches de gestion, de modération et d’organisation d’événements sur le serveur Discord de l’association IGILIM.
 
-<p class="project-entry__meta"><span class="project-entry__availability">Détails bientôt disponibles</span></p>
+<p class="project-entry__link"><a href="/projects/igilim/">Découvrir le projet</a></p>
 :::
 :::
 

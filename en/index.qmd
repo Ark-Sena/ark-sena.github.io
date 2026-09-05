@@ -79,7 +79,7 @@ An idle/clicker mobile game developed by a two-person team, centered on combat, 
 
 A bot developed to automate management, moderation, and event-organization tasks on the IGILIM association’s Discord server.
 
-<p class="project-entry__meta"><span class="project-entry__availability">Details coming soon</span></p>
+<p class="project-entry__link"><a href="/en/projects/igilim/">View project</a></p>
 :::
 :::
 
