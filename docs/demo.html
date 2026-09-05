@@ -391,6 +391,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     padding-top: 0 !important; 
   }
 
+  @media (max-width: 991.98px) {
+    #quarto-header {
+      background-color: rgba(26, 26, 26, 0.92) !important;
+    }
+
+    #quarto-header .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(26, 26, 26, 0.92);
+      color: #fff;
+    }
+
+    #quarto-header .navbar-toggler-icon {
+      filter: brightness(0) invert(1);
+    }
+
+    #quarto-header .navbar-toggler:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 0;
+      box-shadow: 0 0 0 3px #0d6efd;
+    }
+
+    #quarto-header .navbar-collapse.show {
+      background-color: rgba(26, 26, 26, 0.96);
+    }
+  }
+
   /* Spinner de chargement */
   #loader {
     position: fixed;
@@ -413,11 +439,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="city-portfolio" class="level1">
 <h1>City Portfolio</h1>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="68" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 67;"><span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="co">//import { my_3d_canvas } from "./content/scripts/cube_rgb.ojs"</span></span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="co">//my_3d_canvas</span></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { my_portfolio_city } <span class="im">from</span> <span class="st">"./content/scripts/ville.ojs"</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="94" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 93;"><span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="co">//import { my_3d_canvas } from "./content/scripts/cube_rgb.ojs"</span></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="co">//my_3d_canvas</span></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { my_portfolio_city } <span class="im">from</span> <span class="st">"./content/scripts/ville.ojs"</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-1" data-nodetype="declaration">
 
@@ -430,7 +456,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ii8vaW1wb3J0IHsgbXlfM2RfY2FudmFzIH0gZnJvbSBcIi4vY29udGVudC9zY3JpcHRzL2N1YmVfcmdiLm9qc1wiXG5cbi8vbXlfM2RfY2FudmFzXG5cbmltcG9ydCB7IG15X3BvcnRmb2xpb19jaXR5IH0gZnJvbSBcIi4vY29udGVudC9zY3JpcHRzL3ZpbGxlLm9qc1wiXG4ifV19
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ii8vaW1wb3J0IHsgbXlfM2RfY2FudmFzIH0gZnJvbSBcIi4vY29udGVudC9zY3JpcHRzL2N1YmVfcmdiLm9qc1wiXHJcblxyXG4vL215XzNkX2NhbnZhc1xyXG5cclxuaW1wb3J0IHsgbXlfcG9ydGZvbGlvX2NpdHkgfSBmcm9tIFwiLi9jb250ZW50L3NjcmlwdHMvdmlsbGUub2pzXCJcclxuIn1dfQ==
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }

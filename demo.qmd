@@ -42,6 +42,32 @@ editor: visual
     padding-top: 0 !important; 
   }
 
+  @media (max-width: 991.98px) {
+    #quarto-header {
+      background-color: rgba(26, 26, 26, 0.92) !important;
+    }
+
+    #quarto-header .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(26, 26, 26, 0.92);
+      color: #fff;
+    }
+
+    #quarto-header .navbar-toggler-icon {
+      filter: brightness(0) invert(1);
+    }
+
+    #quarto-header .navbar-toggler:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 0;
+      box-shadow: 0 0 0 3px #0d6efd;
+    }
+
+    #quarto-header .navbar-collapse.show {
+      background-color: rgba(26, 26, 26, 0.96);
+    }
+  }
+
   /* Spinner de chargement */
   #loader {
     position: fixed;
