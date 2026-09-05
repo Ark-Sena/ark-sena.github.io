@@ -1,0 +1,56 @@
+---
+format: html
+editor: visual
+lang: fr
+body-classes: "locale-fr igilim-page has-language-equivalent"
+---
+
+<p class="project-back-link"><a href="/#projets-selectionnes">← Retour aux projets</a></p>
+
+# Bot Discord IGILIM
+
+<p class="igilim-project__type">Outil associatif de gestion et d’automatisation</p>
+
+## Présentation
+
+Le Bot Discord IGILIM est un outil développé en Python pour automatiser différentes tâches liées au serveur Discord de l’association. Le projet répond à des besoins de gestion, de modération et d’organisation d’événements au sein de la communauté.
+
+## Technologies
+
+<p class="igilim-project__technologies"><span>Technologies principales&nbsp;:</span> Python · Discord API · Git</p>
+
+## Contexte et besoin
+
+::: {.igilim-context}
+
+Le projet est conçu pour le serveur Discord d’IGILIM et s’inscrit dans le fonctionnement concret de l’association. Cette fiche reste centrée sur l’outil logiciel plutôt que sur la présentation de l’association.
+
+:::
+
+## Mon travail
+
+Mon travail porte sur la conception de l’outil, son développement en Python et la structuration du projet. Il comprend également une réflexion sur les besoins de modération, de gestion communautaire et d’automatisation de tâches Discord.
+
+## Automatisations présentées
+
+Les axes ci-dessous décrivent le périmètre public du projet. Ils ne détaillent ni des commandes particulières ni l’état de déploiement de chaque automatisation.
+
+::: {.igilim-automation-list}
+
+### Gestion du serveur
+
+Automatisation de tâches récurrentes liées à la gestion du serveur Discord de l’association.
+
+### Modération
+
+Prise en compte des besoins de modération dans la conception des automatisations du bot.
+
+### Organisation d’événements
+
+Automatisations destinées à accompagner l’organisation d’événements de la communauté.
+
+:::
+
+## Statut du projet
+
+<p class="igilim-project__status">Cette fiche présente les aspects publics du projet à un niveau volontairement général, sans exposer son code ni ses détails de fonctionnement.</p>

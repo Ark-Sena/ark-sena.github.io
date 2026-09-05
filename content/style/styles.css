@@ -82,10 +82,16 @@ body:not(.has-language-equivalent) #quarto-header .nav-item:has(.language-switch
 
 body:not(.arkhe-page) #quarto-header .nav-item:has(.language-switch--arkhe),
 body:not(.ttb-page) #quarto-header .nav-item:has(.language-switch--ttb),
+body:not(.igilim-page) #quarto-header .nav-item:has(.language-switch--igilim),
 body.arkhe-page #quarto-header .nav-item:has(.language-switch--home),
 body.arkhe-page #quarto-header .nav-item:has(.language-switch--ttb),
+body.arkhe-page #quarto-header .nav-item:has(.language-switch--igilim),
 body.ttb-page #quarto-header .nav-item:has(.language-switch--home),
-body.ttb-page #quarto-header .nav-item:has(.language-switch--arkhe) {
+body.ttb-page #quarto-header .nav-item:has(.language-switch--arkhe),
+body.ttb-page #quarto-header .nav-item:has(.language-switch--igilim),
+body.igilim-page #quarto-header .nav-item:has(.language-switch--home),
+body.igilim-page #quarto-header .nav-item:has(.language-switch--arkhe),
+body.igilim-page #quarto-header .nav-item:has(.language-switch--ttb) {
   display: none;
 }
 
@@ -290,6 +296,78 @@ body.ttb-page #quarto-header .nav-item:has(.language-switch--arkhe) {
 }
 
 .ttb-media-note {
+  color: var(--bs-secondary-color);
+}
+
+.igilim-page h1 {
+  margin-bottom: 0.35rem;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.igilim-project__type {
+  margin: 0 0 2.5rem;
+  color: var(--bs-secondary-color);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.igilim-page h2 {
+  margin-top: 2.75rem;
+}
+
+.igilim-project__technologies {
+  margin-top: 1.25rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--bs-border-color);
+  color: var(--bs-secondary-color);
+}
+
+.igilim-project__technologies span {
+  font-weight: 600;
+}
+
+.igilim-context {
+  margin: 1.5rem 0 0;
+  padding: 1rem 0 1rem 1.25rem;
+  border-left: 2px solid var(--bs-link-color);
+}
+
+.igilim-context p,
+.igilim-project__status {
+  margin: 0;
+}
+
+.igilim-automation-list {
+  margin: 1.5rem 0 0;
+}
+
+.igilim-automation-list > section {
+  display: grid;
+  grid-template-columns: minmax(11rem, 0.8fr) minmax(0, 2fr);
+  gap: 0.6rem clamp(1.5rem, 4vw, 4rem);
+  align-items: start;
+  padding: 1rem 0;
+  border-top: 1px solid var(--bs-border-color);
+}
+
+.igilim-automation-list > section:last-child {
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.igilim-automation-list h3,
+.igilim-automation-list p {
+  margin: 0;
+}
+
+.igilim-automation-list h3 {
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.igilim-project__status {
+  margin-top: 1.5rem;
   color: var(--bs-secondary-color);
 }
 
@@ -592,7 +670,8 @@ body.ttb-page #quarto-header .nav-item:has(.language-switch--arkhe) {
   }
 
   .arkhe-feature-list > section,
-  .ttb-system-list > section {
+  .ttb-system-list > section,
+  .igilim-automation-list > section {
     grid-template-columns: 1fr;
     gap: 0.5rem;
   }

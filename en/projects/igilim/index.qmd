@@ -1,0 +1,56 @@
+---
+format: html
+editor: visual
+lang: en
+body-classes: "locale-en igilim-page has-language-equivalent"
+---
+
+<p class="project-back-link"><a href="/en/#selected-projects">← Back to projects</a></p>
+
+# IGILIM Discord Bot
+
+<p class="igilim-project__type">Community management and automation tool</p>
+
+## Overview
+
+The IGILIM Discord Bot is a Python tool developed to automate tasks related to the association’s Discord server. The project responds to community-management, moderation, and event-organization needs.
+
+## Technologies
+
+<p class="igilim-project__technologies"><span>Core technologies&nbsp;:</span> Python · Discord API · Git</p>
+
+## Context and need
+
+::: {.igilim-context}
+
+The project is designed for the IGILIM Discord server and is part of the association’s day-to-day needs. This page remains focused on the software tool rather than on presenting the association itself.
+
+:::
+
+## My work
+
+My work covers the tool’s design, its Python development, and the project’s structure. It also includes reflection on moderation, community-management, and Discord-task automation needs.
+
+## Automation scope
+
+The areas below describe the project’s public scope. They do not detail individual commands or the deployment status of each automation.
+
+::: {.igilim-automation-list}
+
+### Server management
+
+Automation of recurring tasks related to managing the association’s Discord server.
+
+### Moderation
+
+Consideration of moderation needs in the design of the bot’s automations.
+
+### Event organization
+
+Automations intended to support the community’s event organization.
+
+:::
+
+## Project status
+
+<p class="igilim-project__status">This page presents the project’s public aspects at a deliberately high level, without exposing its source code or implementation details.</p>

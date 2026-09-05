@@ -48,6 +48,12 @@ website:
       - href: en/projects/tap-time-breaker/index.qmd
         text: "[EN]{.language-switch .language-switch--en .language-switch--ttb}"
         aria-label: "View the Tap Time Breaker project page in English"
+      - href: projects/igilim/index.qmd
+        text: "[FR]{.language-switch .language-switch--fr .language-switch--igilim}"
+        aria-label: "Afficher la fiche IGILIM en français"
+      - href: en/projects/igilim/index.qmd
+        text: "[EN]{.language-switch .language-switch--en .language-switch--igilim}"
+        aria-label: "View the IGILIM project page in English"
   page-footer: "© 2026 Mathys Carboila Dias | Built with Quarto & Three.js"
   search: false
 
