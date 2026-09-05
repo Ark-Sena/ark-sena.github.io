@@ -112,45 +112,61 @@ body.igilim-page #quarto-header .nav-item:has(.language-switch--ttb) {
   font-weight: 600;
 }
 
-.arkhe-page h1 {
+.arkhe-page h1,
+.ttb-page h1,
+.igilim-page h1 {
   margin-bottom: 0.35rem;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(2.5rem, 6vw, 4.25rem);
   letter-spacing: -0.04em;
   line-height: 1;
 }
 
-.arkhe-project__type {
+.arkhe-project__type,
+.ttb-project__type,
+.igilim-project__type {
   margin: 0;
   color: var(--bs-secondary-color);
   font-size: 1.125rem;
   font-weight: 600;
 }
 
-.arkhe-project__status {
+.arkhe-project__status,
+.ttb-project__status,
+.igilim-project__status {
   margin: 0.55rem 0 2.5rem;
   color: var(--bs-secondary-color);
 }
 
-.arkhe-project__technologies {
+.arkhe-project__technologies,
+.ttb-project__technologies,
+.igilim-project__technologies {
   margin-top: 1.25rem;
   padding-top: 0.85rem;
   border-top: 1px solid var(--bs-border-color);
   color: var(--bs-secondary-color);
 }
 
-.arkhe-project__technologies span {
+.arkhe-project__technologies span,
+.ttb-project__technologies span,
+.igilim-project__technologies span {
   font-weight: 600;
 }
 
-.arkhe-page h2 {
+.arkhe-page h2,
+.ttb-page h2,
+.igilim-page h2 {
   margin-top: 3.25rem;
 }
 
-.arkhe-feature-list {
+.arkhe-feature-list,
+.ttb-system-list,
+.igilim-automation-list {
   margin: 1.5rem 0 0;
 }
 
-.arkhe-feature-list > section {
+.arkhe-feature-list > section,
+.ttb-system-list > section,
+.igilim-automation-list > section {
   display: grid;
   grid-template-columns: minmax(11rem, 0.8fr) minmax(0, 2fr);
   gap: 0.75rem clamp(1.5rem, 4vw, 4rem);
@@ -159,17 +175,23 @@ body.igilim-page #quarto-header .nav-item:has(.language-switch--ttb) {
   border-top: 1px solid var(--bs-border-color);
 }
 
-.arkhe-feature-list > section:last-child {
+.arkhe-feature-list > section:last-child,
+.ttb-system-list > section:last-child,
+.igilim-automation-list > section:last-child {
   border-bottom: 1px solid var(--bs-border-color);
 }
 
-.arkhe-feature-list h3 {
+.arkhe-feature-list h3,
+.ttb-system-list h3,
+.igilim-automation-list h3 {
   margin: 0;
   font-size: 1.1rem;
   line-height: 1.2;
 }
 
-.arkhe-feature-list p {
+.arkhe-feature-list p,
+.ttb-system-list p,
+.igilim-automation-list p {
   margin: 0;
 }
 
@@ -210,68 +232,6 @@ body.igilim-page #quarto-header .nav-item:has(.language-switch--ttb) {
   white-space: nowrap;
 }
 
-.ttb-page h1 {
-  margin-bottom: 0.35rem;
-  font-size: clamp(2.5rem, 6vw, 4.25rem);
-  letter-spacing: -0.04em;
-  line-height: 1;
-}
-
-.ttb-project__type {
-  margin: 0;
-  color: var(--bs-secondary-color);
-  font-size: 1.125rem;
-  font-weight: 600;
-}
-
-.ttb-project__status {
-  margin: 0.55rem 0 2.5rem;
-  color: var(--bs-secondary-color);
-}
-
-.ttb-page h2 {
-  margin-top: 3.25rem;
-}
-
-.ttb-project__technologies {
-  margin-top: 1.25rem;
-  padding-top: 0.85rem;
-  border-top: 1px solid var(--bs-border-color);
-  color: var(--bs-secondary-color);
-}
-
-.ttb-project__technologies span {
-  font-weight: 600;
-}
-
-.ttb-system-list {
-  margin: 1.5rem 0 0;
-}
-
-.ttb-system-list > section {
-  display: grid;
-  grid-template-columns: minmax(12rem, 0.9fr) minmax(0, 2fr);
-  gap: 0.6rem clamp(1.5rem, 4vw, 4rem);
-  align-items: start;
-  padding: 1.25rem 0;
-  border-top: 1px solid var(--bs-border-color);
-}
-
-.ttb-system-list > section:last-child {
-  border-bottom: 1px solid var(--bs-border-color);
-}
-
-.ttb-system-list h3,
-.ttb-system-list p {
-  margin: 0;
-}
-
-.ttb-system-list h3 {
-  grid-column: 1;
-  font-size: 1.1rem;
-  line-height: 1.2;
-}
-
 .ttb-system__content {
   grid-column: 2;
   min-width: 0;
@@ -299,76 +259,14 @@ body.igilim-page #quarto-header .nav-item:has(.language-switch--ttb) {
   color: var(--bs-secondary-color);
 }
 
-.igilim-page h1 {
-  margin-bottom: 0.35rem;
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  letter-spacing: -0.04em;
-  line-height: 1;
-}
-
-.igilim-project__type {
-  margin: 0 0 2.5rem;
-  color: var(--bs-secondary-color);
-  font-size: 1.125rem;
-  font-weight: 600;
-}
-
-.igilim-page h2 {
-  margin-top: 2.75rem;
-}
-
-.igilim-project__technologies {
-  margin-top: 1.25rem;
-  padding-top: 0.85rem;
-  border-top: 1px solid var(--bs-border-color);
-  color: var(--bs-secondary-color);
-}
-
-.igilim-project__technologies span {
-  font-weight: 600;
-}
-
 .igilim-context {
   margin: 1.5rem 0 0;
   padding: 1rem 0 1rem 1.25rem;
   border-left: 2px solid var(--bs-link-color);
 }
 
-.igilim-context p,
-.igilim-project__status {
+.igilim-context p {
   margin: 0;
-}
-
-.igilim-automation-list {
-  margin: 1.5rem 0 0;
-}
-
-.igilim-automation-list > section {
-  display: grid;
-  grid-template-columns: minmax(11rem, 0.8fr) minmax(0, 2fr);
-  gap: 0.6rem clamp(1.5rem, 4vw, 4rem);
-  align-items: start;
-  padding: 1rem 0;
-  border-top: 1px solid var(--bs-border-color);
-}
-
-.igilim-automation-list > section:last-child {
-  border-bottom: 1px solid var(--bs-border-color);
-}
-
-.igilim-automation-list h3,
-.igilim-automation-list p {
-  margin: 0;
-}
-
-.igilim-automation-list h3 {
-  font-size: 1.05rem;
-  line-height: 1.2;
-}
-
-.igilim-project__status {
-  margin-top: 1.5rem;
-  color: var(--bs-secondary-color);
 }
 
 .profile-actions {

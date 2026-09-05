@@ -11,6 +11,8 @@ body-classes: "locale-en igilim-page has-language-equivalent"
 
 <p class="igilim-project__type">Community management and automation tool</p>
 
+<p class="igilim-project__status">Association project · public overview</p>
+
 ## Overview
 
 The IGILIM Discord Bot is a Python tool developed to automate tasks related to the association’s Discord server. The project responds to community-management, moderation, and event-organization needs.
