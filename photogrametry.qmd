@@ -200,6 +200,8 @@ editor: visual
 
 <div id="loader">Chargement du modèle...</div>
 
+<h1 class="visually-hidden">Photogrammetry</h1>
+
 <div id="ui-container">
   <label for="compare-slider" style="color: white; font-family: sans-serif; font-size: 0.9em; margin-bottom: 5px;">Comparaison (Brut ↔ Optimisé)</label>
   <input type="range" id="compare-slider" min="0" max="1" step="0.01" value="1" style="width: 100%;">
