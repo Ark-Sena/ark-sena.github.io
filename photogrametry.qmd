@@ -244,6 +244,4 @@ editor: visual
 
 ```{ojs}
 import { my_photogrametry_canvas } from "./content/scripts/photogrametrie.ojs"
-
-my_photogrametry_canvas
 ```

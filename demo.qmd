@@ -71,6 +71,4 @@ editor: visual
 //my_3d_canvas
 
 import { my_portfolio_city } from "./content/scripts/ville.ojs"
-
-my_portfolio_city
 ```

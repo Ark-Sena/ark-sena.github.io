@@ -213,6 +213,7 @@ my_portfolio_city = {
     myArtifact.coreMesh.visible = true;
 
     animate();
+    document.body.appendChild(renderer.domElement);
 
     // 8. Garbage Collection
     invalidation.then(() => {
@@ -220,6 +221,7 @@ my_portfolio_city = {
         window.removeEventListener('resize', onWindowResize);
         
         renderer.dispose();
+        renderer.domElement.remove();
         composer.dispose();
         environmentParts.dispose();
         myArtifact.dispose();

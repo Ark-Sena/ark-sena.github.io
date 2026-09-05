@@ -182,12 +182,14 @@ my_photogrametry_canvas = {
         frameId = requestAnimationFrame(animate);
     };
     animate();
+    document.body.appendChild(renderer.domElement);
 
     // 10. Garbage Collection
     invalidation.then(() => {
         cancelAnimationFrame(frameId);
         window.removeEventListener('resize', onWindowResize);
         renderer.dispose();
+        renderer.domElement.remove();
     });
 
     return renderer.domElement;
